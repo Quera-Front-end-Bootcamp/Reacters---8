@@ -1,4 +1,4 @@
-.hero:before{
+.hero::before{
     content: ' ';
     display: block;
     position: absolute;
@@ -11,5 +11,6 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    z-index: -1;
     /* background-repeat: no-repeat; */
 }
