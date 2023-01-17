@@ -1,0 +1,15 @@
+.hero:before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image:url(../../assets/course/class-presentation.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+}
