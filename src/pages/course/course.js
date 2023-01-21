@@ -3,6 +3,7 @@ import classes from "./course.module.css";
 
 import course_logo from "../../assets/course/course-logo.png";
 import teacher_logo from "../../assets/course/teacher.png";
+import pair_programming from '../../assets/course/pair.png';
 
 const Course = () => {
   return (
@@ -71,15 +72,42 @@ const Course = () => {
       {/* end of hero section */}
       <div className={`h-screen`}>
         <div className="h-1/2 bg-slate-100 grid grid-cols-12">
-            <div className="col-span-4">
-
+            <div className="col-span-4 relative  ">
+                <div className="w-1/2 h-3/4 border-b-2 border-r-2 border-slate-400 absolute  top-0 left-0"></div>
+                <div className="w-1/2 h-3/4 bg-slate-100 absolute left-1/4 top-1/4"></div>
             </div>
             <div className="col-span-8 flex flex-col justify-center">
                 <h2 dir="rtl" className={`${classes.desc} font-bold text-3xl`}>توضیحات</h2>
                 <p dir="rtl" className={`${classes.desc}`}>امروزه به دلیل آن که ارتباطات فضای مجازی رونق زیادی یافته است طراحی یک سایت به شکل مناسب و مورد پسند کاربران متفاوت اهمیت بالایی یافته است. به همین جهت صاحبان سرمایه و کار برای رونق کار خود به دنبال طراحان حرفه ای برای طراحی سایتی مناسب و کارآمد هستند. لذا یادگیری روش های مناسب و به روز طراحی سایت مورد توجه بسیاری از علاقه مندان و کارجویان قرار گرفته است. جاوا اسکریپت زبان برنامه نویسی مفسری در سمت کلاینت است که می توان بوسیله سایتی مناسب و کارآمد هستند. لذا یادگیری روش های مناسب و به روز طراحی سایت مورد توجه بسیاری از علاقه مندان و کارجویان قرار گرفته است. جاوا اسکریپت زبان برنامه نویسی مفسری در سمت کلاینت است که می توان بوسیله</p>
             </div>
         </div>
-        <div className="h-1/2 bg-slate-100"></div>
+        <div className="h-1/2 bg-slate-200 flex flex-row justify-end">
+          <div>
+            <h1 dir="rtl" className={`${classes.desc} font-bold text-3xl mb-3`}>مزایای این دوره:</h1>
+            <div className={`${classes.desc}`}>
+                  <span></span>
+                  <div>
+                    <h5 dir="rtl" className="font-bold">آشنایی با زبان برنامه نویسی جاوااسکریپت</h5>
+                    <p dir="rtl" className="text-sm md:text-base">در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود و به راحتی تسک های مربوط را انجام خواهی داد</p>
+                  </div>
+            </div>
+            <div className={`${classes.desc}`}>
+                  <span></span>
+                  <div>
+                    <h5 dir="rtl" className="font-bold">آشنایی با زبان برنامه نویسی جاوااسکریپت</h5>
+                    <p dir="rtl" className="text-sm md:text-base">در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود</p>
+                  </div>
+            </div>
+            <div className={`${classes.desc}`}>
+                  <span></span>
+                  <div>
+                    <h5 dir="rtl" className="font-bold">آشنایی با زبان برنامه نویسی جاوااسکریپت</h5>
+                    <p dir="rtl" className="text-sm md:text-base">در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود</p>
+                  </div>
+            </div>
+          </div>
+          <img src={pair_programming} alt='pair programming'></img>
+        </div>
       </div>
     </>
   );
