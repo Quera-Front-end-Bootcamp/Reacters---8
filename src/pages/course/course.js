@@ -96,6 +96,16 @@ const Course = () => {
                     </div>
                     
                   </div>
+                  <div className="flex flex-row justify-center ">
+                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
+                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
+                      :
+                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
+                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
+                      :
+                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
+                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
+                  </div>
                   <button className="w-3/4 md:w-1/2 mx-auto text-white bg-green-600 p-2" dir="rtl">ثبت نام در دوره</button>
                   </div>
                   
