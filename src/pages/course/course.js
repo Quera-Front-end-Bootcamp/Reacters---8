@@ -117,7 +117,7 @@ const Course = () => {
             </div>
         </div>
         <div className="h-1/2 bg-slate-200 flex flex-row justify-end">
-          <div>
+          <div className="flex flex-col justify-center">
             <h1 dir="rtl" className={`${classes.desc} font-bold text-3xl mb-3`}>مزایای این دوره:</h1>
             <div className={`${classes.desc}`}>
                   <span></span>
