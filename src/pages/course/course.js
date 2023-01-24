@@ -5,8 +5,10 @@ import course_logo from "../../assets/course/course-logo.png";
 import teacher_logo from "../../assets/course/teacher.png";
 import pair_programming from '../../assets/course/pair.png';
 import js_logo from "../../assets/course/js-logo.png";
+import ProgressBar from '../../components/ProgressBar';
 
 const Course = () => {
+  let data = {progress: 60}
   return (
     <>
       {/* hero section */}
@@ -21,9 +23,11 @@ const Course = () => {
             <p>دانشجو: 53 نفر</p>
           </div>
           <div className="w-full h-7 relative bg-gray-300 mt-6 rounded-md overflow-hidden opacity-90 ">
-            <div className="w-4/6 h-full bg-slate-100 flex justify-around items-center">
+            {/* <div className="w-4/6 h-full bg-slate-100 flex justify-around items-center">
               60%
-            </div>
+            </div> */}
+            
+            <ProgressBar data={data} >60%</ProgressBar>
           </div>
         </div>
         <div className="w-full grid grid-cols-3 gap-0 h-1/4 text-white">
