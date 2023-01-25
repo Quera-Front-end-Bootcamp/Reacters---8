@@ -1,6 +1,8 @@
 import React from "react";
 import classes from "./course.module.css";
 
+import store from './store.json';
+
 import course_logo from "../../assets/course/course-logo.png";
 import teacher_logo from "../../assets/course/teacher.png";
 import pair_programming from '../../assets/course/pair.png';
@@ -10,24 +12,10 @@ import js_logo from "../../assets/course/js-logo.png";
 import ProgressBar from '../../components/ProgressBar';
 import BlackBox from './components/BlackBox/BlackBox';
 import BenefitItem from "./components/BenefitItem/BenefitItem";
+import Description from "./components/Description/Description";
 
-const benefits = [
-  {
-    title: "آشنایی با زبان برنامه نویسی جاوااسکریپت",
-    context:
-      "در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود",
-  },
-  {
-    title: "آشنایی با زبان برنامه نویسی جاوااسکریپت",
-    context:
-      "در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود",
-  },
-  {
-    title: "آشنایی با زبان برنامه نویسی جاوااسکریپت",
-    context:
-      "در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود",
-  },
-];
+
+
 
 const Course = () => {
   let data = {progress: 60}
@@ -134,18 +122,14 @@ const Course = () => {
                   </div>
                   <button className="w-3/4 md:w-1/2 mx-auto text-white bg-green-600 p-2" dir="rtl">ثبت نام در دوره</button>
                   </div>
-                  
                 </div>
             </div>
-            <div className="col-span-7 flex flex-col justify-evenly">
-                <h2 dir="rtl" className={`${classes.desc} font-bold text-3xl`}>توضیحات</h2>
-                <p dir="rtl" className={`${classes.desc}`}>امروزه به دلیل آن که ارتباطات فضای مجازی رونق زیادی یافته است طراحی یک سایت به شکل مناسب و مورد پسند کاربران متفاوت اهمیت بالایی یافته است. به همین جهت صاحبان سرمایه و کار برای رونق کار خود به دنبال طراحان حرفه ای برای طراحی سایتی مناسب و کارآمد هستند. لذا یادگیری روش های مناسب و به روز طراحی سایت مورد توجه بسیاری از علاقه مندان و کارجویان قرار گرفته است. جاوا اسکریپت زبان برنامه نویسی مفسری در سمت کلاینت است که می توان بوسیله سایتی مناسب و کارآمد هستند. لذا یادگیری روش های مناسب و به روز طراحی سایت مورد توجه بسیاری از علاقه مندان و کارجویان قرار گرفته است. جاوا اسکریپت زبان برنامه نویسی مفسری در سمت کلاینت است که می توان بوسیله</p>
-            </div>
+            <Description className="col-span-7" description={store.description} />
         </div>
         <div className="h-1/2 bg-slate-200 flex flex-row justify-end">
           <div className="flex flex-col justify-evenly">
             <h1 dir="rtl" className={`${classes.desc} font-bold text-3xl mb-3`}>مزایای این دوره:</h1>
-            {benefits.map((item, index) => <BenefitItem  key={index} title = {item.title} context = {item.context}/>)}
+            {store.benefits.map((item, index) => <BenefitItem  key={index} title = {item.title} context = {item.context}/>)}
           </div>
           <img src={pair_programming} alt='pair programming'></img>
         </div>
