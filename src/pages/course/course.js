@@ -6,13 +6,14 @@ import store from './store.json';
 import course_logo from "../../assets/course/course-logo.png";
 import teacher_logo from "../../assets/course/teacher.png";
 import pair_programming from '../../assets/course/pair.png';
-import js_logo from "../../assets/course/js-logo.png";
+
 
 
 import ProgressBar from '../../components/ProgressBar';
 import BlackBox from './components/BlackBox/BlackBox';
 import BenefitItem from "./components/BenefitItem/BenefitItem";
 import Description from "./components/Description/Description";
+import PriceModal from "./components/PriceModal/PriceModal";
 
 
 
@@ -87,42 +88,9 @@ const Course = () => {
       {/* end of hero section */}
       <div className={`h-screen`}>
         <div className="h-1/2 bg-slate-100 grid grid-cols-12">
-            <div className="col-span-5 relative  ">
+            <div className="col-span-5 relative">
                 <div className="w-1/2 h-3/4 border-b-2 border-r-2 border-slate-400 absolute  top-0 left-0"></div>
-                <div className="w-3/4 h-3/4 sm:w-1/2 bg-slate-100 absolute left-7 top-7 sm:left-1/4 border-2">
-                  <header className="w-full h-1/4 flex flex-row justify-end items-center border-b-2 border-black">
-                    <p dir="rtl">دوره جاوا اسکریپت</p>
-                    <img src={js_logo} alt='js-logo'></img>
-                  </header>
-                  <div className="flex h-3/4 flex-col justify-around  flex-wrap">
-                  <div className="flex flex-col mx-1">
-                    <div className="flex flex-row-reverse justify-between py-1">
-                      <p dir="rtl">قیمت دوره:</p>
-                      <p dir="rtl">200.000 تومان</p>
-                    </div>
-                    <div className="flex flex-row-reverse justify-between py-1">
-                      <p dir="rtl">تخفیف:</p>
-                      <p>10 %</p>
-                    </div>
-                    <div className="flex flex-row-reverse justify-between py-1">
-                      <p dir="rtl">مبلغ قابل پرداخت</p>
-                      <p dir="rtl">180.000 تومان</p>
-                    </div>
-                    
-                  </div>
-                  <div className="flex flex-row justify-center ">
-                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-                      :
-                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-                      :
-                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-                      <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-                  </div>
-                  <button className="w-3/4 md:w-1/2 mx-auto text-white bg-green-600 p-2" dir="rtl">ثبت نام در دوره</button>
-                  </div>
-                </div>
+                <PriceModal priceInfo = {store.price}/>
             </div>
             <Description className="col-span-7" description={store.description} />
         </div>
