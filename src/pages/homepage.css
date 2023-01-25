@@ -1,0 +1,7 @@
+.intro {
+	background: linear-gradient(0deg, rgba(3 100 3 / 50%), rgba(3 100 3 / 50%)),
+		url("../assets/heroIntroImage-homepage.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
