@@ -9,6 +9,25 @@ import js_logo from "../../assets/course/js-logo.png";
 
 import ProgressBar from '../../components/ProgressBar';
 import BlackBox from './components/BlackBox/BlackBox';
+import BenefitItem from "./components/BenefitItem/BenefitItem";
+
+const benefits = [
+  {
+    title: "آشنایی با زبان برنامه نویسی جاوااسکریپت",
+    context:
+      "در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود",
+  },
+  {
+    title: "آشنایی با زبان برنامه نویسی جاوااسکریپت",
+    context:
+      "در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود",
+  },
+  {
+    title: "آشنایی با زبان برنامه نویسی جاوااسکریپت",
+    context:
+      "در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود",
+  },
+];
 
 const Course = () => {
   let data = {progress: 60}
@@ -124,29 +143,9 @@ const Course = () => {
             </div>
         </div>
         <div className="h-1/2 bg-slate-200 flex flex-row justify-end">
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-evenly">
             <h1 dir="rtl" className={`${classes.desc} font-bold text-3xl mb-3`}>مزایای این دوره:</h1>
-            <div className={`${classes.desc}`}>
-                  <span></span>
-                  <div>
-                    <h5 dir="rtl" className="font-bold">آشنایی با زبان برنامه نویسی جاوااسکریپت</h5>
-                    <p dir="rtl" className="text-sm md:text-base">در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود و به راحتی تسک های مربوط را انجام خواهی داد</p>
-                  </div>
-            </div>
-            <div className={`${classes.desc}`}>
-                  <span></span>
-                  <div>
-                    <h5 dir="rtl" className="font-bold">آشنایی با زبان برنامه نویسی جاوااسکریپت</h5>
-                    <p dir="rtl" className="text-sm md:text-base">در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود</p>
-                  </div>
-            </div>
-            <div className={`${classes.desc}`}>
-                  <span></span>
-                  <div>
-                    <h5 dir="rtl" className="font-bold">آشنایی با زبان برنامه نویسی جاوااسکریپت</h5>
-                    <p dir="rtl" className="text-sm md:text-base">در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود</p>
-                  </div>
-            </div>
+            {benefits.map((item, index) => <BenefitItem  key={index} title = {item.title} context = {item.context}/>)}
           </div>
           <img src={pair_programming} alt='pair programming'></img>
         </div>
