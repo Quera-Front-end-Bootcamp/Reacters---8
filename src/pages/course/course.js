@@ -5,7 +5,10 @@ import course_logo from "../../assets/course/course-logo.png";
 import teacher_logo from "../../assets/course/teacher.png";
 import pair_programming from '../../assets/course/pair.png';
 import js_logo from "../../assets/course/js-logo.png";
+
+
 import ProgressBar from '../../components/ProgressBar';
+import BlackBox from './components/BlackBox/BlackBox';
 
 const Course = () => {
   let data = {progress: 60}
@@ -31,7 +34,7 @@ const Course = () => {
           </div>
         </div>
         <div className="w-full grid grid-cols-3 gap-0 h-1/4 text-white">
-          <div className={`${classes.heroEnd} flex flex-col p-8 items-center`} dir='rtl'>
+          <BlackBox >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -48,8 +51,8 @@ const Course = () => {
             </svg>
 
             <p>رتبه : </p>
-          </div>
-          <div className={`${classes.heroEnd} flex flex-col p-8 items-center`} dir='rtl'>
+          </BlackBox>
+          <BlackBox middle = {true}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -66,12 +69,12 @@ const Course = () => {
             </svg>
             <p>تاریخ شروع: 1/1/1400</p>
             <p>تاریخ پایان: 1/1/1401</p>
-          </div>
-          <div className={`${classes.heroEnd} flex flex-col p-8 items-center`} dir='rtl'>
+          </BlackBox>
+          <BlackBox>
             <img src={teacher_logo}></img>
             <p>مدرس:</p>
             <p>دکتر بحر العلومی</p>
-          </div>
+          </BlackBox>
         </div>
       </div>
       {/* end of hero section */}
