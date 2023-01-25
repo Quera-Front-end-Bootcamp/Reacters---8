@@ -1,5 +1,7 @@
 import js_logo from "../../../../assets/course/js-logo.png";
 
+import Countdown from "../Countdown/Countdown";
+
 const PriceField = (props) => {
   return (
     <div className="flex flex-row-reverse justify-between py-1">
@@ -20,16 +22,7 @@ const PriceModal = ({priceInfo}) => {
         <div className="flex flex-col mx-1">
           {priceInfo.properties.map((item, index) => <PriceField key={index} propKey={item.propKey} propValue={item.propValue} />)}
         </div>
-        <div className="flex flex-row justify-center ">
-            <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-            <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-            :
-            <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-            <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-            :
-            <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-            <span className="h-6 w-4 bg-slate-300 mx-1"></span>
-        </div>
+        <Countdown />
         <button className="w-3/4 md:w-1/2 mx-auto text-white bg-green-600 p-2" dir="rtl">ثبت نام در دوره</button>
         </div>
       </div>
