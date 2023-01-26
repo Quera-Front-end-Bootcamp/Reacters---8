@@ -1,4 +1,5 @@
 import "./header.css";
+import SecondaryButton from "./secBtn";
 function Header() {
 	return (
 		<header className="intro h-[75vh] text-slate-50 flex flex-col justify-end">
@@ -15,9 +16,7 @@ function Header() {
 						کنیم.
 					</p>
 				</div>
-				<a href="/courses" className="text-green-800 bg-slate-50 py-4 px-8">
-					مشاهده دوره ها
-				</a>
+				<SecondaryButton anchorText="مشاهده دوره ها" />
 			</section>
 			<section className=" sec-search flex gap-4 items-center px-20 py-2 text-slate-50">
 				<svg
