@@ -1,6 +1,11 @@
 import "./homepage.css";
 import Header from "../components/header";
 import CardNumber from "../components/cardNumber";
+import SecondaryButton from "../components/secBtn";
+import js from "../assets/course preview/js.png";
+import java from "../assets/course preview/java.png";
+import cShrp from "../assets/course preview/c-sharp.png";
+import bootstrap from "../assets/course preview/bootstrap.png";
 function Homepage() {
 	return (
 		<div>
@@ -23,14 +28,41 @@ function Homepage() {
 						d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"
 					/>
 				</section>
-				<section>
-					<div>
-						<h2 className=" text-3xl font-bold">دوره های آموزشی</h2>
-						<p>
-							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپلورم
-							ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
-						</p>
-						<a href="/courses" className="text-slate-50 bg-green-800 py-4 px-8">
+				<section className=" flex">
+					<div className=" basis-2/3 px-80 py-20">
+						<div className="grid grid-cols-2 gap-12 border-2 border-emerald-700 relative h-96">
+							<div className="  bg-purple-800 p-8 flex flex-col justify-center items-center gap-8 w-96 absolute top-8 -right-4">
+								<img src={cShrp} alt="cSharp" className=" w-28 h-28" />
+								<SecondaryButton anchorText="دوره سی شارپ" />
+							</div>
+							<div className=" bg-yellow-300 p-8 flex flex-col justify-center items-center gap-8 h-80 absolute -top-10 -left-8">
+								<img src={js} alt="js" className=" w-28 h-28" />
+								<SecondaryButton anchorText="دوره جاوا اسکریپت" />
+							</div>
+							<div className=" bg-pink-300 p-8 flex flex-col justify-center items-center gap-8 w-72 absolute right-20 top-80">
+								<img src={java} alt="java" className=" w-28 h-28" />
+								<SecondaryButton anchorText="دوره جاوا" />
+							</div>
+							<div className=" bg-violet-300 p-8 flex flex-col justify-center items-center gap-8 absolute top-80 -left-4">
+								<img src={bootstrap} alt="bootstrap" className=" w-28 h-28" />
+								<SecondaryButton anchorText="دوره بوت استرپ" />
+							</div>
+						</div>
+					</div>
+					<div className="basis-1/3 flex flex-col gap-20 justify-center items-end border-b-2 border-r-2 border-slate-300 pl-28 pr-14 pt-48 h-fit">
+						<div className=" flex flex-col gap-8 text-right">
+							<h2 className=" text-3xl font-bold">دوره های آموزشی</h2>
+							<p>
+								لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپلورم
+								ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ ایپسوم متن
+								ساختگی با تولید سادگی نامفهوم از صنعت چاپ ایپسوم متن ساختگی با
+								تولید سادگی نامفهوم از صنعت چاپ
+							</p>
+						</div>
+						<a
+							href="/courses"
+							className="text-slate-50 bg-green-800 py-4 px-8 -m-6"
+						>
 							مشاهده دوره ها
 						</a>
 					</div>
