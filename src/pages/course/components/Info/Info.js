@@ -19,7 +19,7 @@ const Info = (props) => {
               60%
             </div> */}
             
-            <ProgressBar data={data} >60%</ProgressBar>
+            <ProgressBar data={data} ></ProgressBar>
           </div>
         </div>
     );
