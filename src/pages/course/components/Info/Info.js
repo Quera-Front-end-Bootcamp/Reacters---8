@@ -11,7 +11,7 @@ const Info = (props) => {
             دوره جاوا اسکریپت
           </div>
           <div className="w-full text-white flex flex-col items-center md:flex-row justify-between font-bold text-xl">
-            <p>ظرفیت: {} نفر</p>
+            <p>ظرفیت: {42} نفر</p>
             <p>دانشجو: {53} نفر</p>
           </div>
           <div className="w-full h-7  mt-6 rounded-md overflow-hidden opacity-90 ">
