@@ -23,9 +23,9 @@ const Course = () => {
   return (
     <>
       {/* hero section */}
-      <div className={` ${classes.hero} h-screen relative  `}>
+      <div className={` ${classes.hero} min-h-screen md:h-screen relative flex flex-col justify-end `}>
         <Info />
-        <div className="w-full grid grid-cols-3 gap-0 h-1/4 text-white">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3  gap-0 h-1/4 text-white">
           <BlackBox >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,22 +70,24 @@ const Course = () => {
         </div>
       </div>
       {/* end of hero section */}
-      <div className={`h-screen`}>
-        <div className="h-1/2 bg-slate-100 grid grid-cols-12">
-            <div className="col-span-5 relative">
-                <div className="w-1/2 h-3/4 border-b-2 border-r-2 border-slate-400 absolute  top-0 left-0"></div>
-                <PriceModal priceInfo = {store.price}/>
+      {/* <div className={``}> */}
+        <div className=" bg-slate-100 flex flex-col-reverse sm:flex-row flex-wrap">
+            {/* <div className="h-1/2 md:h-full bg-red-600"> */}
+              <div className="h-[calc(50vh+200px)] relative w-full sm:w-1/2">
+                  <div className="w-1/2 h-3/4 border-b-2 border-r-2 border-slate-400 absolute  top-0 left-0"></div>
+                  <PriceModal priceInfo = {store.price}/>
+              {/* </div> */}
             </div>
-            <Description className="col-span-7" description={store.description} />
+            <Description className="min-h-[50vh] md:h-full w-full sm:w-1/2" description={store.description} />
         </div>
-        <div className="h-1/2 bg-slate-200 flex flex-row justify-end">
+        <div className="min-h md:h-[50vh] bg-slate-200 flex flex-col-reverse md:flex-row justify-end">
           <div className="flex flex-col justify-evenly">
             <h1 dir="rtl" className={`${classes.desc} font-bold text-3xl mb-3`}>مزایای این دوره:</h1>
             {store.benefits.map((item, index) => <BenefitItem  key={index} title = {item.title} context = {item.context}/>)}
           </div>
           <img src={pair_programming} alt='pair programming'></img>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };
