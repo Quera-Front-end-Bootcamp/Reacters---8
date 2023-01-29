@@ -1,16 +1,24 @@
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom"
+import Courses from "./pages/courses";
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <div className="flex justify-center">
-        <p className="text-red-300 font-bold">Hellloooooo</p>
-      </div>
-      <Routes>
+      <nav className="navbar h-18 w-full">
+        <ul className="flex justify-start p-2 ml-8">
+          <li className="p-2 ml-3">
+            <Link to={"/courses"}>Courses</Link>
+          </li>
+        </ul>
+      </nav>
 
+      <Routes>
+        <Route path="/courses" element={<Courses />} />
       </Routes>
-    </div>
+
+    </div >
   );
 }
 
