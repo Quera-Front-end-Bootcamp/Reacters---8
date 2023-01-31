@@ -5,7 +5,7 @@ import ProgressBar from '../../../../components/ProgressBar';
 const Info = (props) => {
     let data = {progress: 60}
     return (
-        <div className="w-1/2 md:w-1/4 h-3/4 flex mx-auto flex-col justify-center items-center">
+        <div className="w-1/2 md:w-1/4 h-3/4 flex mx-auto flex-col justify-center items-center my-auto">
           <img src={course_logo} alt="course_logo"></img>
           <div className="w-full text-white font-bold text-3xl text-center border-b-2 border-gray-500 pb-4">
             دوره جاوا اسکریپت
