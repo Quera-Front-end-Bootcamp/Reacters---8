@@ -6,6 +6,7 @@ import js from "../../assets/homepage/course preview/js.png";
 import java from "../../assets/homepage/course preview/java.png";
 import cShrp from "../../assets/homepage/course preview/c-sharp.png";
 import bootstrap from "../../assets/homepage/course preview/bootstrap.png";
+import courseBoxes from "../../assets/homepage/course preview/courseBoxes.png";
 function Homepage() {
 	return (
 		<div>
@@ -30,24 +31,33 @@ function Homepage() {
 				</section>
 				<section className=" flex">
 					<div className=" basis-2/3 px-80 py-20">
-						<div className="grid grid-cols-2 gap-12 border-2 border-emerald-700 relative h-96">
-							<div className="  bg-purple-800 p-8 flex flex-col justify-center items-center gap-8 w-96 absolute top-8 -right-4">
-								<img src={cShrp} alt="cSharp" className=" w-28 h-28" />
-								<SecondaryButton anchorText="دوره سی شارپ" />
-							</div>
-							<div className=" bg-yellow-300 p-8 flex flex-col justify-center items-center gap-8 h-80 absolute -top-10 -left-8">
-								<img src={js} alt="js" className=" w-28 h-28" />
-								<SecondaryButton anchorText="دوره جاوا اسکریپت" />
-							</div>
-							<div className=" bg-pink-300 p-8 flex flex-col justify-center items-center gap-8 w-72 absolute right-20 top-80">
-								<img src={java} alt="java" className=" w-28 h-28" />
-								<SecondaryButton anchorText="دوره جاوا" />
-							</div>
-							<div className=" bg-violet-300 p-8 flex flex-col justify-center items-center gap-8 absolute top-80 -left-4">
-								<img src={bootstrap} alt="bootstrap" className=" w-28 h-28" />
-								<SecondaryButton anchorText="دوره بوت استرپ" />
-							</div>
-						</div>
+						<img src={courseBoxes} useMap="#courses" />
+						<map name="courses">
+							<area
+								shape="rect"
+								coords="350,170,580,250"
+								alt="cSharp"
+								href="/courses/cSharp"
+							></area>
+							<area
+								shape="rect"
+								coords="20,220,250,310"
+								alt="js"
+								href="/courses/js"
+							></area>
+							<area
+								shape="rect"
+								coords="320,470,540,550"
+								alt="java"
+								href="/courses/java"
+							></area>
+							<area
+								shape="rect"
+								coords="40,520,270,620"
+								alt="bootsrap"
+								href="/courses/bootsrap"
+							></area>
+						</map>
 					</div>
 					<div className="basis-1/3 flex flex-col gap-20 justify-center items-end border-b-2 border-r-2 border-slate-300 pl-28 pr-14 pt-48 h-fit">
 						<div className=" flex flex-col gap-8 text-right">
