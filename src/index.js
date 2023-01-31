@@ -8,9 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { ContextProvider } from "./store/context";
-import LoginPage from "./pages/account/Login";
-import ReigsterPage from "./pages/account/Register";
-import AccountPage from "./pages/account/Index";
+
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
