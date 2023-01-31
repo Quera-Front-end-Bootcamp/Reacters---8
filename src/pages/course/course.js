@@ -14,6 +14,7 @@ import BenefitItem from "./components/BenefitItem/BenefitItem";
 import Description from "./components/Description/Description";
 import PriceModal from "./components/PriceModal/PriceModal";
 import Info from "./components/Info/Info";
+import Rating from "./components/Rating/Rating";
 
 
 
@@ -43,6 +44,7 @@ const Course = () => {
             </svg>
 
             <p>رتبه : </p>
+            <Rating grade={4}/>
           </BlackBox>
           <BlackBox middle = {true}>
             <svg
