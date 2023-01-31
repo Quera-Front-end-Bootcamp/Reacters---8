@@ -5,11 +5,6 @@ import "../style/style.css"
 
 const CourseModal = ({ data, isOpen, handleClose }) => {
 
-    const formatPrice = (price) => {
-        const formattedPrice = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'IRR' }).format(price)
-        return formattedPrice.toLocaleString("fa");
-    }
-
     const [isBookmaked, setIsBookmarked] = useState(false)
     const handleToggleBookmark = () => {
         setIsBookmarked(true)
@@ -53,12 +48,11 @@ const CourseModal = ({ data, isOpen, handleClose }) => {
                     {/* modalPhoto */}
                     <div className="modalPhoto flex flex-col items-center p-7 md:w-3/5 md:text-center md:float-left w-full float-none">
                         <img src={data.imageSrc} className="max-h-60" alt="coursePhoto" />
-                        <div className='flex justify-center text-gray-600 mt-10 gap-8'>
+                        <div className='flex justify-center text-gray-600 mt-8 gap-8'>
                             <div className='flex flex-col items-center w-full'>
                                 <div className='mb-2'>وضعیت تکمیل دوره</div>
-                                <div className='flex flex-col items-center'>
+                                <div className='flex flex-col items-center mb-4'>
                                     <ProgressBar data={data} />
-                                    <span className='flex w-full text-sm'>{data.progress} %</span>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +64,7 @@ const CourseModal = ({ data, isOpen, handleClose }) => {
                             <h1>ظرفیت : {data.capacity} نفر</h1>
                             <p>شروع : {new Date(data.startDate).toLocaleDateString('Fa-IR')}</p>
                             <p>پایان : {new Date(data.terminationDate).toLocaleDateString('Fa-IR')}</p>
-                            <p>هزینه دوره : {formatPrice(data.price)} تومان </p>
+                            <p>هزینه دوره : {data.price.toLocaleString("fa")} تومان </p>
                             <div className='flex justify-center w-full mt-9'>
                                 <button className='border border-[#d9d9d9] flex justify-center items-center w-full rounded-md py-2 px-16 text-[#515151] transition-all ease-in font-medium hover:border-[#066649] hover:text-[#066649] hover:cursor-pointer'>
                                     مشاهده کامل
