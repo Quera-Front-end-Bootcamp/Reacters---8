@@ -1,11 +1,11 @@
 import "./homepage.css";
-import Header from "../components/header";
-import CardNumber from "../components/cardNumber";
-import SecondaryButton from "../components/secBtn";
-import js from "../assets/course preview/js.png";
-import java from "../assets/course preview/java.png";
-import cShrp from "../assets/course preview/c-sharp.png";
-import bootstrap from "../assets/course preview/bootstrap.png";
+import Header from "../../components/homepage/header";
+import CardNumber from "../../components/homepage/cardNumber";
+import SecondaryButton from "../../components/homepage/secBtn";
+import js from "../../assets/homepage/course preview/js.png";
+import java from "../../assets/homepage/course preview/java.png";
+import cShrp from "../../assets/homepage/course preview/c-sharp.png";
+import bootstrap from "../../assets/homepage/course preview/bootstrap.png";
 function Homepage() {
 	return (
 		<div>
