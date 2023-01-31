@@ -275,3 +275,4 @@ export const coursesData = [
     //     price: 6500000,
     //     progress: 85,
     // },
+]
