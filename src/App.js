@@ -13,6 +13,7 @@ function App() {
         <Route path="/login" element={<LoginPage />}/>
         <Route path="/register" element={<ReigsterPage/>}/>
         <Route path="/account" element={<AccountPage/>}/>
+        <Route path="/course" element={<Course/>}/>
       </Routes>
     </div>
   );
