@@ -15,24 +15,13 @@ import AccountPage from "./pages/account/Index";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  
-    {
-      path: "/login",
-      element: <LoginPage />,
-    },
-    {
-      path: "/register",
-      element: <ReigsterPage />,
-  },
-]);
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+   <BrowserRouter>
+      {/* <ContextProvider> */}
+        <App />
+      {/* </ContextProvider> */}
+   </BrowserRouter>
   </React.StrictMode>
 );
