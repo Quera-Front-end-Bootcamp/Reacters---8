@@ -4,8 +4,6 @@ import "../style/style.css"
 
 const CourseItem = ({ data }) => {
 
-  const [isBookmaked, setIsBookmarked] = useState(false)
-
   const [modalIsOpen, setModalIsOpen] = useState(false);
   function openModal() {
     setModalIsOpen(true);
@@ -20,7 +18,7 @@ const CourseItem = ({ data }) => {
           <div className="group relative">
             <img className="w-64 h-48 object-cover border border-gray-300 rounded-md" src={data.imageSrc} alt={data.alt}></img>
             <div className="flex items-center justify-center absolute w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md -z-10 group-hover:z-50 group-hover:bg-gray-400 group-hover:opacity-90">
-              <div className="border font-semibold border-gray-400 rounded-md p-3 bg-white hover:bg-[#066649] hover:text-white">مشاهده دوره</div>
+              <button className="border font-semibold border-gray-400 rounded-md p-3 bg-white hover:bg-[#066649] hover:text-white">مشاهده دوره</button>
             </div>
           </div>
           {/* cardDetails */}
@@ -31,7 +29,7 @@ const CourseItem = ({ data }) => {
             <button onClick={openModal} className="border rounded-md bg-[#066649] hover:bg-[#033324] p-2">جزئیات</button>
           </div>
           <hr className="w-4/5 m-auto h-0.5 bg-gray-200"></hr>
-          <div className="dir-rtl text-sm sm:text-base flex text-gray-600 justify-end pl-6 py-4">{data.price} تومان </div>
+          <div className="dir-rtl text-sm sm:text-base flex text-gray-600 justify-end pl-6 py-4">{data.price.toLocaleString("fa")} تومان </div>
         </div>
       </div>
 
@@ -41,7 +39,6 @@ const CourseItem = ({ data }) => {
           data={data}
           isOpen={modalIsOpen}
           handleClose={() => setModalIsOpen(false)}
-          handleToggleBookmark={() => setIsBookmarked(false)}
         />
       )}
     </>
