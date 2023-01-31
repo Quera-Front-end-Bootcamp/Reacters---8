@@ -9,11 +9,11 @@ import AccountPage from "./pages/account/Index";
 function App() {
   return (
     <div className="App">
-      <Course />
       <Routes>
         <Route path="/login" element={<LoginPage />}/>
         <Route path="/register" element={<ReigsterPage/>}/>
         <Route path="/account" element={<AccountPage/>}/>
+        <Route path="/course" element={<Course/>}/>
       </Routes>
     </div>
   );
