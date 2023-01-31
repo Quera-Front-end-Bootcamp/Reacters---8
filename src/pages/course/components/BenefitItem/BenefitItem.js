@@ -11,7 +11,7 @@ const BenefitItem = (props) => {
             <span className="w-[20px] h-[20px]" >
                 <img src={img} alt="benefit item" />
                 </span>
-            <div className="flex flex-col items-end pr-3">
+            <div className="flex flex-col items-end justify-end pr-3">
                 <h5 dir="rtl" className="font-bold">{props.title}</h5>
                 <p dir="rtl" className="text-sm md:text-base">{props.context}</p>
             </div>
