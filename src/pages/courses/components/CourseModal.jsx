@@ -5,7 +5,8 @@ import "../style/style.css"
 
 const CourseModal = ({ data, isOpen, handleClose }) => {
 
-    const [isBookmaked, setIsBookmarked] = useState(false)
+    const [isBookmarked, setIsBookmarked] = useState(false)
+
     const handleToggleBookmark = () => {
         setIsBookmarked(true)
     }
@@ -35,8 +36,8 @@ const CourseModal = ({ data, isOpen, handleClose }) => {
                     </button>
                     {/* modalNavbar */}
                     <nav className='w-full flex justify-between text-[#727272] p-5 text-sm border border-b-[#efefef]'>
-                        <svg on={handleToggleBookmark}
-                            className={`${isBookmaked ? "fill-[#066649]" : "fill-none"} w-6 h-6`}
+                        <svg onClick={handleToggleBookmark}
+                            className={`${isBookmarked ? "fill-[#066649]" : "fill-none"} w-6 h-6`}
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5"
