@@ -7,6 +7,8 @@ import ReigsterPage from "./pages/account/Register";
 import AccountPage from "./pages/account/Index";
 import './App.css';
 
+
+
 function App() {
   return (
     <div className="App">
@@ -17,7 +19,7 @@ function App() {
         <Route path="/course" element={<Course />} />
         <Route path="./courses" element={<Courses />}></Route>
       </Routes>
-    </div >
+    </div>
   );
 }
 
