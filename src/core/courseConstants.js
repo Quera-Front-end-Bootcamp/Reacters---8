@@ -36,30 +36,30 @@ const cssHero = "https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-
 const tailwindHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png";
 const PHPHero = "https://www.php.net/images/logos/new-php-logo.svg";
 const reactHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png";
-const SQLHero = "https://www.clipartmax.com/png/middle/243-2432711_azure-sql-database-icon.png";
-const bootstrapHero = "https://brandslogos.com/wp-content/uploads/thumbs/bootstrap-logo-vector.svg";
-const pythonHero = "https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png";
-const angularHero = "https://assets.stickpng.com/images/5847ea22cef1014c0b5e4833.png";
+const MySQLHero = "https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png";
+const bootstrapHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png";
+const pythonHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png";
+const angularHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png";
 const csharpHero = "https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png";
 const tsHero = "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg";
-const goHero = "https://w7.pngwing.com/pngs/3/219/png-transparent-go-programming-language-boilerplate-code-computer-programming-android-others-dog-like-mammal-snout-computer-programming.png";
+const goHero = "https://i.etsystatic.com/15149849/r/il/c0da64/2032115144/il_fullxfull.2032115144_gp7m.jpg";
 const goModal = "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png"
-const swiftHero = "https://w7.pngwing.com/pngs/657/714/png-transparent-swift-apple-programming-language-macos-apple-class-rectangle-orange.png";
+const swiftHero = "https://developer.apple.com/swift/images/swift-og.png";
 const rubyHero = "https://upload.wikimedia.org/wikipedia/commons/f/f1/Ruby_logo.png";
 const kotlinHero = "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png";
 const rustHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1024px-Rust_programming_language_black_logo.svg.png";
 const rustModal = "https://e7.pngegg.com/pngimages/114/914/png-clipart-rust-programming-language-logo-machine-learning-haskell-crab-animals-cartoon.png"
-const JavaHero = "https://brandslogos.com/wp-content/uploads/images/large/java-logo-1.png";
+const JavaHero = "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg";
 const nextHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png";
 const nextModal = "https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png";
 const vueHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png";
-const nodeHero = "https://w7.pngwing.com/pngs/452/24/png-transparent-js-logo-node-logos-and-brands-icon.png";
+const nodeHero = "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png";
 const viteHero = "https://vitejs.dev/logo-with-shadow.png";
-const reduxHero = "https://assets.stickpng.com/images/5848309bcef1014c0b5e4a9a.png";
-const jqueryHero = "https://w7.pngwing.com/pngs/1004/13/png-transparent-jquery-hd-logo.png";
-const sassHero = "https://cdn.freebiesupply.com/logos/large/2x/sass-1-logo-png-transparent.png";
-const webpackHero = "https://brandslogos.com/wp-content/uploads/images/large/webpack-icon-logo.png";
-const laravelHero = "https://cdn.freebiesupply.com/logos/large/2x/laravel-1-logo-png-transparent.png";
+const reduxHero = "https://www.howtogeek.com/wp-content/uploads/csit/2021/02/99128fa6.jpg?height=200p&trim=2,2,2,2";
+const jqueryHero = "https://www.chicagocomputerclasses.com/wp-content/uploads/2016/01/jquery.gif";
+const sassHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1200px-Sass_Logo_Color.svg.png";
+const webpackHero = "https://webpack.js.org/icon-pwa-512x512.d3dae4189855b3a72ff9.png";
+const laravelHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png";
 
 
 const DESCRIPTION = "امروزه به دلیل آن که ارتباطات فضای مجازی رونق زیادی یافته است طراحی یک سایت به شکل مناسب و مورد پسند کاربران متفاوت اهمیت بالایی یافته است. به همین جهت صاحبان سرمایه و کار برای رونق کار خود به دنبال طراحان حرفه ای برای طراحی سایتی مناسب و کارآمد هستند. لذا یادگیری روش های مناسب و به روز طراحی سایت مورد توجه بسیاری از علاقه مندان و کارجویان قرار گرفته است. جاوا اسکریپت زبان برنامه نویسی مفسری در سمت کلاینت است که می توان بوسیله سایتی مناسب و کارآمد هستند. لذا یادگیری روش های مناسب و به روز طراحی سایت مورد توجه بسیاری از علاقه مندان و کارجویان قرار گرفته است. جاوا اسکریپت زبان برنامه نویسی مفسری در سمت کلاینت است که می توان بوسیله";
@@ -222,8 +222,8 @@ export const coursesData = [
     },
     {
         imageSrc: sqlLogo,
-        alt: "sqlCourse",
-        title: "SQL دوره",
+        alt: "mysqlCourse",
+        title: "MYSQL دوره",
         tutor: "میلاد عباسی",
         capacity: "۴۰",
         startDate: "2022/3/20",

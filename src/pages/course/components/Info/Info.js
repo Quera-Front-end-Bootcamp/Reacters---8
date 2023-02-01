@@ -14,9 +14,6 @@ const Info = (props) => {
         <p>دانشجو: {53} نفر</p>
       </div>
       <div className="w-full h-7 mt-6 flex justify-center rounded-md overflow-hidden opacity-90 ">
-        {/* <div className="w-4/6 h-full bg-slate-100 flex justify-around items-center">
-              60%
-            </div> */}
         <ProgressBar data={data} />
       </div>
     </div>
