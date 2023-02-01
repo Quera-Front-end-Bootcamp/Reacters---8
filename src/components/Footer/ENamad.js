@@ -1,39 +1,32 @@
 import React from "react";
-import etemad from "../../assets/Footer/Enamad/etemad.png";
-import kasbmajazi from "../../assets/Footer/Enamad/kasbokarMajazi.png"
-import sabt from "../../assets/Footer/Enamad/sabt.png";
+import etemad from "../../assets/images/etemad.png";
+import kasbmajazi from "../../assets/images/kasbokarMajazi.png"
+import sabt from "../../assets/images/sabt.png";
 
 const ENamad = () => {
-
   return (
-<div className="h-32 flex flex-row gap-6 items-center bg-greencolor-100 text-right py-4" >
-
-<div className="h-32">
-    {/* <a target="_blank" href="https://trustseal.enamad.ir/?id=30599&amp;Code=uGobIf7GE1XUArlbdKa3"> */}
-        <img src={etemad} alt="نماد اعتماد الکترونیک"  
-        // style={{ height: '100% !important' }} 
-         className="w-full h-full object-center object-cover hover:cursour-pointer "
-         width="100%" height="100%"></img>
-    {/* </a> */}
-</div>
-<div className="h-32" >
-<img src={kasbmajazi} alt="نماد کسب و کار های مجازی"  
-    className=" w-full h-full object-center object-cover  hover:cursour-pointer " 
-    width="100%" height="100%"></img>
-</div>
-<div className="h-32">
-    <img src={sabt} alt="نشان ملی ثبت" 
-    className=" w-full h-full object-center object-cover hover:cursour-pointer  object-cover"
-     width="100%" height="100%"></img>
-</div>
-
+    <div className="h-32 flex flex-row gap-6 items-center bg-greencolor-100 text-right py-4">
+      <div className="h-32">
+          {/* <a target="_blank" href="https://trustseal.enamad.ir/?id=30599&amp;Code=uGobIf7GE1XUArlbdKa3"> */}
+              <img src={etemad} alt="نماد اعتماد الکترونیک"  
+              // style={{ height: '100% !important' }} 
+              className="w-full h-full object-center object-cover hover:cursour-pointer"
+              width="100%" height="100%"></img>
+          {/* </a> */}
+      </div>
+      <div className="h-32" >
+        <img src={kasbmajazi} alt="نماد کسب و کار های مجازی"  
+            className="w-full h-full object-center object-cover hover:cursour-pointer" 
+            ></img>
+      </div>
+      <div className="h-32">
+          <img src={sabt} alt="نشان ملی ثبت" 
+          className="w-full h-full object-center object-cover hover:cursour-pointer"
+          ></img>
+      </div>
     </div>
-    
-    
-
-
   );
-};
+}
 
 export default ENamad;
 

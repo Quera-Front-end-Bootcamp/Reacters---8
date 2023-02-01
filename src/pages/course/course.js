@@ -1,36 +1,26 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import classes from "./course.module.css";
-
-import store from './store.json';
-
-import teacher_logo from "../../assets/course/teacher.png";
-import pair_programming from '../../assets/course/pair.png';
-
-
-import { coursesData } from "../../core/courseConstants";
-
 import BlackBox from './components/BlackBox/BlackBox';
 import BenefitItem from "./components/BenefitItem/BenefitItem";
 import Description from "./components/Description/Description";
 import PriceModal from "./components/PriceModal/PriceModal";
 import Info from "./components/Info/Info";
 import Rating from "./components/Rating/Rating";
-
 import Footer from "../../components/Footer/Footer"
 import Header from "../../components/Header/Header"
-
+import teacher_logo from "../../assets/icons/teacher.png";
+import pair_programming from '../../assets/images/pair.png';
+import { coursesData } from "../../core/courseConstants";
+import store from './store.json';
+import classes from "./course.module.css";
 
 const Course = () => {
-
   const {id} = useParams();
   const data = coursesData.find(item => item.id === id);
-
   document.title = data.title;
-  
+
   return (
     <>
-
       {/* hero section */}
       <div className={` ${classes.hero} min-h-screen relative flex flex-col justify-between `}>
         <Info info = {data}/>
@@ -44,7 +34,7 @@ const Course = () => {
             <p>تاریخ پایان:{data.terminationDate}</p>
           </BlackBox>
           <BlackBox>
-            <img src={teacher_logo}></img>
+            <img src={teacher_logo} alt="teacherLogo"></img>
             <p>مدرس:</p>
             <p>{data.tutor}</p>
           </BlackBox>
@@ -57,11 +47,10 @@ const Course = () => {
               <div className="h-[calc(50vh+200px)] relative w-full sm:w-1/2">
                   <div className="w-1/2 h-3/4 border-b-2 border-r-2 border-slate-400 absolute  top-0 left-0"></div>
                   <PriceModal priceInfo = {data}/>
-            </div>
+              </div>
             <Description className="min-h-[50vh] md:h-full w-full sm:w-1/2" description={data.description} />
         </div>
-
-
+        
         <div className=" bg-slate-200 flex flex-col-reverse md:flex-row justify-end items-end md:items-stretch">
           <div className="flex flex-col justify-evenly items-end">
             <h1 dir="rtl" className={`${classes.desc} font-bold text-3xl mb-3`}>مزایای این دوره:</h1>
@@ -69,6 +58,7 @@ const Course = () => {
           </div>
           <img className="w-[350px] h-[500px] hidden md:block" src={pair_programming} alt='pair programming'></img>
         </div>
+        <Footer />
     </>
   );
 };
