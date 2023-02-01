@@ -8,31 +8,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App bg-green-900 bg-">
-      <Header></Header>
-      <div><div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>/</div> <div><div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>/</div>
-      <div><div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>/</div>
-      <div><div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>
-      <div className="h-150">helo</div>/</div>
+    <div className="App">
       <Routes>
         
         <Route  path="/" component={    <div><div className="h-150">helo</div>
