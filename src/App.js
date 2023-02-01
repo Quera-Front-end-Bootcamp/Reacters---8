@@ -1,23 +1,22 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom"
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Courses from "./pages/courses";
+import Course from './pages/course/course';
+import LoginPage from "./pages/account/Login";
+import ReigsterPage from "./pages/account/Register";
+import AccountPage from "./pages/account/Index";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <nav className="navbar h-18 w-full">
-        <ul className="flex justify-start p-2 ml-8">
-          <li className="p-2 ml-3">
-            <Link to={"/courses"}>Courses</Link>
-          </li>
-        </ul>
-      </nav>
-
       <Routes>
-        <Route path="/courses" element={<Courses />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<ReigsterPage />} />
+        <Route path="/account" element={<AccountPage />} />
+        <Route path="/course" element={<Course />} />
+        <Route path="./courses" element={<Courses />}></Route>
       </Routes>
-
     </div >
   );
 }
