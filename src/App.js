@@ -1,15 +1,55 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+// import { Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
+import {Aboutus} from './components/Footer/AboutUs';
+import Header  from './components/Header/Header';
+import { Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <div className="flex justify-center">
-        <p className="text-red-300 font-bold">Hellloooooo</p>
-      </div>
+    <div className="App bg-green-900 bg-">
+      <Header></Header>
+      <div><div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>/</div> <div><div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>/</div>
+      <div><div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>/</div>
+      <div><div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>/</div>
       <Routes>
+        
+        <Route  path="/" component={    <div><div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>
+      <div className="h-150">helo</div>/</div>} />
+       <Route  path="/Aboutus" component={<Aboutus />} />
+       <Route  path="*" component={ <div>pagenotfound</div>} />
 
+        {/* <Route path="/contact" component={Contact} />  */}
+        {/* <Route component={Notfound} /> */}
       </Routes>
+    
+
+      <Footer ></Footer>
     </div>
   );
 }
