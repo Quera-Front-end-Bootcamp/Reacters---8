@@ -1,4 +1,3 @@
-
 import Wall from "./components/Wall";
 
 function LoginPage() {
