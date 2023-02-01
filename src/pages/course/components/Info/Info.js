@@ -3,7 +3,7 @@ import ProgressBar from '../../../../components/ProgressBar';
 
 
 const Info = (props) => {
-    let data = {progress: 60}
+    let data = {progress: 60, width:100}
     return (
         <div className="w-1/2 md:w-1/4 h-3/4 flex mx-auto flex-col justify-center items-center my-auto">
           <img className="w-[223px] h-[246px]" src={course_logo} alt="course_logo"></img>
