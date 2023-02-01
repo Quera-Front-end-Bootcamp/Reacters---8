@@ -17,7 +17,7 @@ function App() {
         <Route path="/register" element={<ReigsterPage />} />
         <Route path="/account" element={<AccountPage />} />
         <Route path="/course" element={<Course />} />
-        <Route path="./courses" element={<Courses />}></Route>
+        <Route path="/courses" element={<Courses />} />
       </Routes>
     </div>
   );

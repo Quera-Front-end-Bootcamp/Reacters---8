@@ -1,3 +1,4 @@
+//courses page assets
 import jsLogo from "../assets/images/js.jpg"
 import htmlLogo from "../assets/images/html.png"
 import tailwindLogo from "../assets/images/tailwind.png"
@@ -26,6 +27,65 @@ import sassLogo from "../assets/images/sass.jpg"
 import webpackLogo from "../assets/images/webpack.jpg"
 import laravelLogo from "../assets/images/laravel.png"
 
+
+// course hero section assets
+import jsHero from '../assets/course/course-logo.png';
+import jsModal from '../assets/course/js-logo.png';
+const HTMLHero = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Fhtml-5_174854&psig=AOvVaw2Y_BeyuLAJLRVO_tmujlM9&ust=1675342527466000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOjQx7Ov9PwCFQAAAAAdAAAAABAJ";
+const cssHero = "https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-css-logo-png-transparent-svg-vector-bie-supply-9.png";
+const tailwindHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png";
+const PHPHero = "https://www.php.net/images/logos/new-php-logo.svg";
+const reactHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png";
+const SQLHero = "https://www.clipartmax.com/png/middle/243-2432711_azure-sql-database-icon.png";
+const bootstrapHero = "https://brandslogos.com/wp-content/uploads/thumbs/bootstrap-logo-vector.svg";
+const pythonHero = "https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png";
+const angularHero = "https://assets.stickpng.com/images/5847ea22cef1014c0b5e4833.png";
+const csharpHero = "https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png";
+const tsHero = "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg";
+const goHero = "https://w7.pngwing.com/pngs/3/219/png-transparent-go-programming-language-boilerplate-code-computer-programming-android-others-dog-like-mammal-snout-computer-programming.png";
+const goModal = "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png"
+const swiftHero = "https://w7.pngwing.com/pngs/657/714/png-transparent-swift-apple-programming-language-macos-apple-class-rectangle-orange.png";
+const rubyHero = "https://upload.wikimedia.org/wikipedia/commons/f/f1/Ruby_logo.png";
+const kotlinHero = "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png";
+const rustHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1024px-Rust_programming_language_black_logo.svg.png";
+const rustModal = "https://e7.pngegg.com/pngimages/114/914/png-clipart-rust-programming-language-logo-machine-learning-haskell-crab-animals-cartoon.png"
+const JavaHero = "https://brandslogos.com/wp-content/uploads/images/large/java-logo-1.png";
+const nextHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png";
+const nextModal = "https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png";
+const vueHero = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png";
+const nodeHero = "https://w7.pngwing.com/pngs/452/24/png-transparent-js-logo-node-logos-and-brands-icon.png";
+const viteHero = "https://vitejs.dev/logo-with-shadow.png";
+const reduxHero = "https://assets.stickpng.com/images/5848309bcef1014c0b5e4a9a.png";
+const jqueryHero = "https://w7.pngwing.com/pngs/1004/13/png-transparent-jquery-hd-logo.png";
+const sassHero = "https://cdn.freebiesupply.com/logos/large/2x/sass-1-logo-png-transparent.png";
+const webpackHero = "https://brandslogos.com/wp-content/uploads/images/large/webpack-icon-logo.png";
+const laravelHero = "https://cdn.freebiesupply.com/logos/large/2x/laravel-1-logo-png-transparent.png";
+
+
+const DESCRIPTION = "امروزه به دلیل آن که ارتباطات فضای مجازی رونق زیادی یافته است طراحی یک سایت به شکل مناسب و مورد پسند کاربران متفاوت اهمیت بالایی یافته است. به همین جهت صاحبان سرمایه و کار برای رونق کار خود به دنبال طراحان حرفه ای برای طراحی سایتی مناسب و کارآمد هستند. لذا یادگیری روش های مناسب و به روز طراحی سایت مورد توجه بسیاری از علاقه مندان و کارجویان قرار گرفته است. جاوا اسکریپت زبان برنامه نویسی مفسری در سمت کلاینت است که می توان بوسیله سایتی مناسب و کارآمد هستند. لذا یادگیری روش های مناسب و به روز طراحی سایت مورد توجه بسیاری از علاقه مندان و کارجویان قرار گرفته است. جاوا اسکریپت زبان برنامه نویسی مفسری در سمت کلاینت است که می توان بوسیله";
+
+const BENEFITS = [
+    {
+        id:"123",
+      title: "آشنایی با زبان برنامه نویسی جاوااسکریپت",
+      context:
+        "در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود"
+    },
+    {
+        id:"124",
+      title: "آشنایی با زبان برنامه نویسی جاوااسکریپت",
+      context:
+        "در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود"
+    },
+    {
+        id:"321",
+      title: "آشنایی با زبان برنامه نویسی جاوااسکریپت",
+      context:
+        "در پایان این دوره ی آموزشی ، شما دانشجوی گرامی ، قادر به فهمی عمیق و مناسب نسبت به این زبان خواهید بود"
+    }
+  ]
+
+
 export const coursesData = [
     {
         imageSrc: nextLogo,
@@ -37,6 +97,14 @@ export const coursesData = [
         terminationDate: "2023/5/27",
         price: 2300000,
         progress: 75,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"bf047201-3369-4506-8425-bf9c3f8ec298",
+        heroSrc:nextHero,
+        modalSrc:nextModal,
     },
     {
         imageSrc: vuejsLogo,
@@ -48,6 +116,14 @@ export const coursesData = [
         terminationDate: "2023/5/27",
         price: 2150000,
         progress: 75,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"5e278376-ff08-48b7-a9a4-a5ede91c98e5",
+        heroSrc:vueHero,
+        modalSrc:vueHero,
     },
     {
         imageSrc: tsLogo,
@@ -59,6 +135,14 @@ export const coursesData = [
         terminationDate: "2023/5/27",
         price: 2200000,
         progress: 75,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"6e2069c9-06c4-42f7-ab47-3d81fba3df0a",
+        heroSrc:tsHero,
+        modalSrc:tsHero,
     },
     {
         imageSrc: rustLogo,
@@ -70,6 +154,14 @@ export const coursesData = [
         terminationDate: "2023/5/27",
         price: 1550000,
         progress: 75,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"817e3420-4087-4cf8-bbb0-e0df1abdbb18",
+        heroSrc:rustHero,
+        modalSrc:rustModal,
     },
     {
         imageSrc: cssLogo,
@@ -81,6 +173,14 @@ export const coursesData = [
         terminationDate: "2022/11/10",
         price: 299999,
         progress: 90,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"9d2a00a2-f974-4972-b048-8b5570e298b7",
+        heroSrc:cssHero,
+        modalSrc:cssHero,
     },
     {
         imageSrc: rubyLogo,
@@ -92,6 +192,14 @@ export const coursesData = [
         terminationDate: "2023/5/27",
         price: 1000000,
         progress: 75,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"f64435fc-7248-4051-9684-4f97598d597c",
+        heroSrc:rubyHero,
+        modalSrc:rubyHero,
     },
     {
         imageSrc: bootstrapLogo,
@@ -103,6 +211,14 @@ export const coursesData = [
         terminationDate: "2023/7/9",
         price: 399999,
         progress: 25,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"56745e7f-9636-442b-b187-884dec92422b",
+        heroSrc:bootstrapHero,
+        modalSrc:bootstrapHero,
     },
     {
         imageSrc: sqlLogo,
@@ -114,6 +230,14 @@ export const coursesData = [
         terminationDate: "2022/4/25",
         price: 1200000,
         progress: 100,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"1daec968-f0f9-4fa9-b542-b3e2f4e70b4e",
+        heroSrc:SQLHero,
+        modalSrc:SQLHero,
     },
     {
         imageSrc: pythonLogo,
@@ -125,6 +249,14 @@ export const coursesData = [
         terminationDate: "2021/1/25",
         price: 1500000,
         progress: 100,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"c8af881b-594c-4c09-8726-9208f92a6289",
+        heroSrc:pythonHero,
+        modalSrc:pythonLogo,
     },
     {
         imageSrc: csharpLogo,
@@ -136,6 +268,14 @@ export const coursesData = [
         terminationDate: "2021/4/20",
         price: 600000,
         progress: 40,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"9d5470a7-729f-48e7-9624-c779564dc9e1",
+        heroSrc:csharpHero,
+        modalSrc:csharpHero,
     },
     {
         imageSrc: angularLogo,
@@ -147,6 +287,14 @@ export const coursesData = [
         terminationDate: "2021/4/20",
         price: 1200000,
         progress: 25,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"3169c349-efe2-419a-9cd1-9d8141c8e0b8",
+        heroSrc:angularHero,
+        modalSrc:angularHero,
     },
     {
         imageSrc: htmlLogo,
@@ -158,6 +306,14 @@ export const coursesData = [
         terminationDate: "2022/3/20",
         price: 555000,
         progress: 35,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"cde9aa2a-071e-4271-a41e-e9ef84c6743d",
+        heroSrc:HTMLHero,
+        modalSrc:HTMLHero,
     },
     {
         imageSrc: tailwindLogo,
@@ -169,6 +325,14 @@ export const coursesData = [
         terminationDate: "2023/3/25",
         price: 325000,
         progress: 50,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"83013b70-f90e-40f6-9d32-4adb218a9736",
+        heroSrc:tailwindHero,
+        modalSrc:tailwindHero,
     },
     {
         imageSrc: goLogo,
@@ -180,6 +344,14 @@ export const coursesData = [
         terminationDate: "2022/3/20",
         price: 1500000,
         progress: 35,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"83b3b938-3180-4f41-b81f-230a8c942a03",
+        heroSrc:goHero,
+        modalSrc:goModal,
     },
     {
         imageSrc: swiftLogo,
@@ -191,6 +363,14 @@ export const coursesData = [
         terminationDate: "2023/3/25",
         price: 450000,
         progress: 50,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"2a95e9fc-500a-417c-8844-78b80f092ba6",
+        heroSrc:swiftHero,
+        modalSrc:swiftHero,
     },
     {
         imageSrc: phpLogo,
@@ -202,6 +382,14 @@ export const coursesData = [
         terminationDate: "2020/5/12",
         price: 2000000,
         progress: 100,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"1881ee84-612f-4409-aff6-109ee51694ce",
+        heroSrc:PHPHero,
+        modalSrc:PHPHero,
     },
     {
         imageSrc: kotlinLogo,
@@ -213,6 +401,14 @@ export const coursesData = [
         terminationDate: "2022/3/20",
         price: 525000,
         progress: 100,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"95e90187-e067-465e-909a-378d9d841b86",
+        heroSrc:kotlinHero,
+        modalSrc:kotlinHero,
     },
     {
         imageSrc: reactLogo,
@@ -224,6 +420,14 @@ export const coursesData = [
         terminationDate: "2021/5/4",
         price: 6500000,
         progress: 85,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"b87cb02c-93b0-4e34-9c62-5476a5fe48ef",
+        heroSrc:reactHero,
+        modalSrc:reactHero,
     },
     {
         imageSrc: javaLogo,
@@ -235,6 +439,14 @@ export const coursesData = [
         terminationDate: "2021/1/25",
         price: 450000,
         progress: 100,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"0bbc798d-5c5f-417a-b987-7a795f427c99",
+        heroSrc:JavaHero,
+        modalSrc:JavaHero,
     },
     {
         imageSrc: jsLogo,
@@ -246,6 +458,14 @@ export const coursesData = [
         terminationDate: "2023/5/27",
         price: 2000000,
         progress: 100,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"70ce3ded-c3fd-46e9-9f6b-89ff5ca1c894",
+        heroSrc:jsHero,
+        modalSrc:jsModal,
     },
     {
         imageSrc: nodeLogo,
@@ -257,6 +477,14 @@ export const coursesData = [
         terminationDate: "2022/3/20",
         price: 1455000,
         progress: 35,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"1d96c910-9255-4b8b-ad36-1812ad9bc326",
+        heroSrc:nodeHero,
+        modalSrc:nodeHero,
     },
     {
         imageSrc: viteLogo,
@@ -268,6 +496,14 @@ export const coursesData = [
         terminationDate: "2021/4/20",
         price: 650000,
         progress: 40,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"86bcac98-810c-4362-8b6b-9a178ca9716f",
+        heroSrc:viteHero,
+        modalSrc:viteHero,
     },
     {
         imageSrc: reduxLogo,
@@ -279,6 +515,14 @@ export const coursesData = [
         terminationDate: "2021/4/20",
         price: 500000,
         progress: 100,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"bb6a0f48-07db-46ea-ae21-6f3fd844fcde",
+        heroSrc:reduxHero,
+        modalSrc:reduxHero,
     },
     {
         imageSrc: jqueryLogo,
@@ -290,6 +534,14 @@ export const coursesData = [
         terminationDate: "2023/5/27",
         price: 230000,
         progress: 75,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"1e2f6114-b38c-4434-ad68-ae36ab089b3d",
+        heroSrc:jqueryHero,
+        modalSrc:jqueryHero,
     },
     {
         imageSrc: sassLogo,
@@ -301,6 +553,14 @@ export const coursesData = [
         terminationDate: "2022/3/20",
         price: 755000,
         progress: 35,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"7c9c5603-054b-41ac-96e8-32ee0dc26c15",
+        heroSrc:sassHero,
+        modalSrc:sassHero,
     },
     {
         imageSrc: webpackLogo,
@@ -312,6 +572,14 @@ export const coursesData = [
         terminationDate: "2023/3/25",
         price: 345000,
         progress: 50,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"c98ae21c-cbe7-4a42-9bdd-41e42967a270",
+        heroSrc:webpackHero,
+        modalSrc:webpackHero,
     },
     {
         imageSrc: laravelLogo,
@@ -323,60 +591,108 @@ export const coursesData = [
         terminationDate: "2020/5/12",
         price: 2000000,
         progress: 100,
+        students_count:20,
+        rating:3,
+        description:DESCRIPTION,
+        discount:20,
+        benefits:BENEFITS,
+        id:"a5ebfff7-d12e-4101-9750-451b7923a695",
+        heroSrc:laravelHero,
+        modalSrc:laravelHero,
     },
-    {
-        imageSrc: reactLogo,
-        alt: "reactCourse",
-        title: "React دوره",
-        tutor: "صدف رضایی",
-        capacity: "۲۵",
-        startDate: "2021/3/4",
-        terminationDate: "2021/5/4",
-        price: 65000,
-        progress: 100,
-    },
-    {
-        imageSrc: cssLogo,
-        alt: "cssCourse",
-        title: "CSS دوره",
-        tutor: "علی زمانی",
-        capacity: "۶۰",
-        startDate: "2022/10/10",
-        terminationDate: "2022/11/10",
-        price: 299999,
-        progress: 90,
-    },
-    {
-        imageSrc: bootstrapLogo,
-        alt: "sassCourse",
-        title: "Bootstrap دوره",
-        tutor: "سارا اصفهانی",
-        capacity: "۵۰",
-        startDate: "2022/3/9",
-        terminationDate: "2023/7/9",
-        price: 399999,
-        progress: 100,
-    },
-    {
-        imageSrc: nextLogo,
-        alt: "nextCourse",
-        title: "NEXTjs دوره",
-        tutor: "میلاد عباسی",
-        capacity: "۴۰",
-        startDate: "2022/3/20",
-        terminationDate: "2022/4/25",
-        price: 1200000,
-        progress: 100,
-    },
-    {
-        imageSrc: jsLogo,
-        alt: "jsCourse",
-        title: "Javascript دوره",
-        tutor: "علی زمانی",
-        capacity: "۶۰",
-        startDate: "2020/8/20",
-        terminationDate: "2021/1/25",
-        price: 160000,
-        progress: 100,
-    },
+    // {
+    //     imageSrc: reactLogo,
+    //     alt: "reactCourse",
+    //     title: "React دوره",
+    //     tutor: "صدف رضایی",
+    //     capacity: "۲۵",
+    //     startDate: "2021/3/4",
+    //     terminationDate: "2021/5/4",
+    //     price: 65000,
+    //     progress: 100,
+    //     students_count:20,
+    //     rating:3,
+    //     description:DESCRIPTION,
+    //     discount:20,
+    //     benefits:BENEFITS,
+    //     id:"d09adade-a58a-48c8-b14e-c9147621bd92",
+    //     heroSrc:"",
+    //     modalSrc:"",
+    // },
+    // {
+    //     imageSrc: cssLogo,
+    //     alt: "cssCourse",
+    //     title: "CSS دوره",
+    //     tutor: "علی زمانی",
+    //     capacity: "۶۰",
+    //     startDate: "2022/10/10",
+    //     terminationDate: "2022/11/10",
+    //     price: 299999,
+    //     progress: 90,
+    //     students_count:20,
+    //     rating:3,
+    //     description:DESCRIPTION,
+    //     discount:20,
+    //     benefits:BENEFITS,
+    //     id:"328fee41-ecc0-4dab-88a4-5b48888b61ae",
+    //     heroSrc:"",
+    //     modalSrc:"",
+    // },
+    // {
+    //     imageSrc: bootstrapLogo,
+    //     alt: "sassCourse",
+    //     title: "Bootstrap دوره",
+    //     tutor: "سارا اصفهانی",
+    //     capacity: "۵۰",
+    //     startDate: "2022/3/9",
+    //     terminationDate: "2023/7/9",
+    //     price: 399999,
+    //     progress: 100,
+    //     students_count:20,
+    //     rating:3,
+    //     description:DESCRIPTION,
+    //     discount:20,
+    //     benefits:BENEFITS,
+    //     id:"ca6f91d6-323d-4acb-baa5-7daecf65554b",
+    //     heroSrc:"",
+    //     modalSrc:"",
+    // },
+    // {
+    //     imageSrc: nextLogo,
+    //     alt: "nextCourse",
+    //     title: "NEXTjs دوره",
+    //     tutor: "میلاد عباسی",
+    //     capacity: "۴۰",
+    //     startDate: "2022/3/20",
+    //     terminationDate: "2022/4/25",
+    //     price: 1200000,
+    //     progress: 100,
+    //     students_count:20,
+    //     rating:3,
+    //     description:DESCRIPTION,
+    //     discount:20,
+    //     benefits:BENEFITS,
+    //     id:"bbf53cfa-a5f7-4142-9a56-7258fb1b2513",
+    //     heroSrc:"",
+    //     modalSrc:"",
+    // },
+    // {
+    //     imageSrc: jsLogo,
+    //     alt: "jsCourse",
+    //     title: "Javascript دوره",
+    //     tutor: "علی زمانی",
+    //     capacity: "۶۰",
+    //     startDate: "2020/8/20",
+    //     terminationDate: "2021/1/25",
+    //     price: 160000,
+    //     progress: 100,
+    //     students_count:20,
+    //     rating:3,
+    //     description:DESCRIPTION,
+    //     discount:20,
+    //     benefits:BENEFITS,
+    //     id:"8472aeb2-1a72-416c-a68a-39e62f139fab",
+    //     heroSrc:"",
+    //     modalSrc:"",
+    // },
 ]
