@@ -1,22 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import classes from "./course.module.css";
-
-import store from './store.json';
-
+import BlackBox from './components/BlackBox';
+import BenefitItem from "./components/BenefitItem";
+import Description from "./components/Description";
+import PriceModal from "./components/PriceModal";
+import Info from "./components/Info";
+import Rating from "./components/Rating";
 import teacher_logo from "../../assets/icons/teacher.png";
 import pair_programming from '../../assets/images/pair.png';
-
-
 import { coursesData } from "../../core/courseConstants";
-
-import BlackBox from './components/BlackBox/BlackBox';
-import BenefitItem from "./components/BenefitItem/BenefitItem";
-import Description from "./components/Description/Description";
-import PriceModal from "./components/PriceModal/PriceModal";
-import Info from './components/Info/Info';
-import Rating from "./components/Rating/Rating";
-
+import classes from "./course.module.css";
 
 const Course = () => {
 
@@ -35,8 +28,8 @@ const Course = () => {
             <Rating rate={data.rating} />
           </BlackBox>
           <BlackBox middle={true} d={"M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"}>
-            <p>تاریخ شروع:{data.startDate}</p>
-            <p>تاریخ پایان:{data.terminationDate}</p>
+            <p>تاریخ شروع : {new Date(data.startDate).toLocaleDateString('Fa-IR')}</p>
+            <p>تاریخ پایان : {new Date(data.terminationDate).toLocaleDateString('Fa-IR')}</p>
           </BlackBox>
           <BlackBox>
             <img src={teacher_logo} alt="teacher_logo"></img>
