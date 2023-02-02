@@ -4,7 +4,7 @@ import Contactus from "./ContactUs"
 import BeWith from "./BeWith";
 import ENamad from "./ENamad";
 import Aboutus from "./AboutUs";
-import Newssub from "./NewsLetter";
+// import Newssub from "./NewsLetter";
 import NewsLetter from "./NewsLetter";
 
 // {/* z-20  shadow  p-4  md:p-6"> */}
@@ -37,8 +37,8 @@ const Footer = () => {
         </div> */}
       <div className="w-full grid grid-cols-1 px-16 bg-greencolor-100">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-40 px-0 py-8">
-          <NewsLetter></NewsLetter>
-          <Aboutus></Aboutus>
+          <NewsLetter />
+          <Aboutus />
         </div>
         <hr className="h-0.5 bg-[#547D89] border-none "></hr>
         <div className=" grid grid-cols-1 sm:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center">
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <Copyright></Copyright>
+      <Copyright />
     </footer>
   )
 };

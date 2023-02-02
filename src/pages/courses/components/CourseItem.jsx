@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"
 import CourseModal from "./CourseModal";
 import "../style/style.css"
 
@@ -18,7 +19,10 @@ const CourseItem = ({ data }) => {
           <div className="group relative">
             <img className="w-64 h-48 object-cover border border-gray-300 rounded-md" src={data.imageSrc} alt={data.alt}></img>
             <div className="flex items-center justify-center absolute w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md -z-10 group-hover:z-50 group-hover:bg-gray-400 group-hover:opacity-90">
-              <button className="border font-semibold border-gray-400 rounded-md p-3 bg-white hover:bg-[#066649] hover:text-white">مشاهده دوره</button>
+              <Link to={`/course/${data.id}`}
+                className="border font-semibold border-gray-400 rounded-md p-3 bg-white hover:bg-[#066649] hover:text-white">
+                مشاهده دوره
+              </Link>
             </div>
           </div>
           {/* cardDetails */}
