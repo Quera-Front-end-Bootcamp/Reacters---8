@@ -13,10 +13,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/login" element={<Wrapper flag={false} element={<LoginPage />} />} />
-        <Route path="/register" element={<Wrapper flag={false} element={<ReigsterPage />} />}  />
-        <Route path="/account" element={<Wrapper flag={true} element={<AccountPage />} />} />  
-        <Route path="/course/:id" element={<Wrapper flag={true} element={<Course />} />}  />
-        <Route path="/courses" element={<Wrapper flag={true} element={<Courses />} />}  />
+        <Route path="/register" element={<Wrapper flag={false} element={<ReigsterPage />} />} />
+        <Route path="/account" element={<Wrapper flag={true} element={<AccountPage />} />} />
+        <Route path="/course/:id" element={<Wrapper flag={true} element={<Course />} />} />
+        <Route path="/courses" element={<Wrapper flag={true} className="coursesPage" element={<Courses />} />} />
       </Routes>
     </div >
   );

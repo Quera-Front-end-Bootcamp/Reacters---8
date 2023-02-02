@@ -4,14 +4,11 @@ import Contactus from "./ContactUs"
 import BeWith from "./BeWith";
 import ENamad from "./ENamad";
 import Aboutus from "./AboutUs";
-// import Newssub from "./NewsLetter";
 import NewsLetter from "./NewsLetter";
-
-// {/* z-20  shadow  p-4  md:p-6"> */}
 
 const Footer = () => {
   return (
-    <footer className=" bottom-0 left-0 w-full  text-textcolor-100 text-right">
+    <footer className="bottom-0 left-0 w-full text-textcolor-100 text-right">
       {/* <div className="md:flex md:justify-between md:item-center sm:px-12 px-4 bg-[ffffff19] py-7">       
         <h1
           className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold
@@ -35,13 +32,13 @@ const Footer = () => {
         </button>
         </div>
         </div> */}
-      <div className="w-full grid grid-cols-1 px-16 bg-greencolor-100">
+      <div className="w-full grid grid-cols-1 px-16 bg-[#0d5a5f]">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-40 px-0 py-8">
           <NewsLetter />
           <Aboutus />
         </div>
         <hr className="h-0.5 bg-[#547D89] border-none "></hr>
-        <div className=" grid grid-cols-1 sm:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center">
+        <div className="grid grid-cols-1 sm:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center">
           <ENamad />
           <BeWith />
           <Contactus />
