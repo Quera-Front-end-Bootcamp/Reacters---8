@@ -1,6 +1,6 @@
-import learn from '../../../../assets/icons/learn.png';
-import online_learning from '../../../../assets/icons/online-learning.png';
-import success from '../../../../assets/icons/success.png';
+import learn from '../../../assets/icons/learn.png';
+import online_learning from '../../../assets/icons/online-learning.png';
+import success from '../../../assets/icons/success.png';
 
 const BenefitItem = (props) => {
     let img;

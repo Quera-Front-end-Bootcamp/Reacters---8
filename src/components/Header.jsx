@@ -3,10 +3,9 @@ import bamboo from '../assets/icons/bamboo (d2).png';
 
 export const Header = () => {
     return (
-        <header className="w-11/12 m-auto top-0 text-textcolor-900 bg-transparent border-hidden shadow-none">
+        <header className="w-11/12 m-auto top-0 text-gray-200 font-semibold bg-transparent border-hidden shadow-none">
             <nav>
                 <div className="flex justify-between flex-row-reverse  mx-auto Item-center">
-
                     <div className="flex flex-row-reverse items-center justify-between py-auto">
                         <NavLink className="flex flex-row-reverse items-center justify-between py-auto  gap-2" to="/">
                             <img src={bamboo} className="text-white py-auto h-6" alt="bambo logo" />
@@ -14,7 +13,7 @@ export const Header = () => {
                         </NavLink>
                     </div>
 
-                    <div className="items-center justify-between flex flex-row-reverse gap-6 ">
+                    <div className="items-center justify-between flex flex-row-reverse gap-6">
                         <NavLink className="px-4 py-2 hover:bg-transparent/30 dir-rtl" to="/courses">
                             دوره ها
                         </NavLink>

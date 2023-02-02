@@ -1,5 +1,5 @@
 import React from "react";
-import { Icons, BEWITH, MAILS } from "./Links";
+// import { Icons, BEWITH, MAILS } from "./Links";
 
 const Item = ({ Links, title }) => {
   return (

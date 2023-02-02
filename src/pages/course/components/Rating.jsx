@@ -1,4 +1,4 @@
-import star from '../../../../assets/icons/star.png';
+import star from '../../../assets/icons/star.png';
 
 const Rating = (props) => {
     const rating = [];

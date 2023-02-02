@@ -3,8 +3,6 @@ import { coursesData } from "../../core/courseConstants";
 import FilterCourses from "./components/FilterCourses";
 import CoursesList from "./components/CoursesList";
 import CoursePagination from "./components/CoursesPagination";
-// import Header from "../../components/Header"
-import Footer from "../../components/Footer/Footer"
 
 const Courses = () => {
   // Setting the initial state of filteredCourses to all the courses
@@ -23,7 +21,7 @@ const Courses = () => {
   const nPages = Math.ceil(filteredCourses.length / itemsPerPage)
 
   return (
-    <div className="bg-gray-200 pt-24">
+    <div className="bg-gray-200 pt-44">
       <div>
         <FilterCourses setFilteredCourses={setFilteredCourses} />
       </div>
