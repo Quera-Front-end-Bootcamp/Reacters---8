@@ -4,8 +4,8 @@ import classes from "./course.module.css";
 
 import store from './store.json';
 
-import teacher_logo from "../../assets/course/teacher.png";
-import pair_programming from '../../assets/course/pair.png';
+import teacher_logo from "../../assets/icons/teacher.png";
+import pair_programming from '../../assets/images/pair.png';
 
 
 import { coursesData } from "../../core/courseConstants";
