@@ -30,13 +30,12 @@ const Courses = () => {
       <div className="flex justify-center mx-12 pb-16 pt-16">
         <CoursesList coursesData={currentItems} />
       </div>
-      <div className="flex justify-center mt-2 mb-28">
+      <div className="flex justify-center mt-2 pb-28">
         <CoursePagination
           nPages={nPages}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage} />
       </div>
-      <Footer />
     </div>
   );
 };
