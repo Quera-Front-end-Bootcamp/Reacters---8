@@ -19,7 +19,7 @@ export const Header = () => {
                     </div>
 
                     <div className="items-center justify-between flex flex-row-reverse gap-6 ">
-                        <NavLink className="px-4 py-2  hover:bg-transparent/30 dir-rtl" to="./courses">
+                        <NavLink className="px-4 py-2  hover:bg-transparent/30 dir-rtl" to="/courses">
                             دوره ها
                         </NavLink>
                         <NavLink className="px-4 py-2   hover:bg-transparent/30 dir-rtl" to="/Aboutus">

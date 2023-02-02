@@ -31,6 +31,7 @@ const Course = () => {
   return (
     <>
 
+    
       {/* hero section */}
       <div className={` ${classes.hero} min-h-screen relative flex flex-col justify-between `}>
         <Info info = {data}/>
@@ -69,6 +70,7 @@ const Course = () => {
           </div>
           <img className="w-[350px] h-[500px] hidden md:block" src={pair_programming} alt='pair programming'></img>
         </div>
+
     </>
   );
 };
