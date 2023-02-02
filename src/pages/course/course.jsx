@@ -14,15 +14,9 @@ import BlackBox from './components/BlackBox/BlackBox';
 import BenefitItem from "./components/BenefitItem/BenefitItem";
 import Description from "./components/Description/Description";
 import PriceModal from "./components/PriceModal/PriceModal";
-import Info from "./components/Info/Info";
+import Info from './components/Info/Info';
 import Rating from "./components/Rating/Rating";
-// import Header from "../../components/Header"
-import Footer from "../../components/Footer/Footer"
-import teacher_logo from "../../assets/icons/teacher.png";
-import pair_programming from '../../assets/images/pair.png';
-import { coursesData } from "../../core/courseConstants";
-// import store from './store.json';
-import classes from "./course.module.css";
+
 
 const Course = () => {
 
@@ -69,8 +63,6 @@ const Course = () => {
         </div>
         <img className="w-[350px] h-[500px] hidden md:block" src={pair_programming} alt='pair programming'></img>
       </div>
-
-      <Footer />
     </>
   );
 };

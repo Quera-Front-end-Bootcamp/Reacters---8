@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import bamboo from '../../assets/icons/bamboo (d2).png';
+import bamboo from '../assets/icons/bamboo (d2).png';
 
 export const Header = () => {
     return (
