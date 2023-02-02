@@ -9,7 +9,7 @@ const Info = ({ info }) => {
       </div>
       <div className="w-full text-white flex flex-col items-center md:flex-row justify-between font-bold text-xl">
         <p>ظرفیت : {info.capacity} نفر</p>
-        <p>دانشجو : {info.student_count} نفر</p>
+        <p>دانشجو : {info.students_count} نفر</p>
       </div>
       <div className="w-full h-7 mt-6 flex justify-center rounded-md overflow-hidden opacity-90 ">
         <ProgressBar data={info} />

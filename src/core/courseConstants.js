@@ -173,7 +173,7 @@ export const coursesData = [
         terminationDate: "2022/11/10",
         price: 299999,
         progress: 90,
-        students_count: 20,
+        students_count: 30,
         rating: 3,
         description: DESCRIPTION,
         discount: 20,

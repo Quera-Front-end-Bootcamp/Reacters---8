@@ -13,7 +13,7 @@ const PriceModal = ({ priceInfo }) => {
   return (
     <div className="h-[350px] w-1/2 md:min-w bg-slate-100 absolute top-[12%] md:top-[15%] left-[25%] border-2">
       <header className="w-full h-1/4 flex flex-row justify-end items-center gap-2 border-b-2 border-black pr-2">
-        <p dir="rtl">{priceInfo.title}</p>
+        <p >{priceInfo.title}</p>
         <img className="h-12 w-12" src={priceInfo.modalSrc} alt='js-logo'></img>
       </header>
       <div className="flex h-3/4 flex-col justify-end flex-wrap">
