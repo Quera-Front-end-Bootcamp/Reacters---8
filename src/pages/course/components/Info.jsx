@@ -2,7 +2,7 @@ import ProgressBar from '../../../components/ProgressBar';
 
 const Info = ({ info }) => {
   return (
-    <div className="w-1/2 md:w-1/4 h-3/4 flex mx-auto flex-col justify-center items-center mt-16 mb-8">
+    <div className="w-1/2 md:w-1/4 h-3/4 flex mx-auto flex-col justify-center items-center mt-32 mb-8">
       <img className="w-[223px] h-[246px]" src={info.heroSrc} alt="course_logo"></img>
       <div className="w-full text-white font-bold text-3xl text-center border-b-2 border-gray-500 py-4">
         {info.title}
