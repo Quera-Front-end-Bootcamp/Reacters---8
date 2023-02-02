@@ -236,8 +236,8 @@ export const coursesData = [
         discount: 20,
         benefits: BENEFITS,
         id: "1daec968-f0f9-4fa9-b542-b3e2f4e70b4e",
-        heroSrc: SQLHero,
-        modalSrc: SQLHero,
+        heroSrc: MySQLHero,
+        modalSrc: MySQLHero,
     },
     {
         imageSrc: pythonLogo,
