@@ -6,7 +6,7 @@ const NewsLetter = () => {
                 <input placeholder="...ایمیل خود را وارد کنید" type="email"
                     className="rounded-tr-md rounded-br-md text-base placeholder:text-textcolor-300 placeholder:text-right
                     py-4 px-4 md:px-6 lg:py-6 lg:px-8  mb-4 md:mb-0 text-right w-full
-                    bg-greencolor-500  focus:bg-opacity-60 duration-150  outline-none"
+                    bg-[#044733]  focus:bg-opacity-60 duration-150  outline-none"
                 />
                 <input type="submit" value="عضویت"
                     className="rounded-tl-md rounded-bl-md bg-primary text-lg py-4 px-6 md:px-10 lg:py-6 lg:px-12 

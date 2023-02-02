@@ -1,3 +1,5 @@
+import {TbBrandTelegram} from 'react-icons/tb';
+
 export const MAILS = [
     // { name: "iwillbemyvision@gmail.com", link: "#" },
     // { name: "amir.azhkan@yahoo.com", link: "#" },
@@ -10,7 +12,7 @@ export const MAILS = [
     { name: "خدمات", link: "#" },
   ];
   export const Icons = [
-    { name: "logo-telegram", link: "#" },
+    { name: "logo-telegram", link: {TbBrandTelegram} },
     { name: "logo-whatsapp", link: "#" },
     { name: "logo-youtube", link: "#" },
     { name: "logo-instagram", link: "#" },
