@@ -3,6 +3,8 @@ import { coursesData } from "../../core/courseConstants";
 import FilterCourses from "./components/FilterCourses";
 import CoursesList from "./components/CoursesList";
 import CoursePagination from "./components/CoursesPagination";
+// import Header from "../../components/Header"
+import Footer from "../../components/Footer/Footer"
 
 const Courses = () => {
   // Setting the initial state of filteredCourses to all the courses
@@ -21,19 +23,20 @@ const Courses = () => {
   const nPages = Math.ceil(filteredCourses.length / itemsPerPage)
 
   return (
-    <div className="bg-gray-200 py-24">
+    <div className="bg-gray-200 pt-24">
       <div>
         <FilterCourses setFilteredCourses={setFilteredCourses} />
       </div>
       <div className="flex justify-center mx-12 pb-16 pt-16">
         <CoursesList coursesData={currentItems} />
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-2 mb-28">
         <CoursePagination
           nPages={nPages}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage} />
       </div>
+      <Footer />
     </div>
   );
 };

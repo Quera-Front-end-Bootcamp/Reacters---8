@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"
 import ReactModal from "react-modal"
 import ProgressBar from "../../../components/ProgressBar"
 import "../style/style.css"
@@ -67,9 +68,10 @@ const CourseModal = ({ data, isOpen, handleClose }) => {
                             <p>پایان : {new Date(data.terminationDate).toLocaleDateString('Fa-IR')}</p>
                             <p>هزینه دوره : {data.price.toLocaleString("fa")} تومان </p>
                             <div className='flex justify-center w-full mt-9'>
-                                <button className='border border-[#d9d9d9] flex justify-center items-center w-full rounded-md py-2 px-16 text-[#515151] transition-all ease-in font-medium hover:border-[#066649] hover:text-[#066649] hover:cursor-pointer'>
+                                <Link to={`/course/${data.id}`}
+                                    className='border border-[#d9d9d9] flex justify-center items-center w-full rounded-md py-2 px-16 text-[#515151] transition-all ease-in font-medium hover:border-[#066649] hover:text-[#066649] hover:cursor-pointer'>
                                     مشاهده کامل
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

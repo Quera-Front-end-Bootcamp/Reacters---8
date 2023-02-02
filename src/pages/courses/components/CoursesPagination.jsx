@@ -16,7 +16,7 @@ const CoursePagination = ({ nPages, currentPage, setCurrentPage }) => {
 
     return (
         <>
-            <div className="pagination flex flex-wrap items-center justify-center gap-3 mb-8">
+            <div className="pagination flex flex-wrap items-center justify-center gap-3">
                 <button>
                     <img onClick={prevPage} src={backButton} className="h-9 w-9 p-1 border border-gray-400 rounded-3xl flex items-center justify-center bg-[#066649] hover:bg-[#033324]" alt="backButton"></img>
                 </button>
