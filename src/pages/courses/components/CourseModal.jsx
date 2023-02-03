@@ -8,10 +8,6 @@ const CourseModal = ({ data, isOpen, handleClose }) => {
 
     const [isBookmarked, setIsBookmarked] = useState(false)
 
-    const handleToggleBookmark = () => {
-        setIsBookmarked(true)
-    }
-
     return (
         <div>
             <ReactModal
@@ -20,7 +16,7 @@ const CourseModal = ({ data, isOpen, handleClose }) => {
                 ariaHideApp={false}
                 contentLabel="Course Modal"
                 shouldCloseOnOverlayClick={true}
-                className={"flex justify-center items-center outline-none w-3/5 h-full"}
+                className={"flex justify-center items-center outline-none w-3/5 h-[calc(100vh-5rem)]"}
                 overlayClassName={"overlayClassName h-screen w-full top-0 left-0 fixed flex justify-center items-center"}
             >
                 <div className="modalContent relative bg-white w-full md:overflow-visible overflow-y-scroll h-4/5 md:h-fit">
@@ -37,8 +33,8 @@ const CourseModal = ({ data, isOpen, handleClose }) => {
                     </button>
                     {/* modalNavbar */}
                     <nav className='w-full flex justify-between text-[#727272] p-5 text-sm border border-b-[#efefef]'>
-                        <svg onClick={handleToggleBookmark}
-                            className={`${isBookmarked ? "fill-[#0b656b]" : "fill-none"} w-6 h-6`}
+                        <svg onClick={() => setIsBookmarked(!isBookmarked)}
+                            className={`${isBookmarked ? "fill-[#0b656b]" : "fill-white"} w-6 h-6`}
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5"
@@ -69,7 +65,7 @@ const CourseModal = ({ data, isOpen, handleClose }) => {
                             <p>هزینه دوره : {data.price.toLocaleString("fa")} تومان </p>
                             <div className='flex justify-center w-full mt-9'>
                                 <Link to={`/course/${data.id}`}
-                                    className='border border-[#d9d9d9] flex justify-center items-center w-full rounded-md py-2 px-16 text-[#515151] transition-all ease-in font-medium hover:border-[#066649] hover:text-[#066649] hover:cursor-pointer'>
+                                    className='border border-[#d9d9d9] flex justify-center items-center text-center w-full rounded-md py-2 px-16 text-[#515151] transition-all ease-in font-medium hover:border-[#066649] hover:text-[#066649] hover:cursor-pointer'>
                                     مشاهده کامل
                                 </Link>
                             </div>
