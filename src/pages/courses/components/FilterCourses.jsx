@@ -62,13 +62,9 @@ const FilterCourses = ({ setFilteredCourses }) => {
                         </div>
                         <div onClick={handleSortByProgress} className={`${activeFilter === "sortByProgress" ? "bg-[#0d5a5f] text-white" : "bg-gray-100 text-[#0d5a5f]"} flex justify-evenly items-center text-center gap-2 w-fit border border-gray-100 py-2 px-2.5 rounded-md cursor-pointer hover:text-white hover:bg-[#0d5a5f]`}>
                             <p>تکمیل نشده ها</p>
-                            {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5h6.75V15H4.5v-4.5zM3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z" />
-                            </svg> */}
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
                             </svg>
-
                         </div>
                     </div>
                 </div>
