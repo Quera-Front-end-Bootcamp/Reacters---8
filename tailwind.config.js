@@ -8,6 +8,8 @@ module.exports = {
         'sec2': '#088568',
         'sec3': '#0cdbab',
         'sec4': '#00775b', 
+        'textcolor':{100 :'#DBDBDB',500:'#aa2299',600:'#415D65', 900:'#ffffff'},
+        'greencolor':{100:'#004458',200:'#09B28B', 500:'#003544',800:'#002C38'},
       }
   
       ,rotate: {
@@ -28,8 +30,7 @@ module.exports = {
     },
       // transparent: 'transparent',
       // current: 'currentColor',
-      'textcolor':{100 :'#DBDBDB',500:'#aa2299',600:'#415D65', 900:'#ffffff'},
-      'greencolor':{100:'#004458',200:'#09B28B', 500:'#003544',800:'#002C38'},
+
     },
     gridTemplateColumns:
     {
