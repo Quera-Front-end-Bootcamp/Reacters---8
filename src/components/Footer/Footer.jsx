@@ -38,6 +38,7 @@ const Footer = () => {
           <NewsLetter />
           <Aboutus />
         </div>
+        {/* </div> */}
         <hr className="h-0.5 bg-[#547D89] border-none "></hr>
         
         {/* <div className="grid grid-cols-1 md:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center">
@@ -54,6 +55,7 @@ const Footer = () => {
           <Contactus className="w-1/2"/>
           </div>
         </div>
+      {/* </div> */}
       </div>
 
       <Copyright />
