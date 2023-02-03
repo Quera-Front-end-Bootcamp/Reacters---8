@@ -14,7 +14,7 @@ export default function Header() {
                     </div>
 
                     <button
-                        className="px-6 py-3 lg:px-16 lg:py-6 bg-white bg-opacity-60 text-sec1 font-bold text-sm  absolute z-20 mb-11 md:mb-0 ">مشاوره</button>
+                        className="px-6 py-3 lg:px-16 lg:py-6  bg-[#0d5a5f] hover:bg-[#093d41] bg-opacity-60 text-sec1 font-bold text-sm  absolute z-20 mb-11 md:mb-0 ">مشاوره</button>
                 </div>
 
                 <div className="flex md:w-3/5 mb-9 md:mb-0">
