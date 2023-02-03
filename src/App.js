@@ -5,13 +5,16 @@ import Course from './pages/course/course';
 import LoginPage from "./pages/account/Login";
 import ReigsterPage from "./pages/account/Register";
 import AccountPage from "./pages/account/Index";
+import Homepage from "./pages/homepage/homepage";
 import Wrapper from './components/Wrapper';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path="/" element={<Wrapper flag={true} element={<Homepage />} />} />
         <Route path="/login" element={<Wrapper flag={false} element={<LoginPage />} />} />
         <Route path="/register" element={<Wrapper flag={false} element={<ReigsterPage />} />} />
         <Route path="/account" element={<Wrapper flag={true} element={<AccountPage />} />} />
