@@ -7,7 +7,7 @@ const Info = ({ info }) => {
       <div className="w-full text-white font-bold text-3xl text-center border-b-2 border-gray-500 py-4">
         {info.title}
       </div>
-      <div className="w-full text-white flex flex-col items-center md:flex-row justify-between font-bold text-xl">
+      <div className="w-full text-white flex flex-col items-center sm:flex-row justify-between font-bold text-xl">
         <p>ظرفیت : {info.capacity} نفر</p>
         <p>دانشجو : {info.students_count.toLocaleString("fa")} نفر</p>
       </div>

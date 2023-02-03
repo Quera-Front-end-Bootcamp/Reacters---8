@@ -15,7 +15,7 @@ const Course = () => {
 
   const { id } = useParams();
   const data = coursesData.find(item => item.id === id);
-  document.title = data.title;
+  // document.title = data.title;
 
   return (
     <>
