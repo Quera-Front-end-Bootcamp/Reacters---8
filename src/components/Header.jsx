@@ -33,7 +33,7 @@ export const Header = () => {
                 </div>
 
                 <div className="flex flex-col basis-3/6 items-center justify-between md:flex-row-reverse md:gap-4 my:2 gap-4 ld:gap-6 font-semibold text-gray-200">
-                    <NavLink className="px-4 py-2 text-center transition-all ease-in hover:w-3/5 md:hover:w-1/4 hover:bg-transparent/30 dir-rtl" to="/courses">
+                    <NavLink className="px-4 py-2 text-center transition-all ease-in hover:w-3/5 md:hover:w-1/4 hover:bg-transparent/30  dir-rtl" to="/courses">
                         دوره ها
                     </NavLink>
                     <NavLink className="px-4 py-2 text-center transition-all ease-in hover:w-3/5 md:hover:w-1/4 hover:bg-transparent/30 dir-rtl" to="/">

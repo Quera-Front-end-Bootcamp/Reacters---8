@@ -12,7 +12,7 @@ function Homepage() {
 	return (
 		<div>
 			<Header />
-			<main>
+			<main dir="rtl">
 				<section className="sec1-homepage flex items-end gap-2 h-screen">
 					<CardNumber
 						head="576 دانشجو"
@@ -72,7 +72,7 @@ function Homepage() {
 						</div>
 						<a
 							href="/courses"
-							className="text-slate-50 bg-green-800 py-4 px-8 -m-6"
+							className="text-slate-50 bg-[#0d5a5f] hover:bg-[#093d41] py-4 px-8 -m-6"
 						>
 							مشاهده دوره ها
 						</a>
