@@ -40,10 +40,10 @@ const Footer = () => {
         </div>
         <hr className="h-0.5 bg-[#547D89] border-none "></hr>
         
-        <div className="grid grid-cols-1 md:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center">
+        {/* <div className="grid grid-cols-1 md:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center">
           <ENamad />
           <BeWith />
-          <Contactus />
+          <Contactus /> */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center"> */}
           <div className="flex justify-between items-center flex-col md:flex-row  gap-6 lg:gap-6 md:gap-5 px-0 ">
           <div className="w-full md:w-5/12 py-8">
