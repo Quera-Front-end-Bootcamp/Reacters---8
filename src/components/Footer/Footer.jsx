@@ -38,18 +38,20 @@ const Footer = () => {
           <NewsLetter />
           <Aboutus />
         </div>
+        {/* </div> */}
         <hr className="h-0.5 bg-[#547D89] border-none "></hr>
-        
-        <div className="grid grid-cols-1 md:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center">
+
+        {/* <div className="grid grid-cols-1 md:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center">
           <ENamad />
           <BeWith />
+          <Contactus /> */}
+        {/* <div className="grid grid-cols-1 sm:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center">  */}
+          <div className="flex justify-between items-center flex-col md:flex-row gap-10 px-0 py-8">
+          <ENamad/>
+          <BeWith/>
           <Contactus />
-        {/* <div className="grid grid-cols-1 sm:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center"> */}
-          {/* <div className="flex justify-between flex-col md:flex-row gap10 px-0 py-8">
-          <ENamad className="shrink"/>
-          <BeWith className="shrink-0"/>
-          <Contactus className="shrink-0"/> */}
         </div>
+      {/* </div> */}
       </div>
 
       <Copyright />

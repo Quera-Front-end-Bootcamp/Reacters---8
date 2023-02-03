@@ -5,7 +5,7 @@ import sabt from "../../assets/images/sabt.png";
 
 const ENamad = () => {
   return (
-    <div className="h-32 flex flex-row gap-6 items-center text-right py-4">
+    <div className="min-h-32 flex flex-col sm:flex-row gap-6 items-center text-right py-4">
       <div className="h-32 w-[90px] flex-shrink-0">
           {/* <a target="_blank" href="https://trustseal.enamad.ir/?id=30599&amp;Code=uGobIf7GE1XUArlbdKa3"> */}
               <img src={etemad} alt="نماد اعتماد الکترونیک"  
