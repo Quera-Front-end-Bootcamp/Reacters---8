@@ -40,8 +40,7 @@ const Course = () => {
       </div>
       {/* end of hero section */}
 
-      <div className="bg-slate-100 flex flex-col-reverse sm:flex-row flex-wrap">
-        {/* <div className="h-1/2 md:h-full bg-red-600"> */}
+      <div className="bg-slate-100 flex flex-col-reverse sm:flex-row flex-wrap pb-6">
         <div className="h-[calc(50vh+200px)] relative w-full sm:w-1/2">
           <div className="w-1/2 h-3/4 border-b-2 border-r-2 border-slate-400 absolute top-0 left-0"></div>
           <PriceModal priceInfo={data} />
@@ -49,9 +48,9 @@ const Course = () => {
         <Description className="min-h-[50vh] md:h-full w-full sm:w-1/2" description={data.description} />
       </div>
 
-      <div className=" bg-slate-200 flex flex-col-reverse md:flex-row justify-end items-end md:items-stretch">
+      <div className=" bg-slate-200 flex flex-col-reverse p-5 md:flex-row justify-end items-end md:items-stretch">
         <div className="flex flex-col justify-evenly items-end">
-          <h1 dir="rtl" className={`${classes.desc} font-bold text-3xl mb-3`}>مزایای این دوره:</h1>
+          <h1 dir="rtl" className="font-semibold text-3xl mb-3 text-[#0d5a5f]">مزایای این دوره:</h1>
           {data.benefits.map((item, index) => <BenefitItem index={index} key={item.id} title={item.title} context={item.context} />)}
         </div>
         <img className="w-[350px] h-[500px] hidden md:block" src={pair_programming} alt='pair programming'></img>

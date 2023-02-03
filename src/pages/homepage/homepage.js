@@ -1,11 +1,11 @@
 import "./homepage.css";
 import Header from "../../components/homepage/header";
 import CardNumber from "../../components/homepage/cardNumber";
-import SecondaryButton from "../../components/homepage/secBtn";
-import js from "../../assets/homepage/course preview/js.png";
-import java from "../../assets/homepage/course preview/java.png";
-import cShrp from "../../assets/homepage/course preview/c-sharp.png";
-import bootstrap from "../../assets/homepage/course preview/bootstrap.png";
+// import SecondaryButton from "../../components/homepage/secBtn";
+// import js from "../../assets/homepage/course preview/js.png";
+// import java from "../../assets/homepage/course preview/java.png";
+// import cShrp from "../../assets/homepage/course preview/c-sharp.png";
+// import bootstrap from "../../assets/homepage/course preview/bootstrap.png";
 import courseBoxes from "../../assets/homepage/course preview/courseBoxes.png";
 import HomePageTwo from "./HomePageTwo";
 function Homepage() {
@@ -32,7 +32,7 @@ function Homepage() {
 				</section>
 				<section className=" flex h-screen">
 					<div className=" basis-2/3 px-80 py-20">
-						<img src={courseBoxes} useMap="#courses" />
+						<img src={courseBoxes} useMap="#courses" alt="courseBox" />
 						<map name="courses">
 							<area
 								shape="rect"

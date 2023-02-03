@@ -19,7 +19,7 @@ function App() {
         <Route path="/register" element={<Wrapper flag={false} element={<ReigsterPage />} />} />
         <Route path="/account" element={<Wrapper flag={true} element={<AccountPage />} />} />
         <Route path="/course/:id" element={<Wrapper flag={true} element={<Course />} />} />
-        <Route path="/courses" element={<Wrapper flag={true} className="coursesPage" element={<Courses />} />} />
+        <Route path="/courses" element={<Wrapper flag={false} className="coursesPage" element={<Courses />} />} />
       </Routes>
     </div >
   );
