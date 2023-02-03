@@ -1,8 +1,8 @@
 const ProgressBar = ({ data }) => {
     return (
-        <div>
-            <div class="w-full h-6 bg-gray-200 rounded-md border border-gray-400">
-                <div class="h-full rounded-md bg-[#066649]" style={{ width: data.progress + "%" }}></div>
+        <div className="w-52">
+            <div className="w-full h-7 bg-gray-200 rounded-sm border border-gray-400">
+                <div className="h-full rounded-sm bg-[#0d5a5f] text-white flex justify-center items-center" style={{ width: data.progress + "%" }}>{data.progress} %</div>
             </div>
         </div >
     );
