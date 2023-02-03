@@ -5,22 +5,22 @@ import sabt from "../../assets/images/sabt.png";
 
 const ENamad = () => {
   return (
-    <div className="h-32 flex flex-row gap-6 items-center text-right py-4">
-      <div className="h-32">
+    <div className="h-32 flex flex-row gap-6 md:gap-2 lg:gap-6 items-center md:justify-center justify-around py-4 ">
+      <div className="h-32 w-27">
           {/* <a target="_blank" href="https://trustseal.enamad.ir/?id=30599&amp;Code=uGobIf7GE1XUArlbdKa3"> */}
               <img src={etemad} alt="نماد اعتماد الکترونیک"  
-              className="w-full h-full object-center object-cover hover:cursour-pointer"
+              className="object-cover h-full object-center  hover:cursour-pointer"
               ></img>
           {/* </a> */}
       </div>
-      <div className="h-32" >
+      <div className="h-32 w-27" >
         <img src={kasbmajazi} alt="نماد کسب و کار های مجازی"  
-            className="w-full h-full object-center object-cover hover:cursour-pointer" 
+            className="object-cover h-full object-center  hover:cursour-pointer" 
             ></img>
       </div>
-      <div className="h-32">
+      <div className="h-32 w-27">
           <img src={sabt} alt="نشان ملی ثبت" 
-          className="w-full h-full object-center object-cover hover:cursour-pointer"
+          className="object-cover h-full object-center  hover:cursour-pointer"
           ></img>
       </div>
     </div>

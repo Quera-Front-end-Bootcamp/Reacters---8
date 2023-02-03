@@ -4,7 +4,7 @@ import React from "react";
 const Item = ({ Links, title }) => {
   return (
     <ul>
-      <h1 className="mb-4 font-bold	 text-textcolor-900 text-xl	">{title}</h1>
+      <h1 className="mb-4 mt-8 font-bold	text-textcolor-900 text-xl lg:text-xl md:text-sm	">{title}</h1>
       {Links.map((link) => (
         <li key={link.name} className="leading-7 text-base">
           <a
