@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
         </div> */}
       <div className="w-full grid grid-cols-1 px-16 bg-[#0d5a5f]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-40 px-0 py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-40 px-0 py-8">
           <NewsLetter />
           <Aboutus />
         </div>
