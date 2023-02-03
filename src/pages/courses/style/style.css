@@ -8,6 +8,16 @@
     flex-wrap: wrap;
   }
 }
+@media (max-width: 830px) {
+  .filterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+  }
+}
 .dir-rtl {
   direction: rtl;
 }
