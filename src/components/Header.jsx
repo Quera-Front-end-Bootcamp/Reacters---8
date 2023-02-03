@@ -32,7 +32,7 @@ export const Header = () => {
                     </NavLink>
                 </div>
 
-                <div className="flex flex-col basis-3/6 items-center justify-between md:flex-row-reverse md:gap-4 my:2 gap-4 ld:gap-6 font-semibold text-gray-200">
+                <div className="flex flex-col basis-3/6 items-center justify-between md:flex-row-reverse md:gap-3 gap-2 lg:gap-6 font-semibold text-gray-200">
                     <NavLink className="px-4 py-2 text-center transition-all ease-in hover:w-3/5 md:hover:w-1/4 hover:bg-transparent/30 dir-rtl" to="/courses">
                         دوره ها
                     </NavLink>
@@ -47,7 +47,7 @@ export const Header = () => {
                     </NavLink>
                 </div>
 
-                <div className="flex flex-col basis-2/6 md:flex-row items-center justify-between my-2 gap-2 text-gray-200">
+                <div className="flex flex-col basis-2/6 md:flex-row items-center justify-between my-2 gap-2 text-gray-200 font-semibold">
                     <NavLink className="mx-auto py-2 md:my-0 md:px-2 text-center w-3/5 hover:bg-transparent md:hover:bg-transparent/60 bg-transparent/30 dir-rtl" to="/register">
                         ثبت نام
                     </NavLink>
@@ -56,7 +56,7 @@ export const Header = () => {
                     </NavLink>
                 </div>
             </nav>
-            <hr className="h-0.5 bg-[#547D89] border-none bg-transparent/30 "></hr>
+            <hr className="h-0.5 bg-[#547D89] border-none bg-transparent/30"></hr>
         </header>
     );
 };
