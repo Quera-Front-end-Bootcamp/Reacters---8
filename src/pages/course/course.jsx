@@ -9,7 +9,7 @@ import Rating from "./components/Rating";
 import teacher_logo from "../../assets/icons/teacher.png";
 import pair_programming from '../../assets/images/pair.png';
 import { coursesData } from "../../core/courseConstants";
-import classes from "./course.module.css";
+import classes from "./style/course.module.css";
 
 const Course = () => {
 

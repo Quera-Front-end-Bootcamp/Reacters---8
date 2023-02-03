@@ -1,22 +1,41 @@
 import React from "react";
 import { Icons } from "./Links";
-import {TbBrandTelegram} from 'react-icons/tb';
+import { TbBrandTelegram, TbBrandWhatsapp, TbBrandInstagram, TbBrandYoutube } from 'react-icons/tb';
+import { icons } from "react-icons/lib";
 
 
 const SocialIcons = () => {
   return (
-    <div className="text-[#033325]">
-      {Icons.map((icon) => (
-        <span
-          key={icon.name}
-          className="p-2 cursor-pointer inline-flex items-center bg-[#066649]
-        rounded-full mx-1.5 text-xl hover:text-gray-100 hover:bg-teal-500
+    <div className="text-[#033325] my-1.5">
+      <span
+        className="p-1.5 cursor-pointer inline-flex items-center 
+        rounded-full mx-1 text-xl hover:text-gray-100 hover:bg-teal-500
         duration-300 "
-        >
-          {/* <ion-icon name={icon.name}></ion-icon> */}
-          <TbBrandTelegram className="bg-[#066649]"/>
-        </span>
-      ))}
+      >
+        <TbBrandInstagram className="bg-transparent" />
+      </span>
+      <span
+        className="p-1.5 cursor-pointer inline-flex items-center 
+              rounded-full mx-1 text-xl hover:text-gray-100 hover:bg-teal-500
+              duration-300 "
+      >
+        <TbBrandTelegram className="bg-transparent" />
+      </span>
+      <span
+        className="p-1.5 cursor-pointer inline-flex items-center 
+                    rounded-full mx-1 text-xl hover:text-gray-100 hover:bg-teal-500
+                    duration-300 "
+      >
+        <TbBrandWhatsapp className="bg-transparent" />
+      </span>
+      <span
+        className="p-1.5 cursor-pointer inline-flex items-center
+                          rounded-full mx-1 text-xl hover:text-gray-100 hover:bg-teal-500
+                          duration-300 "
+      >
+
+        <TbBrandYoutube className="bg-transparent" />
+      </span>
     </div>
   );
 };
