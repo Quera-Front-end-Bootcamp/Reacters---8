@@ -4,7 +4,7 @@ import { FaTelegramPlane, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons
 function Wall() {
   return (
     <div
-      className="background bg-cover w-full flex-1 md:flex-none md:w-2/3"
+      className="background bg-cover w-full flex-1 md:flex-none md:w-3/5"
       style={{
         backgroundImage: `url(${BackgroundImage})`,
       }}
@@ -39,7 +39,7 @@ function Wall() {
 
         <div className="hidden md:flex flex-1 items-end pb-8">
           <a href="#">
-            <span className="material-symbols-outlined text-3xl text-white  hover:text-4xl ease-in duration-200 ">
+            <span className="material-symbols-outlined text-3xl text-white hover:text-4xl ease-in duration-200 ">
               home
             </span>
           </a>
