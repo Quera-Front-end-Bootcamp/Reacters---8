@@ -1,10 +1,11 @@
 import Wall from "./components/Wall";
 import "./style/login.css"
+import { Link } from "react-router-dom";
 
 function LoginPage() {
   return (
-    <div className="page-login flex flex-col-reverse md:flex-row h-screen text-[#0b686e]">
-      <div className="form flex flex-col justify-center items-center flex-1 md:overflw-hidden overflow-scroll pt-32">
+    <div className="page-login flex flex-col-reverse md:flex-row text-[#0b686e] h-[100vh]">
+      <div className="form flex flex-col justify-center items-center flex-1 pt-32 overflow-scroll">
         <div className="w-9/12">
           <p className="text-3xl font-semibold text-right py-4">ورود کاربر</p>
           <div className="flex flex-row-reverse text-input bg-gray-100 rounded-md p-3 my-4">
@@ -32,13 +33,14 @@ function LoginPage() {
               <p className="rememberCheck lg:w-3/4 md:w-1/2 w-1/4">مرا به خاطر بسپار</p>
             </div>
           </div>
-          <div className="flex lg:flex-row lg:justify-between mt-8 font-semibold flex-col items-center">
+          <div className="flex lg:flex-row lg:justify-between mt-8 font-semibold flex-col items-center text-center">
             <button className="lg:mr-4 m-0 lg:mb-0 mb-4 py-3 px-4 bg-[#0d5a5f] hover:bg-[#093d41] text-white rounded-md w-[45%]">
               ورود
             </button>
-            <button className="border border-gray-200 rounded-md bg-gray-200 hover:border-[#0d5a5f] py-3 px-4 w-[45%]">
+            <Link to={`${"/register"}`}
+              className="border border-gray-200 rounded-md bg-gray-200 hover:border-[#0d5a5f] py-3 px-4 w-[45%]">
               ثبت نام
-            </button>
+            </Link>
           </div>
         </div>
       </div>

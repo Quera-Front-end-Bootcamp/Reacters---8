@@ -13,7 +13,7 @@ function Wall() {
         <div className="flex flex-1"></div>
         <div className="flex flex-1 flex-col">
           <div className="logo flex flex-row-reverse items-center justify-center">
-            <p className="text-white text-4xl">اکادمی آموزشی بامبو</p>
+            <p className="text-white text-4xl pb-2">آکادمی آموزشی بامبو</p>
             <img
               src={require("../../../assets/icons/bamboo (d2).png")}
               className="h-20 text-white "

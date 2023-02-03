@@ -8,7 +8,7 @@ import NewsLetter from "./NewsLetter";
 
 const Footer = () => {
   return (
-    <footer className="bottom-0 left-0 w-full text-textcolor-100 text-right">
+    <footer className="bottom-0 left-0 w-full text-gray-100 text-right">
       {/* <div className="md:flex md:justify-between md:item-center sm:px-12 px-4 bg-[ffffff19] py-7">       
         <h1
           className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold
@@ -46,12 +46,12 @@ const Footer = () => {
           <BeWith />
           <Contactus /> */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-30/30/40 gap-6 px-0 py-8 sm:align-right content-center">  */}
-          <div className="flex justify-between items-center flex-col md:flex-row gap-10 px-0 py-8">
-          <ENamad/>
-          <BeWith/>
+        <div className="flex justify-between items-center flex-col md:flex-row gap-10 px-0 py-8">
+          <ENamad />
+          <BeWith />
           <Contactus />
         </div>
-      {/* </div> */}
+        {/* </div> */}
       </div>
 
       <Copyright />

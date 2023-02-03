@@ -4,17 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'sec1': '#004458',
-        'sec2': '#088568',
-        'sec3': '#0cdbab',
-        'sec4': '#00775b', 
+        // 'sec1': '#004458',
+        // 'sec2': '#088568',
+        // 'sec3': '#0cdbab',
+        // 'sec4': '#00775b',
       }
-  
-      ,rotate: {
+
+      , rotate: {
         '62': '71deg',
         '62-': '-70deg',
         '77-': '-84deg',
-      }, 
+      },
       spacing: {
         '2r': '-2rem',
         '3.5r': '-3.5rem',
@@ -26,15 +26,15 @@ module.exports = {
         'footer-texture': "url('/img/footer-texture.png')",
       }
     },
-      // transparent: 'transparent',
-      // current: 'currentColor',
-      'textcolor':{100 :'#DBDBDB',500:'#aa2299',600:'#415D65', 900:'#ffffff'},
-      'greencolor':{100:'#004458',200:'#09B28B', 500:'#003544',800:'#002C38'},
-    },
-    gridTemplateColumns:
-    {
-      '30/30/40': '37.75% 29% 29%',
-      // '30/30/40': '38% 26% 26%',
-    },
-    plugins: [],
-  }
+    transparent: 'transparent',
+    // current: 'currentColor',
+    // 'textcolor': { 100: '#DBDBDB', 500: '#aa2299', 600: '#415D65', 900: '#ffffff' },
+    // 'greencolor': { 100: '#004458', 200: '#09B28B', 500: '#003544', 800: '#002C38' },
+  },
+  gridTemplateColumns:
+  {
+    '30/30/40': '37.75% 29% 29%',
+    // '30/30/40': '38% 26% 26%',
+  },
+  plugins: [],
+}

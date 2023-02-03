@@ -3,15 +3,19 @@ import Footer from "./Footer/Footer";
 
 const Wrapper = (props) => {
     return (
-        <>
-            {props.flag && <div className="absolute w-full z-10 pt-2 px-2"><Header /></div>}
-            {props.flag && props.className === "coursesPage" &&
-                <div className="absolute w-full z-10 bg-[#0d5a5f] pt-4 px-2">
+        <div className="max-h-full">
+            {props.flag && <div className="w-full z-10 fixed"><Header /></div>}
+            {!props.flag && props.className === "coursesPage" &&
+                <div className="w-full z-10 bg-[#0d5a5f] fixed">
                     <Header />
                 </div>}
-            {props.element}
-            {props.flag && <Footer />}
-        </>
+            <div className="overflow-y-scroll h-[100vh]">
+                {props.element}
+                {(props.flag || props.className === "coursesPage") &&
+                    <div><Footer /></div>
+                }
+            </div>
+        </div>
     );
 }
 
