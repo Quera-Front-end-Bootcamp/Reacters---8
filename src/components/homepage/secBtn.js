@@ -1,7 +1,7 @@
 import "./secBtn.css";
 function SecondaryButton(props) {
 	return (
-		<a href="/courses" className="text-green-800 bg-slate-50 py-4 px-8">
+		<a href="/courses" className=" text-slate-50 bg-[#0d5a5f] hover:bg-[#093d41] py-4 px-8">
 			{props.anchorText}
 		</a>
 	);

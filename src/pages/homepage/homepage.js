@@ -12,8 +12,8 @@ function Homepage() {
 	return (
 		<div>
 			<Header />
-			<main>
-				<section className="sec1-homepage flex items-end gap-2 h-screen">
+			<main dir="rtl">
+				<section className="sec1-homepage min-h-screen  flex flex-col md:flex-row items-end gap-2 ">
 					<CardNumber
 						head="576 دانشجو"
 						desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
@@ -38,25 +38,25 @@ function Homepage() {
 								shape="rect"
 								coords="350,170,580,250"
 								alt="cSharp"
-								href="/courses/cSharp"
+								href="/course/9d5470a7-729f-48e7-9624-c779564dc9e1"
 							></area>
 							<area
 								shape="rect"
 								coords="20,220,250,310"
 								alt="js"
-								href="/courses/js"
+								href="/course/70ce3ded-c3fd-46e9-9f6b-89ff5ca1c894"
 							></area>
 							<area
 								shape="rect"
 								coords="320,470,540,550"
 								alt="java"
-								href="/courses/java"
+								href="/course/0bbc798d-5c5f-417a-b987-7a795f427c99"
 							></area>
 							<area
 								shape="rect"
 								coords="40,520,270,620"
 								alt="bootsrap"
-								href="/courses/bootsrap"
+								href="/course/56745e7f-9636-442b-b187-884dec92422b"
 							></area>
 						</map>
 					</div>
@@ -72,7 +72,7 @@ function Homepage() {
 						</div>
 						<a
 							href="/courses"
-							className="text-slate-50 bg-green-800 py-4 px-8 -m-6"
+							className="text-slate-50 bg-[#0d5a5f] hover:bg-[#093d41] py-4 px-8 -m-6"
 						>
 							مشاهده دوره ها
 						</a>
