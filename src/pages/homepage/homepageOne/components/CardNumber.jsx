@@ -1,7 +1,6 @@
-import "./cardNumber.css";
 function CardNumber(props) {
 	return (
-		<div className="card-number flex flex-col justify-center items-center gap-4 text-slate-50 p-12">
+		<div className="card-number flex flex-col justify-center items-center gap-4 bg-[#00000080] text-slate-50 p-12">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
@@ -17,5 +16,4 @@ function CardNumber(props) {
 		</div>
 	);
 }
-
 export default CardNumber;

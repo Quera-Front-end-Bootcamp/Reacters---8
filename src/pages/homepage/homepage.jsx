@@ -1,13 +1,9 @@
-import "./homepage.css";
-import Header from "../../components/homepage/header";
-import CardNumber from "../../components/homepage/cardNumber";
-// import SecondaryButton from "../../components/homepage/secBtn";
-// import js from "../../assets/homepage/course preview/js.png";
-// import java from "../../assets/homepage/course preview/java.png";
-// import cShrp from "../../assets/homepage/course preview/c-sharp.png";
-// import bootstrap from "../../assets/homepage/course preview/bootstrap.png";
-import courseBoxes from "../../assets/homepage/course preview/courseBoxes.png";
-import HomePageTwo from "./HomePageTwo";
+import "./style/homepage.css";
+import Header from "./homepageOne/Header";
+import CardNumber from "./homepageOne/components/CardNumber";
+import courseBoxes from "../../assets/images/courseBoxes.png";
+import HomePageTwo from "./homepageTwo/HomePageTwo";
+
 function Homepage() {
 	return (
 		<div>

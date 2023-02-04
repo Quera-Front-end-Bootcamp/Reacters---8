@@ -4,11 +4,11 @@ import { MAILS } from "./Links";
 import SocialIcons from "./SocialIcons";
 
 const Contactus = () => {
-    return (    
-      <div>
-        <Item Links={MAILS} title="ارتباط با ما" />
-        <SocialIcons></SocialIcons>
-      </div>
-    );
+  return (
+    <div>
+      <Item Links={MAILS} title="ارتباط با ما" />
+      <SocialIcons></SocialIcons>
+    </div>
+  );
 }
 export default Contactus;

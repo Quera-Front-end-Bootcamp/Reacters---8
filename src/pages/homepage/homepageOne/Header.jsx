@@ -1,11 +1,12 @@
-import "./header.css";
-import SecondaryButton from "./secBtn";
+import "../style/homepage.css";
+import SecondaryButton from "./components/SecBtn";
+
 function Header() {
 	return (
 		<header className="intro h-[75vh] text-slate-50 flex flex-col justify-end">
 			<section className="flex items-end px-20 py-12">
-				<div className="text-right ">
-					<h1 className="text-5xl font-bold leading-[5rem]">
+				<div dir="rtl" className="text-right ">
+					<h1 className="text-4xl font-semibold leading-[5rem]">
 						باید راه بهتری برای آموزش ساخته میشد،
 						<br /> پس ما ساختیمش...
 					</h1>

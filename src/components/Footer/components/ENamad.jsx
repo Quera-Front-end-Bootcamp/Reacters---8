@@ -1,7 +1,7 @@
 import React from "react";
-import etemad from "../../assets/images/etemad.png";
-import kasbmajazi from "../../assets/images/kasbokarMajazi.png"
-import sabt from "../../assets/images/sabt.png";
+import etemad from "../../../assets/images/etemad.png";
+import kasbmajazi from "../../../assets/images/kasbokarMajazi.png"
+import sabt from "../../../assets/images/sabt.png";
 
 const ENamad = () => {
   return (

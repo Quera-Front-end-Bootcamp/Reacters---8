@@ -1,7 +1,7 @@
 import React from 'react'
-import imgSec1 from '../../../assets/imgHomePageTwo/moshavere-y.png'
-import imgSec2 from '../../../assets/imgHomePageTwo/studentS2.png'
-import imgSec3 from '../../../assets/imgHomePageTwo/moshavereS3.png'
+import imgSec1 from '../../../../assets/images/moshavere-y.png'
+import imgSec2 from '../../../../assets/images/studentS2.png'
+import imgSec3 from '../../../../assets/images/moshavereS3.png'
 
 export default function Header() {
     return (

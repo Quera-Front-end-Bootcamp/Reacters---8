@@ -1,9 +1,9 @@
 import React from 'react'
-import imgSec5 from '../../../assets/imgHomePageTwo/websiteF.png'
+import imgSec5 from '../../../../assets/images/websiteF.png'
 
 export default function Fotter() {
-  return (
- <article className=" flex flex-col items-center justify-center w-full h-60v">
+    return (
+        <article className=" flex flex-col items-center justify-center w-full h-60v">
             <div className="w-full h-full  flex relative overflow-hidden ">
                 <div className="flex w-full md:w-3/5 ">
                     <div className="w-full h-full  bg-sec2  flex items-center justify-evenly flex-col ">
@@ -21,7 +21,7 @@ export default function Fotter() {
                             </div>
 
                             <button className=" py-2  px-9 lg:py-4 lg:text-2xl lg:mt-5 bg-sec1 text-white ">
-                                    ارسال
+                                ارسال
                             </button>
 
 
@@ -35,6 +35,6 @@ export default function Fotter() {
                     <img src={imgSec5} className="hidden md:flex w-full h-full " alt="young-handsome" />
                 </div>
             </div>
-        </article> 
-  )
+        </article>
+    )
 }
