@@ -1,7 +1,11 @@
 import Header from "./homepageOne/Header";
 import CardNumber from "./homepageOne/components/CardNumber";
 import HomePageTwo from "./homepageTwo/HomePageTwo";
-import courseBoxes from "../../assets/images/courseBoxes.png";
+import js from "../../assets/images/js-yellow.png";
+import java from "../../assets/images/java-pink.png";
+import cShrp from "../../assets/images/csharp-purpule.png";
+import bootstrap from "../../assets/images/bootstrap-pur.png";
+import { Link } from "react-router-dom";
 import "./style/homepage.css";
 
 function Homepage() {
@@ -26,7 +30,7 @@ function Homepage() {
 						d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"
 					/>
 				</section>
-				<section className="flex flex-col lg:flex-row min-h-screen">
+				<section className="flex flex-col lg:flex-row min-h-screen pb-28">
           <div className="w-full md:w-2/3 flex justify-center items-center py-10 lg:py-0">
             <div className="border-[#09b28b] border-[3px] w-[314px] min-h-[314px] relative flex flex-col gap-3">
               <div className="w-full lg:w-3/4 h-[70%] bg-[#F7DF1E] lg:absolute lg:top-2r lg:-left-1/2 flex flex-col justify-around items-center py-2">
