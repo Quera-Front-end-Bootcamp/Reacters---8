@@ -12,7 +12,7 @@ export default function Header() {
                         <img src={imgSec1} className="hidden md:flex w-full h-full opacity-80 object-cover" alt="moshavere" />
                     </div>
                     <div className='flex justify-center items-center'>
-                        <button className="px-10 py-3 lg:px-12 lg:py-5 md:bg-[#0d5a5f] hover:bg-[#093d41] bg-cyan-500 text-[#093d41] md:text-gray-200 opacity-70 hover:opacity-90 rounded-md font-semibold absolute z-20 mb-11 md:mb-0 ">
+                        <button className="px-10 py-3 lg:px-12 lg:py-5 md:bg-[#0d5a5f] hover:bg-[#093d41] hover:text-gray-100 bg-cyan-500 text-[#093d41] md:text-gray-200 opacity-70 hover:opacity-90 rounded-md font-semibold absolute z-20 mb-11 md:mb-0 ">
                             مشاوره
                         </button>
                     </div>
