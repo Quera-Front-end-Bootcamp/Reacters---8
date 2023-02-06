@@ -8,7 +8,7 @@ import NewsLetter from "./components/NewsLetter";
 
 const Footer = () => {
   return (
-    <footer className="bottom-0 left-0 w-full text-gray-100 text-right">
+    <footer className="bottom-0 left-0 w-full text-gray-200 text-right">
       <div className="w-full grid grid-cols-1 px-16 bg-[#0d5a5f]">
         <div className="flex justify-between flex-col md:flex-row gap-10 md:gap-20 px-0 py-8">
           <NewsLetter />
