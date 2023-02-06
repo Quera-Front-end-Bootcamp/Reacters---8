@@ -26,55 +26,65 @@ function Homepage() {
 						d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"
 					/>
 				</section>
-				<section className="flex h-screen text-[#093d41] font-semibold text-center text-lg justify-center">
-					<div className="flex justify-center items-center h-[85vh] w-2/3 px-80 md:py-20 pt-40">
-						<img className="max-w-[25rem] p-5" src={courseBoxes} useMap="#courses" alt="courseBox" />
-						{/* <map name="courses">
-							<area
-								shape="rect"
-								coords="350,170,580,250"
-								alt="cSharp"
-								href="/course/9d5470a7-729f-48e7-9624-c779564dc9e1"
-							></area>
-							<area
-								shape="rect"
-								coords="20,220,250,310"
-								alt="js"
-								href="/course/70ce3ded-c3fd-46e9-9f6b-89ff5ca1c894"
-							></area>
-							<area
-								shape="rect"
-								coords="320,470,540,550"
-								alt="java"
-								href="/course/0bbc798d-5c5f-417a-b987-7a795f427c99"
-							></area>
-							<area
-								shape="rect"
-								coords="40,520,270,620"
-								alt="bootsrap"
-								href="/course/56745e7f-9636-442b-b187-884dec92422b"
-							></area>
-						</map> */}
-
-					</div>
-					<div className="headerCourses flex flex-col gap-20 justify-center items-end border-b-2 border-r-2 border-slate-300 pl-20 pr-10 pt-20 h-fit">
-						<div className="flex flex-col gap-8 text-right text-[#093d41]">
-							<h2 className="text-2xl font-semibold text-[#093d41]">دوره های آموزشی</h2>
-							<p className="font-normal">
-								لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپلورم
-								ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ ایپسوم متن
-								ساختگی با تولید سادگی نامفهوم از صنعت چاپ ایپسوم متن ساختگی با
-								تولید سادگی نامفهوم از صنعت چاپ
-							</p>
-						</div>
-						<a
-							href="/courses"
-							className="text-slate-50 bg-[#0d5a5f] hover:bg-[#093d41] py-4 px-8 -m-6 font-semibold text-base rounded-md"
-						>
-							مشاهده دوره ها
-						</a>
-					</div>
-				</section>
+				<section className="flex flex-col lg:flex-row min-h-screen">
+          <div className="w-full md:w-2/3 flex justify-center items-center py-10 lg:py-0">
+            <div className="border-[#09b28b] border-[3px] w-[314px] min-h-[314px] relative flex flex-col gap-3">
+              <div className="w-full lg:w-3/4 h-[70%] bg-[#F7DF1E] lg:absolute lg:top-2r lg:-left-1/2 flex flex-col justify-around items-center py-2">
+                <img src={js} alt="js_course" className="w-1/2"></img>
+                <Link
+                  to="/course/70ce3ded-c3fd-46e9-9f6b-89ff5ca1c894"
+                  className="text-slate-50 bg-[#0d5a5f] hover:bg-[#093d41] w-1/2 text-center rounded-md py-2 px-2"
+                >
+                  مشاهده دوره
+                </Link>
+              </div>
+			  <div className="w-full lg:w-3/4 h-[70%] bg-[#CAB2EF] lg:absolute lg:-bottom-32 lg:-left-1/2 flex flex-col flex-grow justify-around items-center py-2">
+                <img src={bootstrap} alt="bootstrap_course" className="w-1/2"></img>
+                <Link
+                  to="/course/56745e7f-9636-442b-b187-884dec92422b"
+                  className="text-slate-50 bg-[#0d5a5f] hover:bg-[#093d41] w-1/2 text-center rounded-md py-2 px-2"
+                >
+                  مشاهده دوره
+                </Link>
+              </div>
+			  <div className="w-full lg:w-[80%] h-1/2 bg-[#6A1577] lg:absolute lg:top-8 lg:right-[-40px] flex flex-col justify-around items-center py-2">
+                <img src={cShrp} alt="charp_course" className="w-1/4"></img>
+                <Link
+                  to="/course/9d5470a7-729f-48e7-9624-c779564dc9e1"
+                  className="text-slate-50 bg-[#0d5a5f] hover:bg-[#093d41] w-1/2 text-center rounded-md py-2 px-2"
+                >
+                  مشاهده دوره
+                </Link>
+              </div>
+			  <div className="w-full lg:w-1/2 h-[70%] bg-[#FFC7F8] lg:absolute lg:-bottom-28 lg:right-[20px] flex flex-col justify-around items-center py-2">
+                <img src={java} alt="java_course" className="w-1/2"></img>
+                <Link
+                  to="/course/0bbc798d-5c5f-417a-b987-7a795f427c99"
+                  className="text-slate-50 bg-[#0d5a5f] hover:bg-[#093d41] w-1/2 text-center rounded-md py-2 px-2"
+                >
+                  مشاهده دوره
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3 flex flex-col gap-20 justify-center items-end border-b-2 border-r-2 border-slate-300 pl-28 pr-14 pt-48 h-fit">
+            <div className=" flex flex-col gap-8 text-right">
+              <h2 className=" text-3xl font-bold">دوره های آموزشی</h2>
+              <p>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپلورم
+                ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ ایپسوم متن
+                ساختگی با تولید سادگی نامفهوم از صنعت چاپ ایپسوم متن ساختگی با
+                تولید سادگی نامفهوم از صنعت چاپ
+              </p>
+            </div>
+            <Link
+              to="/courses"
+              className="text-slate-50 bg-[#0d5a5f] hover:bg-[#093d41] py-4 px-8 -m-6"
+            >
+              مشاهده دوره ها
+            </Link>
+          </div>
+        </section>
 				<section dir="ltr">
 					<HomePageTwo />
 				</section>
