@@ -256,7 +256,7 @@ export const coursesData = [
         benefits: BENEFITS("پایتون"),
         id: "c8af881b-594c-4c09-8726-9208f92a6289",
         heroSrc: pythonHero,
-        modalSrc: pythonLogo,
+        modalSrc: pythonHero,
     },
     {
         imageSrc: csharpLogo,
