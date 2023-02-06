@@ -11,7 +11,7 @@ function CardNumber(props) {
 			>
 				<path strokeLinecap="round" strokeLinejoin="round" d={props.d} />
 			</svg>
-			<p className=" text-3xl font-medium">{props.head}</p>
+			<p className="text-xl font-medium">{props.head}</p>
 			<p>{props.desc}</p>
 		</div>
 	);

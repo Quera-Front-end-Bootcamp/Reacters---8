@@ -1,8 +1,8 @@
-import "./style/homepage.css";
 import Header from "./homepageOne/Header";
 import CardNumber from "./homepageOne/components/CardNumber";
-import courseBoxes from "../../assets/images/courseBoxes.png";
 import HomePageTwo from "./homepageTwo/HomePageTwo";
+import courseBoxes from "../../assets/images/courseBoxes.png";
+import "./style/homepage.css";
 
 function Homepage() {
 	return (
@@ -26,10 +26,10 @@ function Homepage() {
 						d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"
 					/>
 				</section>
-				<section className=" flex h-screen">
-					<div className=" basis-2/3 px-80 py-20">
-						<img src={courseBoxes} useMap="#courses" alt="courseBox" />
-						<map name="courses">
+				<section className="flex h-screen text-[#093d41] font-semibold text-center text-lg justify-center">
+					<div className="flex justify-center items-center h-[85vh] w-2/3 px-80 md:py-20 pt-40">
+						<img className="max-w-[25rem] p-5" src={courseBoxes} useMap="#courses" alt="courseBox" />
+						{/* <map name="courses">
 							<area
 								shape="rect"
 								coords="350,170,580,250"
@@ -54,12 +54,13 @@ function Homepage() {
 								alt="bootsrap"
 								href="/course/56745e7f-9636-442b-b187-884dec92422b"
 							></area>
-						</map>
+						</map> */}
+
 					</div>
-					<div className="basis-1/3 flex flex-col gap-20 justify-center items-end border-b-2 border-r-2 border-slate-300 pl-28 pr-14 pt-48 h-fit">
-						<div className=" flex flex-col gap-8 text-right">
-							<h2 className=" text-3xl font-bold">دوره های آموزشی</h2>
-							<p>
+					<div className="headerCourses flex flex-col gap-20 justify-center items-end border-b-2 border-r-2 border-slate-300 pl-20 pr-10 pt-20 h-fit">
+						<div className="flex flex-col gap-8 text-right text-[#093d41]">
+							<h2 className="text-2xl font-semibold text-[#093d41]">دوره های آموزشی</h2>
+							<p className="font-normal">
 								لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپلورم
 								ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ ایپسوم متن
 								ساختگی با تولید سادگی نامفهوم از صنعت چاپ ایپسوم متن ساختگی با
@@ -68,7 +69,7 @@ function Homepage() {
 						</div>
 						<a
 							href="/courses"
-							className="text-slate-50 bg-[#0d5a5f] hover:bg-[#093d41] py-4 px-8 -m-6"
+							className="text-slate-50 bg-[#0d5a5f] hover:bg-[#093d41] py-4 px-8 -m-6 font-semibold text-base rounded-md"
 						>
 							مشاهده دوره ها
 						</a>
