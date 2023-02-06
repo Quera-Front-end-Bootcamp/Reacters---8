@@ -7,7 +7,6 @@ import ReigsterPage from "./pages/account/Register";
 import AccountPage from "./pages/account/Index";
 import Homepage from "./pages/homepage/homepage";
 import Wrapper from './components/Wrapper';
-
 import './App.css';
 
 function App() {

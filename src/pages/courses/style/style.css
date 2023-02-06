@@ -8,7 +8,7 @@
     flex-wrap: wrap;
   }
 }
-@media (max-width: 830px) {
+@media (max-width: 900px) {
   .filterContainer {
     display: flex;
     flex-direction: column;

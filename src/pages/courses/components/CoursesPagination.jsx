@@ -24,7 +24,7 @@ const CoursePagination = ({ nPages, currentPage, setCurrentPage }) => {
                     {pageNumbers.map(pgNumber => (
                         <li key={pgNumber}
                             onClick={() => setCurrentPage(pgNumber)}
-                            className={`page-item ${currentPage === pgNumber ? 'active bg-[#0d5a5f] text-white hover:bg-[#093d41]' : 'bg-gray-200 text-gray-800'} h-10 w-10 border border-gray-400 rounded-3xl flex items-center justify-center gap-2 cursor-pointer hover:text-white hover:bg-[#0d5a5f]`}>
+                            className={`page-item ${currentPage === pgNumber ? 'active bg-[#0d5a5f] text-white hover:bg-[#093d41]' : 'bg-gray-200 text-gray-800'} h-9 w-9 border border-gray-400 rounded-3xl flex items-center justify-center gap-2 cursor-pointer hover:text-white hover:bg-[#0d5a5f]`}>
                             {pgNumber}
                         </li>
                     ))}

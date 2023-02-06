@@ -1,0 +1,24 @@
+.sec1-homepage {
+  background: url("../../../assets/images/sec1BgImage-homepage.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.intro {
+  background: linear-gradient(0deg, rgb(4, 73, 78, 0.7), rgb(4, 73, 78, 0.4)),
+    url("../../../assets/images/home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.sec-search {
+  background-color: rgb(4, 73, 78, 0.8);
+}
+@media (max-width: 945px) {
+  .headerCourses {
+    display: none;
+  }
+  .rotateDiv {
+    display: none;
+  }
+}
