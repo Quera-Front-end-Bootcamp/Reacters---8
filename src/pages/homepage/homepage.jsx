@@ -13,7 +13,7 @@ function Homepage() {
 		<div dir="rtl">
 			<Header />
 			<main dir="rtl">
-				<section className="sec1-homepage min-h-screen  flex flex-col md:flex-row items-end gap-2 ">
+				<section className="sec1-homepage min-h-screen  flex flex-col md:flex-row items-end justify-end gap-2 ">
 					<CardNumber
 						head="576 دانشجو"
 						desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
