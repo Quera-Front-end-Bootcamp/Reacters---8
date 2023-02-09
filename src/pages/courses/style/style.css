@@ -1,21 +1,11 @@
 @media (max-width: 350px) {
   .pagination {
-    width: 45%;
+    width: 35%;
   }
 }
 @media (max-width: 380px) {
   .filterOptions {
     flex-wrap: wrap;
-  }
-}
-@media (max-width: 900px) {
-  .filterContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 2rem;
   }
 }
 .dir-rtl {
