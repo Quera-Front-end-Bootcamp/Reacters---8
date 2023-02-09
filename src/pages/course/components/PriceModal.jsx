@@ -12,7 +12,7 @@ const PriceField = (props) => {
 const PriceModal = ({ priceInfo }) => {
   return (
     <div className="h-[400px] w-[60%] md:min-w bg-slate-100 absolute top-[12%] md:top-[15%] left-[25%] border-2">
-      <header className="w-full h-1/4 flex flex-row justify-end items-center gap-2 border-b-2 border-gray-300 pr-2">
+      <header className="w-full h-1/4 flex flex-row justify-end items-center gap-2 border-b-2 border-[#0d5a5f] pr-2">
         <p>{priceInfo.title}</p>
         <img className="h-12 w-12" src={priceInfo.modalSrc} alt={priceInfo.alt}></img>
       </header>

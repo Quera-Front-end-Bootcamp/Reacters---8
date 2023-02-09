@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Wall from "./components/Wall";
 
 function LoginPage() {
@@ -57,9 +58,9 @@ function LoginPage() {
             />
           </div>
           <div className="flex lg:flex-row lg:justify-between mt-8 font-semibold flex-col items-center">
-            <button className="lg:mr-4 m-0 lg:mb-0 mb-4 py-3 px-4 bg-[#0d5a5f] hover:bg-[#093d41] text-white rounded-md w-[45%]">
+            <Link to='/login' className="lg:mr-4 m-0 lg:mb-0 mb-4 py-3 px-4 bg-[#0d5a5f] hover:bg-[#093d41] text-white text-center rounded-md w-[45%]">
               ورود
-            </button>
+            </Link>
             <button className="border border-gray-200 rounded-md bg-gray-200 hover:border-[#0d5a5f] py-3 px-4 w-[45%]">
               ثبت نام
             </button>

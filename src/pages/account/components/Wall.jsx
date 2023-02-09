@@ -1,5 +1,6 @@
 import BackgroundImage from "../../../assets/images/laptop.jpg";
 import { FaTelegramPlane, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Wall() {
   return (
@@ -38,11 +39,11 @@ function Wall() {
         </div>
 
         <div className="hidden md:flex flex-1 items-end pb-8">
-          <a href="#">
+          <Link to="/">
             <span className="material-symbols-outlined text-3xl text-white hover:text-4xl ease-in duration-200 ">
               home
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

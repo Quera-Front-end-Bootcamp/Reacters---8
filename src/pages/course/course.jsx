@@ -42,7 +42,7 @@ const Course = () => {
 
       <div className="bg-slate-100 flex flex-col-reverse sm:flex-row flex-wrap pb-6">
         <div className="h-[calc(50vh+200px)] relative w-full sm:w-1/2">
-          <div className="w-1/2 h-3/4 border-b-2 border-r-2 border-slate-400 absolute top-0 left-0"></div>
+          <div className="w-1/2 h-3/4 border-b-2 border-r-2 border-[#0d5a5f] absolute top-0 left-0"></div>
           <PriceModal priceInfo={data} />
         </div>
         <Description className="min-h-[50vh] md:h-full w-full sm:w-1/2" description={data.description} />
