@@ -27,7 +27,6 @@ import sassLogo from "../assets/images/sass.jpg"
 import webpackLogo from "../assets/images/webpack.jpg"
 import laravelLogo from "../assets/images/laravel.png"
 
-
 // course hero section assets
 import jsHero from '../assets/images/course-logo.png';
 import jsModal from '../assets/images/js-logo.png';
@@ -109,7 +108,7 @@ export const coursesData = [
     {
         imageSrc: vuejsLogo,
         alt: "vueCourse",
-        title: "Vuejs دوره",
+        title: "Vue.js دوره",
         tutor: "سارا اصفهانی",
         capacity: "۲۰",
         startDate: "2023/3/3",

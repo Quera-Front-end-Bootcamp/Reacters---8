@@ -29,8 +29,8 @@ const CourseItem = ({ data }) => {
           <div className="py-2 px-4 text-lg text-[#727272] font-semibold">{data.title}</div>
           <div className="py-2 px-4 text-sm text-gray-500">مدرس : {data.tutor}</div>
           <div className="pb-4 px-4 text-sm text-gray-500">ظرفیت : {data.capacity} نفر</div>
-          <div className="detailsButton pl-6 py-2 text-center text-gray-100 flex justify-start">
-            <button onClick={openModal} className="border rounded-md bg-[#0d5a5f] hover:bg-[#093d41] p-2">جزئیات</button>
+          <div className="pl-6 py-2 text-center text-gray-100 flex justify-start">
+            <button onClick={openModal} className="border rounded-md bg-[#0d5a5f] hover:bg-[#093d41] p-2 shadow-md">جزئیات</button>
           </div>
           <hr className="w-4/5 m-auto h-0.5 bg-gray-200"></hr>
           <div className="dir-rtl text-sm sm:text-base flex text-gray-600 justify-end pl-6 py-4">{data.price.toLocaleString("fa")} تومان </div>
