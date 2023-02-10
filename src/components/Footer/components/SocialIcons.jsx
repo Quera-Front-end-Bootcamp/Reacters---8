@@ -1,8 +1,5 @@
 import React from "react";
-import { Icons } from "./Links";
 import { TbBrandTelegram, TbBrandWhatsapp, TbBrandInstagram, TbBrandYoutube } from 'react-icons/tb';
-import { icons } from "react-icons/lib";
-
 
 const SocialIcons = () => {
   return (
@@ -33,7 +30,6 @@ const SocialIcons = () => {
                           rounded-full mx-1 text-xl hover:text-gray-100 hover:bg-teal-500
                           duration-300 "
       >
-
         <TbBrandYoutube className="bg-transparent" />
       </span>
     </div>

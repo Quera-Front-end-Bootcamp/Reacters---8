@@ -14,10 +14,6 @@ module.exports = {
         '60v': '60vh',
         '1r': '-1rem',
       },
-      backgroundImage: {
-        'hero-pattern': "url('/moshavere-y.jpg')",
-        'footer-texture': "url('/img/footer-texture.png')",
-      }
     },
   },
   gridTemplateColumns: {

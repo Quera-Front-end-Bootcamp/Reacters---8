@@ -1,13 +1,12 @@
 # Bamboo -- a React App --
 **Bamboo** is our group project for Quera Front-end development bootcamp 
 ### Contributors
-- [Amirfazel koozegar](https://github.com/mr-amirfazel)
-- [Mahya asadi](https://github.com/mahyaasadi)
-- [Arezoo amini tehrani](https://github.com/ArezooAT)
-- [Amirhossein darabi](https://github.com/AmirHD-dev)
-- [Sina sakhaei](https://github.com/cnasakhaei)
-- [Sarem tavakoli](https://github.com/SaremTavakolis)
-
+- [Amirfazel Koozegar](https://github.com/mr-amirfazel)
+- [Mahya Asadi](https://github.com/mahyaasadi)
+- [Arezoo Amini Tehrani](https://github.com/ArezooAT)
+- [Amirhossein Darabi](https://github.com/AmirHD-dev)
+- [Sina Sakhaei](https://github.com/cnasakhaei)
+- [Sarem Tavakoli](https://github.com/SaremTavakolis)
 
 
 

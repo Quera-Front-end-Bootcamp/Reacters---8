@@ -1,6 +1,6 @@
 import React from "react";
 
-const Item = ({ Links, title }) => {
+const FooterLinks = ({ Links, title }) => {
   return (
     <ul>
       <h1 className="mb-4 mt-4 font-semibold text-textcolor-900 text-lg">{title}</h1>
@@ -17,4 +17,4 @@ const Item = ({ Links, title }) => {
   );
 };
 
-export default Item;
+export default FooterLinks;

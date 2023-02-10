@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 import Wall from "./components/Wall";
 import "./style/login.css"
-import { Link } from "react-router-dom";
 
 function LoginPage() {
   return (
@@ -37,7 +37,7 @@ function LoginPage() {
             <button className="lg:mr-4 m-0 lg:mb-0 mb-4 py-3 px-4 bg-[#0d5a5f] hover:bg-[#093d41] text-white rounded-md w-[45%]">
               ورود
             </button>
-            <Link to={`${"/register"}`}
+            <Link to={"/register"}
               className="border border-gray-200 rounded-md bg-gray-200 hover:border-[#0d5a5f] py-3 px-4 w-[45%]">
               ثبت نام
             </Link>

@@ -1,5 +1,5 @@
-import "../style/homepage.css";
 import SecondaryButton from "./components/SecBtn";
+import "../style/homepage.css";
 
 function Header() {
 	return (

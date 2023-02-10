@@ -1,6 +1,7 @@
-import BackgroundImage from "../../../assets/images/laptop.jpg";
-import { FaTelegramPlane, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaTelegramPlane, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import BackgroundImage from "../../../assets/images/laptop.jpg";
+import bambooIcon from "../../../assets/icons/bamboo (d2).png"
 
 function Wall() {
   return (
@@ -16,7 +17,7 @@ function Wall() {
           <div className="logo flex flex-row-reverse items-center justify-center">
             <p className="text-white text-4xl pb-2">آکادمی آموزشی بامبو</p>
             <img
-              src={require("../../../assets/icons/bamboo (d2).png")}
+              src={bambooIcon}
               className="h-20 text-white "
               alt=""
             />
