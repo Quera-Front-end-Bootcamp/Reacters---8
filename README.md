@@ -1,3 +1,15 @@
+# Bamboo -- a React App --
+**Bamboo** is our group project for Quera Front-end development bootcamp 
+### Contributors
+- [Amirfazel Koozegar](https://github.com/mr-amirfazel)
+- [Mahya Asadi](https://github.com/mahyaasadi)
+- [Arezoo Amini Tehrani](https://github.com/ArezooAT)
+- [Amirhossein Darabi](https://github.com/AmirHD-dev)
+- [Sina Sakhaei](https://github.com/cnasakhaei)
+- [Sarem Tavakoli](https://github.com/SaremTavakolis)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
