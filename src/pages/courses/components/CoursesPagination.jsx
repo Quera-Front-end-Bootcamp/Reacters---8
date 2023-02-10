@@ -18,9 +18,9 @@ const CoursePagination = ({ nPages, currentPage, setCurrentPage }) => {
         <>
             <div className="pagination flex flex-wrap items-center justify-center gap-3">
                 <button>
-                    <img onClick={prevPage} src={backButton} className="h-9 w-9 p-1 border border-gray-400 rounded-3xl flex items-center justify-center bg-[#0d5a5f] hover:bg-[#093d41]" alt="backButton"></img>
+                    <img onClick={nextPage} src={backButton} className="h-9 w-9 p-1 border border-gray-400 rounded-3xl flex items-center justify-center bg-[#0d5a5f] hover:bg-[#093d41]" alt="backButton"></img>
                 </button>
-                <div className="flex flex-wrap justify-center gap-3">
+                <div className="dir-rtl flex flex-wrap justify-center gap-3">
                     {pageNumbers.map(pgNumber => (
                         <li key={pgNumber}
                             onClick={() => setCurrentPage(pgNumber)}
@@ -30,7 +30,7 @@ const CoursePagination = ({ nPages, currentPage, setCurrentPage }) => {
                     ))}
                 </div>
                 <button>
-                    <img onClick={nextPage} src={nextButton} className="h-9 w-9 p-1 border border-gray-400 rounded-3xl flex items-center justify-center bg-[#0d5a5f] hover:bg-[#093d41]" alt="nextButton"></img>
+                    <img onClick={prevPage} src={nextButton} className="h-9 w-9 p-1 border border-gray-400 rounded-3xl flex items-center justify-center bg-[#0d5a5f] hover:bg-[#093d41]" alt="nextButton"></img>
                 </button>
             </div>
         </>
