@@ -1,9 +1,9 @@
 import React from "react";
 import sabt from "../../assets/images/sabt.png";
-import FooterLinks from "./components/FooterLinks";
-import { Mails } from "./components/LinksConstants";
-import { BeWith } from "./components/LinksConstants";
-import SocialIcons from "./components/SocialIcons";
+import FooterLinks from "./FooterLinks";
+import { Mails } from "../../constants/LinksConstants";
+import { BeWith } from "../../constants/LinksConstants";
+import SocialIcons from "./SocialIcons";
 import etemad from "../../assets/images/etemad.png";
 import kasbmajazi from "../../assets/images/kasbokarMajazi.png"
 
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
 
           {/* contact us */}
-          <div className="w-full md:w-5/12 flex items-end sm:items-center lg:justify-between flex-col sm:flex-row md:gap-5 gap-8 px-0 py-8">
+          <div className="w-full md:w-5/12 flex items-end sm:items-center lg:justify-between flex-col sm:flex-row md:gap-8 gap-12 px-0 py-8">
             <div className="w-1/2">
               <FooterLinks Links={BeWith} title="همراه باشید" />
             </div>
