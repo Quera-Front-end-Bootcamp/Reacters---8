@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Wall from "../components/Account/Wall";
+import Wall from "../../components/Account/Wall";
 
 function LoginPage() {
   return (

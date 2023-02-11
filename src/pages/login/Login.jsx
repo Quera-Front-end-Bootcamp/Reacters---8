@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Wall from "../components/Account/Wall";
-import "../styles/style.css"
+import Wall from "../../components/Account/Wall";
+import "./style/login.css"
 
 function LoginPage() {
   return (
@@ -9,7 +9,7 @@ function LoginPage() {
         <div className="w-9/12">
           <p className="text-3xl font-semibold text-right py-4">ورود کاربر</p>
           <div className="flex flex-row-reverse text-input bg-gray-100 rounded-md p-3 my-4">
-            <label for="form-email" className="">: ایمیل</label>
+            <label for="form-email">: ایمیل</label>
             <input
               type="email"
               id="form-email"
@@ -17,7 +17,7 @@ function LoginPage() {
             />
           </div>
           <div className="flex flex-row-reverse text-input bg-gray-100 rounded-md p-3 mb-4">
-            <label for="form-email" className="">
+            <label for="form-email">
               : رمز عبور
             </label>
             <input

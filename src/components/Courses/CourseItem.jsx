@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
 import CourseModal from "./CourseModal";
-import "../../styles/style.css"
+import "./style/courses.css"
 
 const CourseItem = ({ data }) => {
 

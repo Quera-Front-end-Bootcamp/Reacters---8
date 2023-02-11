@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { coursesData } from "../../constants/courseConstants";
-import "../../styles/style.css"
+import "./style/courses.css"
 
 const FilterCourses = ({ setFilteredCourses }) => {
 

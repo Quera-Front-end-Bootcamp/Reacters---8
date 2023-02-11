@@ -1,12 +1,12 @@
-import Header from "../components/Homepage/firstHalf/HomePageOne";
-import HomePageTwo from "../components/Homepage/secondHalf/HomePageTwo";
-import CardNumber from "../components/Homepage/firstHalf/CardNumber";
-import js from "../assets/images/js-yellow.png";
-import java from "../assets/images/java-pink.png";
-import cShrp from "../assets/images/csharp-purpule.png";
-import bootstrap from "../assets/images/bootstrap-pur.png";
+import Header from "../../components/Homepage/firstHalf/HomePageOne";
+import HomePageTwo from "../../components/Homepage/secondHalf/HomePageTwo";
+import CardNumber from "../../components/Homepage/firstHalf/CardNumber";
+import js from "../../assets/images/js-yellow.png";
+import java from "../../assets/images/java-pink.png";
+import cShrp from "../../assets/images/csharp-purpule.png";
+import bootstrap from "../../assets/images/bootstrap-pur.png";
 import { Link } from "react-router-dom";
-import "../styles/style.css";
+import "./style/homepage.css";
 
 function Homepage() {
   return (
@@ -65,8 +65,8 @@ function Homepage() {
             </div>
           </div>
           <div className="w-full lg:w-1/3 flex flex-col gap-20 justify-center items-end text-[#093d41] border-b-2 border-r-2 border-slate-300 pl-28 pr-14 pt-24 h-fit">
-            <div className=" flex flex-col gap-8 text-right">
-              <h2 className=" text-3xl font-bold">دوره های آموزشی</h2>
+            <div className="flex flex-col gap-8 text-right">
+              <h2 className="text-3xl font-bold">دوره های آموزشی</h2>
               <p>
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپلورم
                 ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ ایپسوم متن

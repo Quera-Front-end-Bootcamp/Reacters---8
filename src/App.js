@@ -1,11 +1,11 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Courses from "./pages/courses";
-import Course from "./pages/course";
-import LoginPage from "./pages/Login";
-import ReigsterPage from "./pages/Register";
-import Account from "./pages/Account";
-import Homepage from "./pages/homepage";
+import Courses from "./pages/courses/courses";
+import Course from "./pages/course/course";
+import LoginPage from "./pages/login/Login";
+import ReigsterPage from "./pages/register/Register";
+import Account from "./pages/account/Account";
+import Homepage from "./pages/homepage/homepage";
 import Wrapper from "./components/Wrapper/Wrapper";
 
 function App() {

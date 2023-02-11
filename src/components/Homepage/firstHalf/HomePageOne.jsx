@@ -1,6 +1,6 @@
 import Search from "../../Search/Search"
 import SecondaryButton from "./SecBtn";
-import "../../../styles/style.css";
+import "../style/homepages.css";
 
 function Header() {
 	return (
