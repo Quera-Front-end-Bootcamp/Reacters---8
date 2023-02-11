@@ -1,7 +1,7 @@
 import React from 'react';
 import backButton from "../../assets/icons/back.png"
 import nextButton from "../../assets/icons/next.png"
-import "../../styles/style.css"
+import "./style/courses.css"
 
 const CoursePagination = ({ nPages, currentPage, setCurrentPage }) => {
 

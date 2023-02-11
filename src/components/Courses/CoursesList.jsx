@@ -1,6 +1,5 @@
 //rendering a list of cards by applying map on CourseItem component
 import CourseItem from "./CourseItem";
-import "../../styles/style.css"
 
 const CoursesList = ({ coursesData }) => {
   return (

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { coursesData } from "../constants/courseConstants";
-import FilterCourses from "../components/Courses/FilterCourses";
-import CoursesList from "../components/Courses/CoursesList";
-import CoursePagination from "../components/Courses/CoursesPagination";
+import { coursesData } from "../../constants/courseConstants";
+import FilterCourses from "../../components/Courses/FilterCourses";
+import CoursesList from "../../components/Courses/CoursesList";
+import CoursePagination from "../../components/Courses/CoursesPagination";
 
 const Courses = () => {
   // Setting the initial state of filteredCourses to all the courses

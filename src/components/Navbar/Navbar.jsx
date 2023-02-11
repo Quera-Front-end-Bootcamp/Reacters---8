@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import bamboo from '../../assets/icons/bamboo (d2).png';
-import React, { useState } from 'react';
 
 export const Navbar = () => {
 

@@ -1,15 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import BlackBox from '../components/Course/BlackBox';
-import BenefitItem from "../components/Course/BenefitItem";
-import Description from "../components/Course/Description";
-import PriceModal from "../components/Course/PriceModal";
-import Info from "../components/Course/Info";
-import Rating from "../components/Course/Rating";
-import teacher_logo from "../assets/icons/teacher.png";
-import pair_programming from '../assets/images/pair.png';
-import { coursesData } from "../constants/courseConstants";
-import "../styles/style.css";
+import BlackBox from '../../components/Course/BlackBox';
+import BenefitItem from "../../components/Course/BenefitItem";
+import Description from "../../components/Course/Description";
+import PriceModal from "../../components/Course/PriceModal";
+import Info from "../../components/Course/Info";
+import Rating from "../../components/Course/Rating";
+import teacher_logo from "../../assets/icons/teacher.png";
+import pair_programming from '../../assets/images/pair.png';
+import { coursesData } from "../../constants/courseConstants";
+import "./style/course.css";
 
 const Course = () => {
 
