@@ -1,7 +1,8 @@
-import ProgressBar from "../../components/ProgressBar/ProgressBar"
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import {progressBarValueCalculator} from '../../utils/utils';
 
 const Info = ({ info }) => {
-  let data = {progress: (info?.students.length/info?.capacity)*100};
+  let data = {progress: progressBarValueCalculator(info?.capacity, info?.students.length)};
   return (
     <div className="w-1/2 md:w-1/4 h-3/4 flex mx-auto flex-col justify-center items-center mt-32 mb-8">
       <img className="w-[223px] h-[246px]" src={``} alt="course_logo"></img>
