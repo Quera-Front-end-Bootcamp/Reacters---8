@@ -424,7 +424,7 @@ export const coursesData = [
         description: DESCRIPTION,
         discount: 20,
         benefits: BENEFITS("ری اکت"),
-        id: "b87cb02c-93b0-4e34-9c62-5476a5fe48ef",
+        id: "63e77afe7bd118083fef2dcc",
         heroSrc: reactHero,
         modalSrc: reactHero,
     },
