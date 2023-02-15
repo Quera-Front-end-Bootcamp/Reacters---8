@@ -8,14 +8,12 @@ import Info from "../../components/Course/Info";
 import Rating from "../../components/Course/Rating";
 import teacher_logo from "../../assets/icons/teacher.png";
 import pair_programming from '../../assets/images/pair.png';
-import { coursesData, DESCRIPTION } from "../../constants/courseConstants";
+import { coursesData, DESCRIPTION, BENEFITS } from "../../constants/courseConstants";
 import {AXIOS} from '../../config/axios.config.js';
-import axios from 'axios';
 import "./style/course.css";
 
 const Course = () => {
   const [data, setData] = useState();
-  const [startDate, setStartDate] = useState("");
 
   const { id } = useParams();
 
@@ -70,7 +68,7 @@ const Course = () => {
       <div className="bg-slate-200 flex flex-col-reverse p-5 md:flex-row justify-end items-end md:items-stretch">
         <div className="flex flex-col justify-evenly items-end">
           <h1 dir="rtl" className="font-semibold text-3xl mb-3 text-[#0d5a5f]">مزایای این دوره:</h1>
-          
+          {BENEFITS(data?.title).map((item, index) => <BenefitItem index = {index} title = {item.title}  context={item.context} key={item.id}/>)}
         </div>
         <img className="w-[350px] h-[500px] hidden md:block" src={pair_programming} alt='pair programming'></img>
       </div>
