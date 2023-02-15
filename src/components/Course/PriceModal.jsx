@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Countdown from "./Countdown";
-import {coursesData} from '../../constants/courseConstants';
+import * as Utils from '../../utils/utils';
 
 const PriceField = (props) => {
   return (
@@ -13,8 +13,11 @@ const PriceField = (props) => {
 
 const PriceModal = ({ priceInfo }) => {
 
-  let image = coursesData.find(item => item.id == priceInfo?._id)?.modalSrc;
-  priceInfo = { ...priceInfo, discount:60, modalSrc: image}
+  let image = Utils.getModalSrc(priceInfo?._id);
+  let discount = Utils.getDiscount(priceInfo?._id);
+  let alt = Utils.getAlt(priceInfo?._id);
+
+  priceInfo = { ...priceInfo, discount:discount, modalSrc: image, alt:alt}
   
   useEffect(() => {
     console.log('price', priceInfo.cost);
