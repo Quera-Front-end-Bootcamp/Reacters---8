@@ -1,6 +1,7 @@
 import ProgressBar from "../../components/ProgressBar/ProgressBar"
 
 const Info = ({ info }) => {
+  let data = {progress: (info?.students.length/info?.capacity)*100};
   return (
     <div className="w-1/2 md:w-1/4 h-3/4 flex mx-auto flex-col justify-center items-center mt-32 mb-8">
       <img className="w-[223px] h-[246px]" src={``} alt="course_logo"></img>
@@ -12,7 +13,7 @@ const Info = ({ info }) => {
         <p>دانشجو : {info?.students.length} نفر</p>
       </div>
       <div className="w-full h-7 mt-6 flex justify-center rounded-md overflow-hidden opacity-90 ">
-        <ProgressBar />
+        <ProgressBar data={data} />
       </div>
     </div>
   );
