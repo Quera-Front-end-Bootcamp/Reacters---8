@@ -1,1 +1,1 @@
-export const progressBarValueCalculator = (capacity, studentsLength) =>  (studentsLength/capacity)*100;
+export const getProgressValue = (data) => (data.students.length / data.capacity) * 100
