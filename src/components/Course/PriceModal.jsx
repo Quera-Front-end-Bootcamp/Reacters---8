@@ -12,11 +12,7 @@ const PriceField = (props) => {
 
 const PriceModal = ({ priceInfo }) => {
 
-  priceInfo = { ...priceInfo, discount:60, modalSrc: ""}
-  
-  useEffect(() => {
-    console.log('price', priceInfo.cost);
-  },[])
+  priceInfo = { ...priceInfo, discount: 60, modalSrc: "" }
 
   return (
     <div className="h-[400px] w-[60%] md:min-w bg-slate-100 absolute top-[12%] md:top-[15%] left-[25%] border-2">

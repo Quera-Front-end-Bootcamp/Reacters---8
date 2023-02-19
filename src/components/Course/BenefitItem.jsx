@@ -5,7 +5,6 @@ import success from '../../assets/icons/success.png';
 const BenefitItem = (props) => {
     let img;
     img = props.index === 0 ? online_learning : props.index === 1 ? learn : success;
-    console.log(props.index);
     return (
         <div className="text-[#004458] flex flex-row-reverse p-3">
             <span className="w-[20px] h-[20px]" >
