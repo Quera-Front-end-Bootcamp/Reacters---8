@@ -14,11 +14,11 @@ function Wall() {
       <div className="overlay flex flex-col items-center justify-center w-full h-full">
         <div className="flex flex-1"></div>
         <div className="flex flex-1 flex-col">
-          <div className="logo flex flex-row-reverse items-center justify-center">
-            <p className="text-white text-4xl pb-2">آکادمی آموزشی بامبو</p>
+          <div className="logo flex flex-row-reverse items-center justify-center gap-1">
+            <p className="text-white sm:text-3xl text-xl pb-2">آکادمی آموزشی بامبو</p>
             <img
               src={bambooIcon}
-              className="h-20 text-white "
+              className="sm:h-16 h-12 text-white "
               alt=""
             />
           </div>
