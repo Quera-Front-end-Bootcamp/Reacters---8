@@ -4,7 +4,11 @@ import imgSec5 from "../../../assets/images/suggestion.jpeg";
 
 export default function Fotter() {
 	const [data, setData] = useState({ email: "", text: "" });
-	const changeHandler = (event) => {};
+	const postData = () => {
+		axios
+			.post("https://{{apiurl}}/api/contactUs", data)
+			.then((response) => console.log(response));
+	};
 	return (
 		<article className=" flex flex-col items-center justify-center w-full h-60v mt-52 md:mt-8">
 			<div className="w-full h-full  flex relative overflow-hidden ">
@@ -36,7 +40,10 @@ export default function Fotter() {
 									className="text-white placeholder-gray-100 w-72 h-12 lg:w-96 lg:h-16 bg-transparent border-b border-gray-400 focus:border-b-teal-800 focus:border-b-3 outline-none text-end  pr-5"
 								/>
 							</div>
-							<button className="py-3 px-7 mb-4 border border-[#093d41] text-lg font-semibold text-[#052d30] lg:mt-8 bg-teal-700 hover:bg-[#093d41] hover:text-white rounded-md">
+							<button
+								onClick={postData}
+								className="py-3 px-7 mb-4 border border-[#093d41] text-lg font-semibold text-[#052d30] lg:mt-8 bg-teal-700 hover:bg-[#093d41] hover:text-white rounded-md"
+							>
 								ارسال
 							</button>
 						</form>
