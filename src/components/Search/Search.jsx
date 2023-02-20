@@ -1,4 +1,6 @@
 const Search = () => {
+
+
     return (
         <div className="flex justify-start gap-4 items-center px-12 py-2 h-16 text-slate-50">
             <svg xmlns="http://www.w3.org/2000/svg"

@@ -20,9 +20,9 @@ export default function Body() {
                 <div className="lg:w-full lg:h-full flex justify-center lg:items-end ">
                     <div className="lg:w-4/5 lg:h-4/5 flex items-end relative md:mt-0 mt-8">
                         <img src={imgSec4} className="w-full lg:h-5/6 object-cover" alt="slider" />
-                        <p
-                            className="absolute w-full h-8 sm:h-16 lg:h-20 flex items-center justify-center bg-[#0d5a5f] bg-opacity-60 text-white font-bold text-xs sm:text-base xl:text-lg">
-                            مقایسه ری اکت با فریم ورک های جدید جاوا اسکریپت</p>
+                        <p className="absolute w-full h-8 sm:h-16 lg:h-20 flex items-center justify-center bg-[#0d5a5f] bg-opacity-60 text-white font-bold text-xs sm:text-base xl:text-lg">
+                            مقایسه ری اکت با فریم ورک های جدید جاوا اسکریپت
+                        </p>
 
                         {/* <!-- lg < active    start --> */}
                         <div className="absolute w-full h-full flex justify-between items-center lg:hidden text-white p-2">
