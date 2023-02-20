@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Countdown from "./Countdown";
 import * as Utils from '../../utils/utils';
 
@@ -17,16 +16,12 @@ const PriceModal = ({ priceInfo }) => {
   let discount = Utils.getDiscount(priceInfo?._id);
   let alt = Utils.getAlt(priceInfo?._id);
 
-  priceInfo = { ...priceInfo, discount:discount, modalSrc: image, alt:alt}
-  
-  useEffect(() => {
-    console.log('price', priceInfo.cost);
-  },[])
+  priceInfo = { ...priceInfo, discount: discount, modalSrc: image, alt: alt }
 
   return (
     <div className="h-[400px] w-[60%] md:min-w bg-slate-100 absolute top-[12%] md:top-[15%] left-[25%] border-2">
-      <header className="w-full h-1/4 flex flex-row justify-end items-center gap-2 border-b-2 border-[#0d5a5f] pr-2">
-        <p>{`دوره ${priceInfo?.title}`}</p>
+      <header dir="ltr" className="w-full h-1/4 flex flex-row justify-end items-center gap-2 border-b-2 border-[#0d5a5f] pr-2">
+        <p>{priceInfo?.title} دوره</p>
         <img className="h-12 w-12" src={priceInfo?.modalSrc} alt={priceInfo?.alt}></img>
       </header>
       <div className="flex h-3/4 flex-col justify-end flex-wrap px-2">

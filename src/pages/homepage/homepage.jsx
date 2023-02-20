@@ -29,7 +29,7 @@ function Homepage() {
         </section>
         <section className="flex flex-col lg:flex-row min-h-screen pb-28">
           <div className="lg:w-2/3 w-full flex justify-center items-center py-10 lg:py-0">
-            <div className="border-gray-400 border-2 lg:w-[314px] w-[260px] min-h-[314px]  relative flex flex-col gap-3">
+            <div className="border-gray-400 lg:border-1 border-none lg:w-[310px] w-[290px] min-h-[314px] relative flex flex-col gap-3">
               <div className="w-full lg:w-3/4 h-[70%] bg-[#F7DF1E] lg:absolute lg:top-2r lg:-left-1/2 flex flex-col justify-around items-center py-2">
                 <img src={js} alt="js_course" className="w-1/2"></img>
                 <Link
