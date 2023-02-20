@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import imgSec5 from "../../../assets/images/suggestion.jpeg";
 
 export default function Fotter() {
+	const [data, setData] = useState({ email: "", text: "" });
+	const changeHandler = (event) => {};
 	return (
 		<article className=" flex flex-col items-center justify-center w-full h-60v mt-52 md:mt-8">
 			<div className="w-full h-full  flex relative overflow-hidden ">
@@ -15,12 +18,20 @@ export default function Fotter() {
 							<div className="flex flex-col pt-6 w-72 h-56 gap-12 md:gap-16">
 								<input
 									type="email"
+									value={data.email}
+									onChange={(event) =>
+										setData({ ...data, email: event.target.value })
+									}
 									placeholder="... ایمیل خود را وارد کنید"
 									className="text-white placeholder-gray-100 w-72 h-12 lg:w-96 lg:h-16 bg-transparent border-b border-gray-400 focus:border-b-teal-800 focus:border-b-3 outline-none text-end pr-5"
 								/>
 
 								<input
 									type="text"
+									value={data.text}
+									onChange={(event) =>
+										setData({ ...data, text: event.target.value })
+									}
 									placeholder="... متن خود را وارد کنید"
 									className="text-white placeholder-gray-100 w-72 h-12 lg:w-96 lg:h-16 bg-transparent border-b border-gray-400 focus:border-b-teal-800 focus:border-b-3 outline-none text-end  pr-5"
 								/>
