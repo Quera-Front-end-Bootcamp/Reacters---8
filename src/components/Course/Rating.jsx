@@ -7,7 +7,7 @@ const Rating = (props) => {
     }
     return (
         <div className="flex">
-            {rating.map(item => item)}
+            {rating.map((item) => <div key={item.index}>item</div>)}
         </div>
     );
 }
