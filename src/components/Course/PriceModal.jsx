@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Countdown from "./Countdown";
+import * as Utils from '../../utils/utils';
 
 const PriceField = (props) => {
   return (
@@ -12,7 +13,15 @@ const PriceField = (props) => {
 
 const PriceModal = ({ priceInfo }) => {
 
-  priceInfo = { ...priceInfo, discount: 60, modalSrc: "" }
+  let image = Utils.getModalSrc(priceInfo?._id);
+  let discount = Utils.getDiscount(priceInfo?._id);
+  let alt = Utils.getAlt(priceInfo?._id);
+
+  priceInfo = { ...priceInfo, discount:discount, modalSrc: image, alt:alt}
+  
+  useEffect(() => {
+    console.log('price', priceInfo.cost);
+  },[])
 
   return (
     <div className="h-[400px] w-[60%] md:min-w bg-slate-100 absolute top-[12%] md:top-[15%] left-[25%] border-2">
