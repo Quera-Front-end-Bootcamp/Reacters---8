@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import axios from "axios";
 import {AXIOS} from '../../../config/axios.config';
 import imgSec5 from "../../../assets/images/suggestion.jpeg";
 
@@ -13,7 +12,6 @@ export default function Fotter() {
 	const postData = () => {
 		if (!checkDataValidation()) {
 			alert("لطفا ورودی ها را پر کنید")
-			// return;
 		}
 		else{
 			AXIOS
