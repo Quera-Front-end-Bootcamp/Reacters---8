@@ -1,13 +1,30 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
+import {AXIOS} from '../../../config/axios.config';
 import imgSec5 from "../../../assets/images/suggestion.jpeg";
 
+const initialState = { email: "", text: "", name: "" };
+
 export default function Fotter() {
-	const [data, setData] = useState({ email: "", text: "" });
+	const [data, setData] = useState(initialState);
+	const checkDataValidation = () => {
+		return data.email.length > 0 && data.text.length > 0
+	}
 	const postData = () => {
-		axios
-			.post("https://{{apiurl}}/api/contactUs", data)
-			.then((response) => console.log(response));
+		if (!checkDataValidation()) {
+			alert("لطفا ورودی ها را پر کنید")
+			// return;
+		}
+		else{
+			AXIOS
+			.post("/api/contactUs", data)
+			.then((response) => {
+				if (response.status === 200) {
+					alert(response.data.message[0].message);
+					setData(initialState);
+				}
+			});
+		}
 	};
 	return (
 		<article className=" flex flex-col items-center justify-center w-full h-60v mt-52 md:mt-8">
