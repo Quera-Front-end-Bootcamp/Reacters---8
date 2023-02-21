@@ -6,7 +6,7 @@ function Header() {
 	return (
 		<header className="intro h-[75vh] text-slate-50 flex flex-col justify-end">
 			<section className="flex md:flex-row flex-col items-center justify-center md:justify-around h-[25rem] gap-4">
-				<div dir="rtl" className="md:text-right text-center">
+				<div dir="rtl" className="md:text-right text-center pr-10">
 					<h1 className="md:text-4xl text-3xl font-semibold leading-[5rem] pb-4">
 						باید راه بهتری برای آموزش ساخته میشد،
 						<br /> پس ما ساختیمش...
