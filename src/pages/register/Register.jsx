@@ -208,11 +208,14 @@ function LoginPage() {
             </label>
             <select
               id="form-address"
-              onChange={(e) => setRole(e.target.value)}
+              onChange={(e) => {
+                debugger;
+                setRole(e.target.value);
+              }}
               className="flex-1 bg-transparent mx-2 outline-none w-3/5"
             >
-              <option> آموزگار </option>
-              <option> ادمین </option>
+              <option value="teacher"> آموزگار </option>
+              <option value="admin"> ادمین </option>
             </select>
           </div>
           <div className="flex lg:flex-row lg:justify-between mt-8 font-semibold flex-col items-center">
