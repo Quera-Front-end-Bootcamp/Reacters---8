@@ -6,7 +6,9 @@ import LoginPage from "./pages/login/Login";
 import ReigsterPage from "./pages/register/Register";
 import Account from "./pages/account/Account";
 import Homepage from "./pages/homepage/homepage";
+import DashboardCourses from './pages/dashboard/courses';
 import Wrapper from "./components/Wrapper/Wrapper";
+import DashboardLayout from './components/dashboard/layout';
 
 function App() {
   return (
@@ -18,6 +20,12 @@ function App() {
         <Route path="/account" element={<Wrapper flag={true} element={<Account />} />} />
         <Route path="/course/:id" element={<Wrapper flag={true} element={<Course />} />} />
         <Route path="/courses" element={<Wrapper flag={false} className="coursesPage" element={<Courses />} />} />
+        <Route path="/dashboard" element={<DashboardLayout />}>
+          <Route path="users" element={<div>users</div>}></Route>
+          <Route path="news" element={<div>news</div>}></Route>
+          <Route path="lessons" element={<div>lessons</div>}></Route>
+          <Route path="courses" element={<DashboardCourses />}></Route>
+        </Route>
       </Routes>
     </div >
   );
