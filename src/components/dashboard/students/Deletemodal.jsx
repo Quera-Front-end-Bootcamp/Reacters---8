@@ -17,7 +17,7 @@ const DeleteModal = ({ data, isOpen, handleClose, handleDelete }) => {
         isOpen={isOpen}
         onRequestClose={handleClose}
         ariaHideApp={false}
-        contentLabel="Edit Modal"
+        contentLabel="Delete Modal"
         shouldCloseOnOverlayClick={true}
         className={
           "flex justify-center items-center outline-none w-3/5 md:w-1/3 h-[350px] pt-0 md:pt-20"

@@ -25,7 +25,8 @@ import {
 import Label from '../../components/label';
 import Iconify from '../../components/iconify';
 import Loading from '../../components/Loading/Loading';
-import EditModal from '../../components/dashboard/students/Deletemodal';
+import DeleteModal from '../../components/dashboard/students/Deletemodal';
+import EditModal from '../../components/dashboard/students/Editmodal';
 // sections
 import { UserListHead, UserListToolbar } from '../../components/dashboard/students';
 
@@ -94,11 +95,7 @@ export default function StudentPage() {
 
   const [students, setStudents] = useState([]);
 
-  const config = {
-    headers:{
-        "x-auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjgxMjE2MTZiZWZjZDNmODQzOTcwODQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTI2Mjk4ODV9.RYwyhkF3_nJpFv7O2Wy9lT0TpKRxcC80TCy-M9rnlXA",
-    }
-  };
+  
 
 
   const handleRequestSort = (event, property) => {
@@ -135,6 +132,11 @@ export default function StudentPage() {
 
   const isNotFound = !filteredUsers.length && !!filterName;
 
+  const config = {
+    headers:{
+        "x-auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjgxMjE2MTZiZWZjZDNmODQzOTcwODQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTI2Mjk4ODV9.RYwyhkF3_nJpFv7O2Wy9lT0TpKRxcC80TCy-M9rnlXA",
+    }
+  };
   
   const fetchStudents  = async () => {
     const res = await AXIOS.get('/api/student/getall', config);
@@ -150,7 +152,16 @@ export default function StudentPage() {
     });
   }
 
-  
+  const updateStudent = (data, setEditingState) => {
+    console.log('update is running');
+    data = {...data, profile:""}
+        AXIOS.put(`/api/student/${data.id}`, data, config).then(() => {
+          console.log('doneeE');
+          fetchStudents();
+          setEditingState(false);
+          setEditModalIsOpen(false);
+        }).catch(err => {console.log('err: ', err.config);})
+  }
 
   
   useEffect(()=>{
@@ -197,7 +208,7 @@ export default function StudentPage() {
                       page * rowsPerPage + rowsPerPage
                     )
                     .map((row) => {
-                      const { _id, fullName, role, isActive, profile, email } = row;
+                      const { _id, fullName, isActive, profile, email, phoneNumber, birthDate, nationalId } = row;
                       const selectedUser = selected.indexOf(fullName) !== -1;
                       return (
                         <TableRow
@@ -245,7 +256,7 @@ export default function StudentPage() {
                             </MenuItem>
                           </TableCell>
                           <TableCell>
-                            <MenuItem>
+                            <MenuItem onClick={() => {setEditModalIsOpen(true); setSudentData({_id, fullName, email, phoneNumber, birthDate, nationalId });}}>
                               <Iconify icon={"eva:edit-fill"} sx={{ mr: 2 }} />
                               Edit
                             </MenuItem>
@@ -305,11 +316,19 @@ export default function StudentPage() {
         </div>
       )}
       {DeleteModalIsOpen && (
-        <EditModal
+        <DeleteModal
           data={studentData}
           isOpen={DeleteModalIsOpen}
           handleClose={() => setDeleteModalIsOpen(false)}
           handleDelete = {deleteStudent}
+        />
+      )}
+      {EditModalIsOpen && (
+        <EditModal
+          data={studentData}
+          isOpen={EditModalIsOpen}
+          handleClose={() => setEditModalIsOpen(false)}
+          handleEdit = {updateStudent}
         />
       )}
     </>
