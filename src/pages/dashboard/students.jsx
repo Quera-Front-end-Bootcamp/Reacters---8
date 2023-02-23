@@ -24,6 +24,7 @@ import {
 // components
 import Label from '../../components/label';
 import Iconify from '../../components/iconify';
+import Loading from '../../components/Loading/Loading';
 // sections
 import { UserListHead, UserListToolbar } from '../../sections/@dashboard/students';
 
@@ -69,7 +70,8 @@ function applySortFilter(array, comparator, query) {
 }
 
 export default function StudentPage() {
-  const [open, setOpen] = useState(null);
+  
+  const [loading, setLoading] = useState(false);
 
   const [page, setPage] = useState(0);
 
@@ -96,21 +98,14 @@ export default function StudentPage() {
     console.log('fetching ...');
     const res = await AXIOS.get('/api/student/getall', config);
     setStudents(res.data.result);
+    setLoading(false);
     console.log(res);
     } 
 
   useEffect(()=>{
+    setLoading(true);
     fetchStudents();
   }, [])
-
-
-  const handleOpenMenu = (event) => {
-    setOpen(event.currentTarget);
-  };
-
-  const handleCloseMenu = () => {
-    setOpen(null);
-  };
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc';
@@ -164,50 +159,67 @@ export default function StudentPage() {
 
 
   const deleteStudent = (id, fullName) => {
-    console.log(id, fullName);
+    console.log('del  ',id, fullName);
     AXIOS.delete(`/api/student/${id}`, config).then(() => {
+      fetchStudents();
       console.log("done");
     });
-    fetchStudents();
+    
   }
 
   return (
     <>
-      <Container>
-        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
+      {!loading &&<Container>
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+          mb={5}
+        ></Stack>
+
+        <Card>
           <Typography variant="h4" gutterBottom>
             User
           </Typography>
-        </Stack>
+          <UserListToolbar
+            numSelected={selected.length}
+            filterName={filterName}
+            onFilterName={handleFilterByName}
+          />
 
-        <Card>
-          <UserListToolbar numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} />
-
-          {/* <Scrollbar> */}
-            <TableContainer sx={{ minWidth: 800 }}>
-              <Table>
-                <UserListHead
-                  order={order}
-                  orderBy={orderBy}
-                  headLabel={TABLE_HEAD}
-                  rowCount={students.length}
-                  numSelected={selected.length}
-                  onRequestSort={handleRequestSort}
-                  onSelectAllClick={handleSelectAllClick}
-                />
-                <TableBody>
-                  {students?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
-                    const { _id, fullName, role, isActive, profile} = row;
+          <TableContainer sx={{ minWidth: 900 }}>
+            <Table>
+              <UserListHead
+                order={order}
+                orderBy={orderBy}
+                headLabel={TABLE_HEAD}
+                rowCount={students.length}
+                numSelected={selected.length}
+                onRequestSort={handleRequestSort}
+                onSelectAllClick={handleSelectAllClick}
+              />
+              <TableBody>
+                {students
+                  ?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((row) => {
+                    const { _id, fullName, role, isActive, profile } = row;
                     const selectedUser = selected.indexOf(fullName) !== -1;
-
+                    console.log(_id, fullName);
                     return (
-                      <TableRow hover key={_id} tabIndex={-1} role="checkbox" selected={selectedUser}>
-                        <TableCell padding="checkbox">
-                          <Checkbox checked={selectedUser} onChange={(event) => handleClick(event, fullName)} />
-                        </TableCell>
+                      <TableRow
+                        hover
+                        key={_id}
+                        tabIndex={-1}
+                        role="checkbox"
+                        selected={selectedUser}
+                      >
 
                         <TableCell component="th" scope="row" padding="none">
-                          <Stack direction="row" alignItems="center" spacing={2}>
+                          <Stack
+                            direction="row"
+                            alignItems="center"
+                            spacing={2}
+                          >
                             <Avatar alt={fullName} src={profile} />
                             <Typography variant="subtitle2" noWrap>
                               {fullName}
@@ -216,80 +228,63 @@ export default function StudentPage() {
                         </TableCell>
 
                         <TableCell align="left">
-                          <Label color={ (isActive ? 'primary' : 'error')}>{isActive ? 'Active' : 'deactive'}</Label>
+                          <Label color={isActive ? "primary" : "error"}>
+                            {isActive ? "Active" : "deactive"}
+                          </Label>
                         </TableCell>
-
-                        <TableCell align="right">
-                          <IconButton size="large" color="inherit" onClick={handleOpenMenu}>
-                            <Iconify icon={'eva:more-vertical-fill'} />
-                          </IconButton>
-                        </TableCell>
-                        <Popover
-                            open={Boolean(open)}
-                            anchorEl={open}
-                            onClose={handleCloseMenu}
-                            anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
-                            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-                            PaperProps={{
-                            sx: {
-                                p: 1,
-                                width: 140,
-                                '& .MuiMenuItem-root': {
-                                px: 1,
-                                typography: 'body2',
-                                borderRadius: 0.75,
-                                },
-                            },
-                            }}
-                        >
-                            <MenuItem>
-                            <Iconify icon={'eva:edit-fill'} sx={{ mr: 2 }} />
-                            Edit
-                            </MenuItem>
-
-                            <MenuItem sx={{ color: 'error.main' }} onClick={() => deleteStudent(_id, fullName)}>
-                            <Iconify icon={'eva:trash-2-outline'} sx={{ mr: 2 }} />
+                        <TableCell>
+                          <MenuItem
+                            sx={{ color: "error.main" }}
+                            onClick={() => deleteStudent(_id, fullName)}
+                          >
+                            <Iconify
+                              icon={"eva:trash-2-outline"}
+                              sx={{ mr: 2 }}
+                            />
                             Delete
-                            </MenuItem>
-                        </Popover>
+                          </MenuItem>
+                        </TableCell>
+                        <TableCell>
+                          <MenuItem>
+                            <Iconify icon={"eva:edit-fill"} sx={{ mr: 2 }} />
+                            Edit
+                          </MenuItem>
+                        </TableCell>
                       </TableRow>
-
                     );
                   })}
-                  {emptyRows > 0 && (
-                    <TableRow style={{ height: 53 * emptyRows }}>
-                      <TableCell colSpan={6} />
-                    </TableRow>
-                  )}
-                </TableBody>
-
-                {isNotFound && (
-                  <TableBody>
-                    <TableRow>
-                      <TableCell align="center" colSpan={6} sx={{ py: 3 }}>
-                        <Paper
-                          sx={{
-                            textAlign: 'center',
-                          }}
-                        >
-                          <Typography variant="h6" paragraph>
-                            Not found
-                          </Typography>
-
-                          <Typography variant="body2">
-                            No results found for &nbsp;
-                            <strong>&quot;{filterName}&quot;</strong>.
-                            <br /> Try checking for typos or using complete words.
-                          </Typography>
-                        </Paper>
-                      </TableCell>
-                    </TableRow>
-                  </TableBody>
+                {emptyRows > 0 && (
+                  <TableRow style={{ height: 53 * emptyRows }}>
+                    <TableCell colSpan={6} />
+                  </TableRow>
                 )}
-                
-              </Table>
-            </TableContainer>
-          {/* </Scrollbar> */}
+              </TableBody>
+
+              {isNotFound && (
+                <TableBody>
+                  <TableRow>
+                    <TableCell align="center" colSpan={6} sx={{ py: 3 }}>
+                      <Paper
+                        sx={{
+                          textAlign: "center",
+                        }}
+                      >
+                        <Typography variant="h6" paragraph>
+                          Not found
+                        </Typography>
+
+                        <Typography variant="body2">
+                          No results found for &nbsp;
+                          <strong>&quot;{filterName}&quot;</strong>.
+                          <br /> Try checking for typos or using complete words.
+                        </Typography>
+                      </Paper>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              )}
+            </Table>
+          </TableContainer>
 
           <TablePagination
             rowsPerPageOptions={[5, 10, 25]}
@@ -301,9 +296,8 @@ export default function StudentPage() {
             onRowsPerPageChange={handleChangeRowsPerPage}
           />
         </Card>
-      </Container>
-
-      
+      </Container>}
+      {loading && <div className="flex justify-center items-center"><Loading /></div> }
     </>
   );
 }

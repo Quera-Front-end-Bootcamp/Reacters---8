@@ -23,15 +23,6 @@ const nav = useNavigate();
   //#endregion
   //#region registerfunction
   const register = async (isWorker) => {
-    // const user = {
-    //   fullName,
-    //   email,
-    //   password,
-    //   phoneNumber,
-    //   birthDate,
-    //   nationalId,
-    //   profile: "image.png",
-    // };
     const user = {
       fullName,
       email,
