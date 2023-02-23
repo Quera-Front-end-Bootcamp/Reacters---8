@@ -40,10 +40,8 @@ const Courses = () => {
     fetchData();
     setItemsPerPage(
       screenWidth >= 1024 ? 8
-        : screenWidth >= 768 && screenWidth < 1024
-          ? 6
-          : screenWidth > 460 && screenWidth < 768
-            ? 4
+        : screenWidth >= 768 && screenWidth < 1024 ? 6
+          : screenWidth > 460 && screenWidth < 768 ? 4
             : 4
     );
     const updateScreen = () => setScreenWidth(window.innerWidth)
