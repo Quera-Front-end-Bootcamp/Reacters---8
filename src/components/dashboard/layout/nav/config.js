@@ -9,8 +9,8 @@ const navConfig = [
     icon: <FiBook />,
   },
   {
-    title: 'users',
-    path: '/dashboard/users',
+    title: 'students',
+    path: '/dashboard/students',
     icon: <FiUser />,
   },
   {
