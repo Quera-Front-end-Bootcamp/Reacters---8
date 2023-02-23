@@ -28,7 +28,6 @@ import Iconify from '../../components/iconify';
 import { UserListHead, UserListToolbar } from '../../sections/@dashboard/students';
 
 import {AXIOS} from '../../config/axios.config';
-import { config } from '@fortawesome/fontawesome-svg-core';
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
@@ -164,8 +163,8 @@ export default function StudentPage() {
   const isNotFound = !filteredUsers.length && !!filterName;
 
 
-  const deleteStudent = (id) => {
-    // console.log(students.filter(student => student.id === id)[0].fullName);
+  const deleteStudent = (id, fullName) => {
+    console.log(id, fullName);
     AXIOS.delete(`/api/student/${id}`, config).then(() => {
       console.log("done");
     });
@@ -248,7 +247,7 @@ export default function StudentPage() {
                             Edit
                             </MenuItem>
 
-                            <MenuItem sx={{ color: 'error.main' }} onClick={() => deleteStudent(_id)}>
+                            <MenuItem sx={{ color: 'error.main' }} onClick={() => deleteStudent(_id, fullName)}>
                             <Iconify icon={'eva:trash-2-outline'} sx={{ mr: 2 }} />
                             Delete
                             </MenuItem>
