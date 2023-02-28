@@ -8,7 +8,7 @@ const DashboardCourse = ({ data, handleDeleteCourse }) => {
     function openDeleteModal() {
       setDeleteModalIsOpen(true);
     }
- 
+     
     //description of each card that gets rendered in DashboardCoursesList
     return (
         <>

@@ -1,6 +1,5 @@
 const Search = () => {
 
-
     return (
         <div className="flex justify-start gap-4 items-center px-12 py-2 h-16 text-slate-50">
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -15,9 +14,10 @@ const Search = () => {
             <input
                 className="bg-transparent text-base placeholder:text-gray-100 border border-gray-400 p-2.5 rounded-md md:w-1/3 w-1/2"
                 dir="rtl"
+                type="text"
                 placeholder="جستجو ..."
             />
         </div>
-    );
+    )
 }
 export default Search;
