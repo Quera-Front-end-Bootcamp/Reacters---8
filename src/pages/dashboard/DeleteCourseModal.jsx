@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { Link } from "react-router-dom"
 import ReactModal from "react-modal"
 import "./style/dashboardCourses.css"
 
@@ -33,20 +31,23 @@ const DeleteCourseModal = ({ data, isOpen, handleClose, handleDeleteCourse }) =>
                         <p>آیا اطمینان به حذف این دوره دارید؟</p>
                     </nav>
                     <div dir="rtl" className="flex justify-center gap-4">
-                        <button onClick={(e) => handleDeleteCourse(`${data._id}`, e)}
-                            onChange={handleClose}
+                        <button onClick={(e) => {
+                            handleDeleteCourse(`${data._id}`, e)
+                            handleClose()
+                        }}
+
                             className='text-gray-100 border border-red-500 rounded-sm bg-red-500 py-2 px-5 my-5 w-1/3 hover:bg-red-600'>
-                           <p>تایید</p>
+                            <p>تایید</p>
                         </button>
                         <button onClick={handleClose}
                             className="text-gray-800 border border-gray-200 rounded-sm bg-gray-100 py-2 px-5 my-5 w-1/3 hover:bg-gray-200">
-                            <p>انصراف</p>  
+                            <p>انصراف</p>
                         </button>
                     </div>
                 </div>
             </ReactModal>
         </div >
-    );
+    )
 }
 
-export default DeleteCourseModal;
+export default DeleteCourseModal
