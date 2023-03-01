@@ -1,4 +1,4 @@
-import Search from "../../Search/Search"
+import HomePageSearch from "../../Search/HomePageSearch"
 import SecondaryButton from "./SecBtn";
 import "../style/homepages.css";
 
@@ -20,7 +20,7 @@ function Header() {
 				</div>
 				<SecondaryButton anchorText="مشاهده دوره ها" />
 			</section>
-			<div className="sec-search"><Search /></div>
+			<div className="sec-search"><HomePageSearch /></div>
 		</header>
 	);
 }

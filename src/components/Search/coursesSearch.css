@@ -1,0 +1,21 @@
+.input {
+  transition: 0.5s;
+}
+.box:hover input {
+  width: 350px;
+  background: #0d5a5f;
+  border-radius: 6px;
+}
+.box svg {
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+}
+.box:hover svg {
+  opacity: 70;
+  /* z-index: -1; */
+}
+@media (max-width: 360px) {
+  .box:hover input {
+    width: 290px;
+  }
+}

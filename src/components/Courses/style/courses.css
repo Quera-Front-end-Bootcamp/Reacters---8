@@ -8,12 +8,9 @@
 .modalContent:hover {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.courseSearch {
-  background-color: rgba(13, 90, 95, 0.87);
-}
 @media (max-width: 500px) {
   .pagination {
-    width: 75%
+    width: 75%;
   }
 }
 @media (max-width: 320px) {
