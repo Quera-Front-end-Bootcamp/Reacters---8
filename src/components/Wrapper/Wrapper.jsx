@@ -1,7 +1,5 @@
-import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
-import Search from "../Search/Search"
-import "../../components/Courses/style/courses.css"
+import Navbar from "../Navbar/Navbar"
+import Footer from "../Footer/Footer"
 
 const Wrapper = (props) => {
     return (
@@ -9,7 +7,6 @@ const Wrapper = (props) => {
             {props.flag && <div className="w-full z-10 fixed bg-gray-400/20"><Navbar /></div>}
             {!props.flag && props.className === "coursesPage" && <div className="w-full z-10 fixed">
                 <div className="bg-[#0d5a5f]"><Navbar /></div>
-                <div dir="rtl" className="courseSearch md:block hidden"><Search /></div>
             </div>}
             <div className="overflow-y-scroll h-[100vh]">
                 {props.element}

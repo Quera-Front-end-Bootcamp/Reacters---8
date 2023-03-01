@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
-// import { AXIOS } from "../../config/axios.config"
-import DeleteCourseModal from "./DeleteCourseModal";
+import { useState } from "react"
+import DeleteCourseModal from "./DeleteCourseModal"
+import UpdateCourseModal from "./UpdateCourseModal"
 
 const DashboardCourse = ({ data, handleDeleteCourse }) => {
 
-    const [deleteModalIsOpen, setDeleteModalIsOpen] = useState(false);
-    function openDeleteModal() {
-      setDeleteModalIsOpen(true);
-    }
- 
+    const [deleteModalIsOpen, setDeleteModalIsOpen] = useState(false)
+    function openDeleteModal() { setDeleteModalIsOpen(true) }
+
+    const [updateModalIsOpen, setUpdateModalIsOpen] = useState(false)
+    function openUpdateModal() { setUpdateModalIsOpen(true) }
+
     //description of each card that gets rendered in DashboardCoursesList
     return (
         <>
@@ -25,13 +26,14 @@ const DashboardCourse = ({ data, handleDeleteCourse }) => {
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none" viewBox="0 0 24 24"
                                     strokeWidth="1.5" stroke="currentColor"
-                                    className="w-6 h-6 relative top-[6%] left-0 z-10 text-white cursor-pointer"
+                                    className="w-6 h-6 relative top-[6%] left-0 before:z-10 after:z-0 text-white cursor-pointer"
                                 >
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
                                 </svg>
                             </button>
                             <ul className="group-hover:block absolute top-[2px] left-[10px] hidden z-10 text-gray-600 font-semibold ml-2.5 border border-gray-100 bg-gray-100 rounded-sm">
-                                <li className="flex items-center text-center border-b border-gray-300 py-3 px-16 cursor-pointer hover:bg-gray-200">
+                                <li onClick={openUpdateModal}
+                                    className="flex items-center text-center border-b border-gray-300 py-3 px-16 cursor-pointer hover:bg-gray-200">
                                     <p>ویرایش</p>
                                 </li>
                                 <li onClick={openDeleteModal}
@@ -54,15 +56,22 @@ const DashboardCourse = ({ data, handleDeleteCourse }) => {
 
             {/* if modal is open then render DeleteCourseModal Component and its props */}
             {deleteModalIsOpen && (
-            <DeleteCourseModal
-                data={data}
-                isOpen={deleteModalIsOpen}
-                handleClose={() => setDeleteModalIsOpen(false)}
-                handleDeleteCourse={handleDeleteCourse}
-            />
+                <DeleteCourseModal
+                    data={data}
+                    isOpen={deleteModalIsOpen}
+                    handleClose={() => setDeleteModalIsOpen(false)}
+                    handleDeleteCourse={handleDeleteCourse}
+                />
+            )}
+            {/* if modal is open then render UpdateCourseModal Component and its props */}
+            {updateModalIsOpen && (
+                <UpdateCourseModal
+                    data={data}
+                    isOpen={updateModalIsOpen}
+                    handleClose={() => setUpdateModalIsOpen(false)}
+                />
             )}
         </>
-    );
-};
-
+    )
+}
 export default DashboardCourse;

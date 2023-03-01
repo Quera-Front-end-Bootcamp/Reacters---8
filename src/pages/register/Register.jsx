@@ -1,14 +1,14 @@
 //#region imports required modules and components
 import React, { useState } from "react";
-import { Link, useNative, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Wall from "../../components/Account/Wall";
 import Registerapi from "../../core/apis/Register.api";
-import { InputDatePicker, DatePicker } from "jalaali-react-date-picker";
+import { InputDatePicker } from "jalaali-react-date-picker";
 import "jalaali-react-date-picker/lib/styles/index.css";
 //#endregion
 
 function LoginPage() {
-const nav = useNavigate();
+  const nav = useNavigate();
 
   //#region statedeclaration
   const [isWorker, setIsWorker] = useState(Boolean(false));
@@ -53,40 +53,10 @@ const nav = useNavigate();
 
   return (
     <div className="page-login flex flex-col-reverse md:flex-row-reverse h-screen overflow-scroll">
-      <div
-        className="form flex flex-col justify-center items-center flex-1 text-[#0d5a5f] 
-                      md:overflow-none overflow-scroll pt-60 md:pt-8"
-      >
-        <div className="rounded-lg flex-row-reverse justify-none flex w-9/12 gap-2">
-          <p
-            className={`${
-              isWorker
-                ? "bg-gray-200 hover:bg-[#093d41] hover:text-white hover:scale-1.5"
-                : "bg-[#10696f] text-white"
-            }
-              shadow-md rounded-r-lg text-xl lg:text-2xl text-center font-semibold  py-4 px-4 w-1/2 cursor-pointer duration-500`}
-            onClick={() => {
-              setIsWorker(false);
-            }}
-          >
-            ثبت نام دانش آموز
-          </p>
-          <p
-            className={`${
-              isWorker
-                ? "bg-[#10696f] text-white"
-                : "bg-gray-200 hover:bg-[#093d41] hover:text-white"
-            } shadow-md rounded-l-lg text-xl lg:text-2xl text-center font-semibold  py-4 px-4 w-1/2 cursor-pointer duration-500`}
-            onClick={() => {
-              setIsWorker(true);
-            }}
-          >
-            ثبت نام کارمند
-          </p>
-        </div>
-        <div className={` w-9/12 py-8 `}>
+      <div className="form flex flex-col justify-center items-center md:pt-40 md:pb-10 pt-[18rem] pb-12 flex-1 text-[#0d5a5f] md:overflow-none overflow-scroll">
+        <div className="w-9/12">
           <div className="flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md">
-            <label htmlFor="form-username" className="">
+            <label htmlFor="form-username">
               : نام کاربری
             </label>
             <input
@@ -98,7 +68,7 @@ const nav = useNavigate();
             />
           </div>
           <div className="flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md">
-            <label htmlFor="form-email" className="">
+            <label htmlFor="form-email">
               : ایمیل
             </label>
             <input
@@ -110,7 +80,7 @@ const nav = useNavigate();
             />
           </div>
           <div className="flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md">
-            <label htmlFor="form-phone" className="">
+            <label htmlFor="form-phone">
               : شماره موبایل
             </label>
             <input
@@ -124,8 +94,8 @@ const nav = useNavigate();
               value={phoneNumber}
             />
           </div>
-          <div className=" flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md">
-            <label htmlFor="form-idNum" className="">
+          <div className="flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md">
+            <label htmlFor="form-idNum">
               : شماره ملی
             </label>
             <input
@@ -136,20 +106,24 @@ const nav = useNavigate();
               className="flex-1 bg-transparent mx-2 outline-none w-3/5"
             />
           </div>
-          <div className="flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md">
-            <label htmlFor="form-date" className="">
-              : تاریخ تولد
-            </label>
-            <InputDatePicker
-              placeholder=" تاریخ"
-              className="flex-1 bg-transparent mx-2 outline-none w-3/5"
-              id="form-date"
-              // value={birthDate}
-              onChange={(e, y) => setBirthDate(y)}
-            />
+          <div className="flex flex-row-reverse justify-between items-center w-full gap-4 text-input bg-gray-100 p-2 rounded-md">
+            <div className="w-[25%] flex justify-end items-center text-center">
+              <label htmlFor="form-date">
+                : تاریخ تولد
+              </label>
+            </div>
+            <div className="w-[70%]">
+              <InputDatePicker
+                placeholder="انتخاب کنید"
+                className="flex-1 bg-transparent mx-2 outline-none"
+                id="form-date"
+                // value={birthDate}
+                onChange={(e, y) => setBirthDate(y)}
+              />
+            </div>
           </div>
           <div className="flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md">
-            <label htmlFor="form-password" className="">
+            <label htmlFor="form-password">
               : رمز عبور
             </label>
             <input
@@ -161,11 +135,10 @@ const nav = useNavigate();
             />
           </div>
           <div
-            className={`${
-              isWorker ? "" : "hidden"
-            } flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md`}
+            className={`${isWorker ? "" : "hidden"
+              } flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md`}
           >
-            <label htmlFor="form-idNum" className="">
+            <label htmlFor="form-idNum">
               : نشانی سکونت
             </label>
             <input
@@ -177,41 +150,48 @@ const nav = useNavigate();
             />
           </div>
           <div
-            className={`${
-              isWorker ? "" : "hidden"
-            } flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md`}
-          >
-            <label htmlFor="form-date" className="">
+            className={`${isWorker ? "" : "hidden"}
+              flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md`}>
+            <label htmlFor="form-date">
               : نوع همکاری
             </label>
             <select
               id="form-address"
               onChange={(e) => {
                 debugger;
-                setRole(e.target.value);
+                setRole(e.target.value)
               }}
-              className="flex-1 bg-transparent mx-2 outline-none w-3/5"
+              className="flex-1 bg-transparent ml-2 mr-10 outline-none w-3/5 border border-gray-300 py-5"
             >
-              <option value="teacher"> آموزگار </option>
+              <option value="teacher"> مدرس </option>
               <option value="admin"> ادمین </option>
             </select>
           </div>
-          <div className="flex lg:flex-row-reverse lg:justify-between mt-8 font-semibold flex-col items-center">
+          <div className="flex flex-row-reverse justify-between mt-8 font-semibold items-center">
             <Link
               to="/login"
-              className="lg:mr-4 m-0 lg:mb-0 mb-4 py-3 px-4  bg-gray-200 hover:border-[#0d5a5f] text-center rounded-md w-[45%]"
-            >
+              className="lg:mb-0 py-3 px-4 bg-gray-200 hover:border-[#0d5a5f] text-center rounded-md w-[45%]">
               ورود
             </Link>
 
             <button
-              onClick={() => {
-                register(isWorker);
-              }}
-              className="border border-gray-200 rounded-md bg-[#0d5a5f] hover:bg-[#093d41] text-white  py-3 px-4 w-[45%]"
-            >
+              onClick={() => register(isWorker)}
+              className="border border-gray-200 rounded-md bg-[#0d5a5f] hover:bg-[#093d41] text-white py-3 px-4 w-[45%]">
               ثبت نام
             </button>
+          </div>
+
+          <div className="rounded-lg flex-col flex w-full gap-2 mt-8">
+            <p className={`${isWorker ? "bg-gray-200 hover:bg-[#093d41] hover:text-white hover:scale-1.5" : "bg-[#10696f] text-white hover:bg-[#0b4a4e]"}
+              shadow-md rounded-md text-center font-semibold py-3 px-4 cursor-pointer duration-500`}
+              onClick={() => setIsWorker(false)}>
+              ثبت نام دانش آموز
+            </p>
+            <p className={`${isWorker ? "bg-[#10696f] text-white hover:bg-[#093d41]" : "bg-gray-200 hover:bg-[#10696f] hover:text-white"}
+              shadow-md rounded-md text-center font-semibold py-3 px-4 cursor-pointer duration-500`}
+              onClick={() => setIsWorker(true)}>
+              ثبت نام کارمند
+            </p>
           </div>
         </div>
       </div>

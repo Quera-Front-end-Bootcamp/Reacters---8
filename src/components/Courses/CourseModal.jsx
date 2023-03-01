@@ -16,7 +16,7 @@ const CourseModal = ({ data, isOpen, handleClose }) => {
                 ariaHideApp={false}
                 contentLabel="Course Modal"
                 shouldCloseOnOverlayClick={true}
-                className={"flex justify-center items-center outline-none w-3/5 h-screen pt-0 md:pt-20"}
+                className={"flex justify-center items-center outline-none w-3/5 h-screen"}
                 overlayClassName={"overlayClassName h-[108vh] w-full top-0 left-0 fixed flex justify-center items-center"}
             >
                 <div className="modalContent relative bg-white w-full md:overflow-visible overflow-y-scroll h-4/5 md:h-fit">
