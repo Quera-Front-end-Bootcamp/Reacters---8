@@ -2,13 +2,15 @@ import { useState, useEffect } from 'react';
 import { AXIOS } from '../../config/axios.config';
 import { Container, Typography, Stack, Button } from '@mui/material';
 import Iconify from '../../components/iconify';
-import DashboardCoursesList from "./DashboardCoursesList"
+import DashboardCoursesList from "../../components/dashboard/courses/DashboardCoursesList"
 import CoursePagination from "../../components/Courses/CoursesPagination"
+import DashboardSearch from "../../components/Search/DashboardSearch"
+import CreateCourseModal from "../../components/dashboard/courses/CreateCourseModal"
 import Loading from "../../components/Loading/Loading"
 
 export default function Courses() {
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
   //get all courses
@@ -52,43 +54,34 @@ export default function Courses() {
   const currentItems = filteredCourses.slice(indexOfFirstRecord, indexOfLastRecord)
   const nPages = Math.ceil(filteredCourses.length / itemsPerPage)
 
+  //create course modal
+  const [createModalIsOpen, setCreateModalIsOpen] = useState(false)
+  function openCreateModal() { setCreateModalIsOpen(true) }
+
   return (
     <>
       <Container maxWidth="xl" className="mt-8">
         <Stack className="flex flex-row md:justify-between justify-center items-center" mb={5}>
-          <div className="flex flex-col-reverse justify-center sm:flex-row sm:justify-between gap-2">
-          <Button
-            variant="contained"
-            startIcon={<Iconify icon="eva:plus-fill" />}
-            className="bg-gray-400 w-full sm:w-2/3"
-          >
-            دوره جدید
-          </Button>
-          <div className="flex justify-start gap-4 items-center h-fit text-slate-50 relative">
-            <svg xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-7 h-7 absolute text-teal-800 pl-2 cursor-pointer">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-            </svg>
-
-            <input
-              onChange={(e) => setSearchInput(e.target.value)}
-              value={searchInput}
-              className="bg-transparent outline-teal-600 text-teal-800 text-base placeholder:text-gray-400 placeholder:pr-2 border border-gray-300 py-[6px] sm:w-[25rem] w-[18rem] rounded-md shadow-lg"
-              dir="rtl"
-              type="text"
-              placeholder="جستجو ..."
-            />
+          <div className="flex flex-col-reverse justify-center sm:flex-row gap-2 items-center sm:items-stretch w-full sm:w-1/2">
+            <Button
+              variant="contained"
+              startIcon={<Iconify icon="eva:plus-fill" />}
+              className="bg-gray-400 sm:w-[40%] w-3/5 hover:bg-[#0d5a5f]"
+              onClick={openCreateModal}
+            >
+              دوره جدید
+            </Button>
+            <div>
+              <DashboardSearch
+                searchInput={searchInput}
+                setSearchInput={setSearchInput}
+              />
+            </div>
           </div>
-          </div>
-         
           <Typography
             dir="rtl"
             variant="h4"
-            className="text-white text-base bg-gray-400 px-[20px] py-[6px] rounded-md shadow-lg md:flex hidden"
+            className="text-white text-base bg-gray-400 px-[20px] py-2 rounded-md shadow-lg md:flex hidden"
           >
             تمام دوره ها
           </Typography>
@@ -113,6 +106,14 @@ export default function Courses() {
             </>
           )}
       </Container>
+
+      {createModalIsOpen && (
+        <CreateCourseModal
+          data={data}
+          isOpen={createModalIsOpen}
+          handleClose={() => setCreateModalIsOpen(false)}
+        />
+      )}
     </>
-  );
+  )
 }
