@@ -1,4 +1,5 @@
 import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 // @mui
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
@@ -28,6 +29,7 @@ export default function AccountPopover() {
   const [open, setOpen] = useState(null);
 
   const ctx = useContext(Context);
+  const nav = useNavigate();
 
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
@@ -35,6 +37,8 @@ export default function AccountPopover() {
 
   const handleClose = () => {
     setOpen(null);
+      ctx.onLogout();
+      nav('/');
   };
 
   return (

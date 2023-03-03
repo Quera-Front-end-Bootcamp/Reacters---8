@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useEffect, useContext } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
 import { Box, Link, Button, Drawer, Typography, Avatar, Stack } from '@mui/material';
@@ -38,6 +38,12 @@ Nav.propTypes = {
 export default function Nav({ openNav, onCloseNav }) {
   const { pathname } = useLocation();
   const ctx = useContext(Context);
+  const nav = useNavigate(pathname);
+
+  const logOutHandler = ()=> {
+    ctx.onLogout();
+    nav('/');
+  }
 
   const isDesktop = useResponsive('up', 'lg');
 
@@ -70,7 +76,7 @@ export default function Nav({ openNav, onCloseNav }) {
               </Typography>
 
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                {ctx.role}
+                {ctx.user.role}
               </Typography>
             </Box>
           </StyledAccount>
@@ -79,7 +85,7 @@ export default function Nav({ openNav, onCloseNav }) {
 
       <NavSection data={navConfig} />
 
-      <Button onClick={ctx.onLogout}>خروج</Button>
+      <Button onClick={logOutHandler}>خروج</Button>
 
       <Box sx={{ flexGrow: 1 }} />
 
