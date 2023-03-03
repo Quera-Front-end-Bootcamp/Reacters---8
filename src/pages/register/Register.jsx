@@ -11,7 +11,7 @@ function LoginPage() {
   const nav = useNavigate();
 
   //#region statedeclaration
-  const [isWorker, setIsWorker] = useState(Boolean(false));
+  const [isWorker, setIsWorker] = useState(false);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,13 +28,15 @@ function LoginPage() {
       email,
       password,
       phoneNumber,
-      birthDate,
+      birthDate:birthDate.split('-').join('/'),
       nationalId,
       profile: "image.png",
       address,
       role,
     };
+    console.log(user);
     const regresult = await Registerapi(user, isWorker);
+    console.log(regresult);
     if (regresult?.success) {
       setFullName('');
       setEmail('');
@@ -46,12 +48,16 @@ function LoginPage() {
       setPhoneNumber('');
       setPassword('');
       alert(`${fullName} با موفقیت ثبت نام شدید`);
-      nav('/register');
+      nav('/login');
     }
-    else
+    else if(!regresult?.success)
     {
-      alert("مشکلی رخ داده است")
+      alert(regresult?.message?.message);
     }
+    else{
+      alert('خطایی رخ داده لطفا دوباره تلاش کنید');
+    }
+
   };
   //#endregion
 
@@ -162,7 +168,6 @@ function LoginPage() {
             <select
               id="form-address"
               onChange={(e) => {
-                debugger;
                 setRole(e.target.value)
               }}
               className="flex-1 bg-transparent ml-2 mr-10 outline-none w-3/5 border border-gray-300 py-5"
