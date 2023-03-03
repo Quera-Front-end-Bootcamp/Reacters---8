@@ -10,6 +10,7 @@ const Context = React.createContext({
     news: [],
     lessons: [],
     onLogin: (role, user) => {},
+    onLogout: () => {},
     setNews: () => {},
     setLessons: () => {},
 });
@@ -43,6 +44,15 @@ export const ContextProvider = (props) => {
         setIsloggedIn(true);
         
     }
+    const logOutHandler =() => {
+        setIsloggedIn(false);
+        setRole(null);
+        setUser(null);
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        localStorage.removeItem('role');
+        localStorage.removeItem('isloggedin');
+    }
 
 
     return (
@@ -55,8 +65,9 @@ export const ContextProvider = (props) => {
             news,
             lessons,
             onLogin: loginHandler,
+            onLogout: logOutHandler,
             setNews,
-            setLessons
+            setLessons,
         }}
         >
         {props.children}

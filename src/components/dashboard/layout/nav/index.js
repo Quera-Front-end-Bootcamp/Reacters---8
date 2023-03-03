@@ -79,6 +79,8 @@ export default function Nav({ openNav, onCloseNav }) {
 
       <NavSection data={navConfig} />
 
+      <Button onClick={ctx.onLogout}>خروج</Button>
+
       <Box sx={{ flexGrow: 1 }} />
 
     </Scrollbar>
