@@ -4,22 +4,22 @@ import { BiNews} from 'react-icons/bi';
 
 const navConfig = [
   {
-    title: 'courses',
+    title: 'دوره ها',
     path: '/dashboard/courses',
     icon: <FiBook />,
   },
   {
-    title: 'students',
+    title: 'دانش آموزان',
     path: '/dashboard/students',
     icon: <FiUser />,
   },
   {
-    title: 'lessons',
+    title: 'دروس',
     path: '/dashboard/lessons',
     icon: <FiBookOpen />,
   },
   {
-    title: 'news',
+    title: 'اخبار',
     path: '/dashboard/news',
     icon: <BiNews />,
   },
