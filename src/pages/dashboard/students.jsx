@@ -134,7 +134,7 @@ export default function StudentPage() {
 
   const config = {
     headers:{
-        "x-auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjgxMjE2MTZiZWZjZDNmODQzOTcwODQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTI2Mjk4ODV9.RYwyhkF3_nJpFv7O2Wy9lT0TpKRxcC80TCy-M9rnlXA",
+        "x-auth-token": localStorage.getItem('token'),
     }
   };
   
