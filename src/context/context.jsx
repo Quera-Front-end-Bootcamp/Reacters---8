@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 const Context = React.createContext({
     isLoggedIn: "",
@@ -12,6 +12,22 @@ const Context = React.createContext({
 });
 
 export const ContextProvider = (props) => {
+
+
+    useEffect(() => {
+        const logged = localStorage.getItem('isloggedin');
+        console.log('logged', logged);
+        if (logged) {
+            setIsloggedIn(true);
+            const role = localStorage.getItem('role');
+            console.log('role', role);
+            setRole(role);
+            const user = JSON.parse(localStorage.getItem('user'));
+            setUser(user);
+        }
+    }
+    ,[])
+
     const [isLoggedIn, setIsloggedIn] = useState(false);
     const [role, setRole] = useState("");
     const [user, setUser] = useState({});
@@ -22,6 +38,7 @@ export const ContextProvider = (props) => {
         setRole(role);
         setUser(user);
         setIsloggedIn(true);
+        
     }
 
 

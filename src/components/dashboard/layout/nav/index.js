@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
@@ -12,10 +12,13 @@ import useResponsive from '../../../../hooks/useResponsive';
 import Logo from '../../../../components/logo';
 import Scrollbar from '../../../../components/scrollbar';
 import NavSection from '../../../../components/nav-section';
+import Context from '../../../../context/context';
 //
 import navConfig from './config';
 
+
 // ----------------------------------------------------------------------
+const pfpURL = 'https://darbonnewoods.com/wp-content/uploads/2022/04/Blank-Profile.png';
 
 const NAV_WIDTH = 280;
 
@@ -36,6 +39,7 @@ Nav.propTypes = {
 
 export default function Nav({ openNav, onCloseNav }) {
   const { pathname } = useLocation();
+  const ctx = useContext(Context);
 
   const isDesktop = useResponsive('up', 'lg');
 
@@ -60,15 +64,15 @@ export default function Nav({ openNav, onCloseNav }) {
       <Box sx={{ mb: 5, mx: 2.5 }}>
         <Link underline="none">
           <StyledAccount>
-            <Avatar src={account.photoURL} alt="photoURL" />
+            <Avatar src={pfpURL} alt="photoURL" />
 
             <Box sx={{ ml: 2 }}>
               <Typography variant="subtitle2" sx={{ color: 'text.primary' }}>
-                {account.displayName}
+                {ctx.user.fullName}
               </Typography>
 
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                {account.role}
+                {ctx.role}
               </Typography>
             </Box>
           </StyledAccount>

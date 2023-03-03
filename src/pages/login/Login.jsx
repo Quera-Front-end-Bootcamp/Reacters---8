@@ -8,7 +8,7 @@ import "./style/login.css"
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("student");
+  const [role, setRole] = useState("employee");
 
   const ctx = useContext(Context);
 
@@ -25,6 +25,9 @@ function LoginPage() {
         alert(response?.data.message[0]?.message);
         ctx.onLogin(role, role === 'employee' ? response.data.result.employeeModel : response.data.result.studentModel);
         localStorage.setItem("token", response.data.result.jwtToken);
+        localStorage.setItem("isloggedin", true);
+        localStorage.setItem("role", role);
+        localStorage.setItem("user", role === 'employee' ? JSON.stringify(response.data.result.employeeModel) : JSON.stringify(response.data.result.studentModel));
       })
       .catch((error) => {
         alert(error.message);
