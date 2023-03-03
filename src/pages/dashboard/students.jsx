@@ -1,6 +1,5 @@
-import { filter } from 'lodash';
-import { sentenceCase } from 'change-case';
-import { useEffect, useState } from 'react';
+import { filter } from "lodash";
+import { useEffect, useState } from "react";
 // @mui
 import {
   Card,
@@ -20,27 +19,29 @@ import {
   IconButton,
   TableContainer,
   TablePagination,
-} from '@mui/material';
+} from "@mui/material";
 // components
-import Label from '../../components/label';
-import Iconify from '../../components/iconify';
-import Loading from '../../components/Loading/Loading';
-import DeleteModal from '../../components/dashboard/students/Deletemodal';
-import EditModal from '../../components/dashboard/students/Editmodal';
+import Label from "../../components/label";
+import Iconify from "../../components/iconify";
+import Loading from "../../components/Loading/Loading";
+import DeleteModal from "../../components/dashboard/students/Deletemodal";
+import EditModal from "../../components/dashboard/students/Editmodal";
 // sections
-import { UserListHead, UserListToolbar } from '../../components/dashboard/students';
+import {
+  UserListHead,
+  UserListToolbar,
+} from "../../components/dashboard/students";
 
-import {AXIOS} from '../../config/axios.config';
+import { AXIOS } from "../../config/axios.config";
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
-  { id: 'name', label: 'Name', alignRight: false },
-  { id: 'status', label: 'Status', alignRight: false },
-  { id: '' },
+  { id: "name", label: "Name", alignRight: false },
+  { id: "status", label: "Status", alignRight: false },
+  { id: "" },
 ];
 
 // ----------------------------------------------------------------------
-
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -53,7 +54,7 @@ function descendingComparator(a, b, orderBy) {
 }
 
 function getComparator(order, orderBy) {
-  return order === 'desc'
+  return order === "desc"
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
@@ -66,7 +67,11 @@ function applySortFilter(array, comparator, query) {
     return a[1] - b[1];
   });
   if (query) {
-    return filter(array, (_user) => _user.fullName.toLowerCase().indexOf(query.toLowerCase()) !== -1);
+    return filter(
+      array,
+      (_user) =>
+        _user.fullName.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    );
   }
   return stabilizedThis.map((el) => el[0]);
 }
@@ -76,31 +81,29 @@ export default function StudentPage() {
 
   const [DeleteModalIsOpen, setDeleteModalIsOpen] = useState(false);
 
-
   const [EditModalIsOpen, setEditModalIsOpen] = useState(false);
 
   const [loading, setLoading] = useState(false);
 
   const [page, setPage] = useState(0);
 
-  const [order, setOrder] = useState('asc');
+  const [order, setOrder] = useState("asc");
 
   const [selected, setSelected] = useState([]);
 
-  const [orderBy, setOrderBy] = useState('name');
+  const [orderBy, setOrderBy] = useState("name");
 
-  const [filterName, setFilterName] = useState('');
+  const [filterName, setFilterName] = useState("");
 
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
   const [students, setStudents] = useState([]);
 
-  
-
+  const [activeLoading, setActiveLoading] = useState(false);
 
   const handleRequestSort = (event, property) => {
-    const isAsc = orderBy === property && order === 'asc';
-    setOrder(isAsc ? 'desc' : 'asc');
+    const isAsc = orderBy === property && order === "asc";
+    setOrder(isAsc ? "desc" : "asc");
     setOrderBy(property);
   };
 
@@ -126,48 +129,73 @@ export default function StudentPage() {
     setFilterName(event.target.value);
   };
 
-  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - students.length) : 0;
+  const emptyRows =
+    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - students.length) : 0;
 
-  const filteredUsers = applySortFilter(students, getComparator(order, orderBy), filterName);
+  const filteredUsers = applySortFilter(
+    students,
+    getComparator(order, orderBy),
+    filterName
+  );
 
   const isNotFound = !filteredUsers.length && !!filterName;
 
   const config = {
-    headers:{
-        "x-auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjgxMjE2MTZiZWZjZDNmODQzOTcwODQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTI2Mjk4ODV9.RYwyhkF3_nJpFv7O2Wy9lT0TpKRxcC80TCy-M9rnlXA",
-    }
+    headers: {
+      "x-auth-token": localStorage.getItem("token"),
+    },
   };
-  
-  const fetchStudents  = async () => {
-    const res = await AXIOS.get('/api/student/getall', config);
+
+  const fetchStudents = async () => {
+    const res = await AXIOS.get("/api/student/getall", config);
     setStudents(res.data.result);
     setLoading(false);
-    } 
+    
+  };
 
   const deleteStudent = (id, setDeletingState) => {
     AXIOS.delete(`/api/student/${id}`, config).then(() => {
       fetchStudents();
       setDeletingState(false);
       setDeleteModalIsOpen(false);
+      
     });
-  }
+  };
 
   const updateStudent = (data, setEditingState) => {
-    console.log('update is running');
-    data = {...data, profile:""}
-        AXIOS.put(`/api/student/${data.id}`, data, config).then(() => {
-          console.log('doneeE');
-          fetchStudents();
-          setEditingState(false);
-          setEditModalIsOpen(false);
-        }).catch(err => {console.log('err: ', err.config);})
-  }
+    let id = data.id;
+    delete data.id;
+    AXIOS.put(`/api/student/${id}`, data, config)
+      .then(() => {
+        fetchStudents();
+        setEditingState(false);
+        setEditModalIsOpen(false);
+      })
+      .catch((err) => {
+        console.log("err: ", err);
+      });
+  };
 
-  
-  useEffect(()=>{
+  const toggleActiveStudent = (id, isActive) => {
+    setActiveLoading(true);
+    AXIOS.put(
+      `/api/student/${isActive ? "deactive" : "active"}/${id}`,
+      {},
+      config
+    )
+      .then(() => {
+        fetchStudents();
+        setActiveLoading(false)
+      })
+      .catch((err) => {
+        console.log("err: ", err);
+      });
+  };
+
+  useEffect(() => {
     setLoading(true);
     fetchStudents();
-  }, [])
+  }, []);
 
   return (
     <>
@@ -181,8 +209,8 @@ export default function StudentPage() {
           ></Stack>
 
           <Card>
-            <Typography variant="h4" gutterBottom>
-              User
+            <Typography variant="h4" dir="rtl" gutterBottom >
+              دانش آموزان
             </Typography>
             <UserListToolbar
               numSelected={selected.length}
@@ -208,7 +236,16 @@ export default function StudentPage() {
                       page * rowsPerPage + rowsPerPage
                     )
                     .map((row) => {
-                      const { _id, fullName, isActive, profile, email, phoneNumber, birthDate, nationalId } = row;
+                      const {
+                        _id,
+                        fullName,
+                        isActive,
+                        profile,
+                        email,
+                        phoneNumber,
+                        birthDate,
+                        nationalId,
+                      } = row;
                       const selectedUser = selected.indexOf(fullName) !== -1;
                       return (
                         <TableRow
@@ -239,14 +276,27 @@ export default function StudentPage() {
                           </TableCell>
 
                           <TableCell align="left">
-                            <Label color={isActive ? "primary" : "error"}>
-                              {isActive ? "Active" : "deactive"}
+                            <Label
+                              color={isActive ? "primary" : "error"}
+                              onClick={() => toggleActiveStudent(_id, isActive)}
+                            >
+                              {!activeLoading && isActive
+                                ? "Active"
+                                : "deactive"}
+                              {activeLoading && (
+                                <div className="flex justify-center items-start w-[8px] h-[8px]">
+                                  <Loading />
+                                </div>
+                              )}
                             </Label>
                           </TableCell>
                           <TableCell>
                             <MenuItem
                               sx={{ color: "error.main" }}
-                              onClick={() => {setDeleteModalIsOpen(true); setSudentData({_id, fullName, email});}}
+                              onClick={() => {
+                                setDeleteModalIsOpen(true);
+                                setSudentData({ _id, fullName, email });
+                              }}
                             >
                               <Iconify
                                 icon={"eva:trash-2-outline"}
@@ -256,7 +306,19 @@ export default function StudentPage() {
                             </MenuItem>
                           </TableCell>
                           <TableCell>
-                            <MenuItem onClick={() => {setEditModalIsOpen(true); setSudentData({_id, fullName, email, phoneNumber, birthDate, nationalId });}}>
+                            <MenuItem
+                              onClick={() => {
+                                setEditModalIsOpen(true);
+                                setSudentData({
+                                  _id,
+                                  fullName,
+                                  email,
+                                  phoneNumber,
+                                  birthDate,
+                                  nationalId,
+                                });
+                              }}
+                            >
                               <Iconify icon={"eva:edit-fill"} sx={{ mr: 2 }} />
                               Edit
                             </MenuItem>
@@ -320,7 +382,7 @@ export default function StudentPage() {
           data={studentData}
           isOpen={DeleteModalIsOpen}
           handleClose={() => setDeleteModalIsOpen(false)}
-          handleDelete = {deleteStudent}
+          handleDelete={deleteStudent}
         />
       )}
       {EditModalIsOpen && (
@@ -328,7 +390,7 @@ export default function StudentPage() {
           data={studentData}
           isOpen={EditModalIsOpen}
           handleClose={() => setEditModalIsOpen(false)}
-          handleEdit = {updateStudent}
+          handleEdit={updateStudent}
         />
       )}
     </>

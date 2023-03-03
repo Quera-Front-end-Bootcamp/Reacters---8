@@ -2,22 +2,26 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import {AXIOS} from '../../config/axios.config';
 import Context from "../../context/context";
+import { useNavigate } from "react-router-dom";
 import Wall from "../../components/Account/Wall";
+import Loading from '../../components/Loading/Loading';
 import "./style/login.css"
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("student");
+  const [role, setRole] = useState("employee");
+  const [isLoading, setIsLoading] = useState(false);
 
   const ctx = useContext(Context);
-
+  const nav = useNavigate();
   const loginHandler = (e) => {
     e.preventDefault();
     const emailFilled = email.trim().length>0;
     const passfilled = password.trim().length>0;
 
     if (emailFilled && passfilled) {
+      setIsLoading(true);
       const userData = {email, password};
       const URL = role === 'student' ? "/api/auth/login" : '/api/auth/employee/login';
       AXIOS.post(URL, userData)
@@ -25,9 +29,15 @@ function LoginPage() {
         alert(response?.data.message[0]?.message);
         ctx.onLogin(role, role === 'employee' ? response.data.result.employeeModel : response.data.result.studentModel);
         localStorage.setItem("token", response.data.result.jwtToken);
+        localStorage.setItem("isloggedin", true);
+        localStorage.setItem("role", role);
+        localStorage.setItem("user", role === 'employee' ? JSON.stringify(response.data.result.employeeModel) : JSON.stringify(response.data.result.studentModel));
+        setIsLoading(false);
+        nav('/dashboard');
       })
       .catch((error) => {
         alert(error.message);
+        setIsLoading(false);
       });
     }
     else
@@ -81,7 +91,12 @@ function LoginPage() {
           </div>
           <div className="flex lg:flex-row lg:justify-between mt-8 font-semibold flex-col items-center text-center">
             <button className="lg:mr-4 m-0 lg:mb-0 mb-4 py-3 px-4 bg-[#0d5a5f] hover:bg-[#093d41] text-white rounded-md w-[45%]" onClick={loginHandler}>
-              ورود
+            {!isLoading && <p> ورود </p>}
+              {isLoading && 
+              <div className="flex justify-center items-center h-1/2 w-1/2">
+                <Loading />
+              </div>
+              }
             </button>
             <Link to={"/register"}
               className="border border-gray-200 rounded-md bg-gray-200 hover:border-[#0d5a5f] py-3 px-4 w-[45%]">

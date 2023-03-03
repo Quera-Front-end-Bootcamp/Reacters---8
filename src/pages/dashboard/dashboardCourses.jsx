@@ -26,7 +26,7 @@ export default function Courses() {
   useEffect(() => { fetchData() }, [])
 
   const config = {
-    headers: { "x-auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2U5MWJkZWE3M2FjYTY0NTBjNTBjNWUiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzcxNTk1NTN9.e1y3sV3JcszwE2NtEOr7uxRhIJ3l02Oe14IIBL4uqBc" }
+    headers: { "x-auth-token": localStorage.getItem('token') }
   }
 
   // delete course by id

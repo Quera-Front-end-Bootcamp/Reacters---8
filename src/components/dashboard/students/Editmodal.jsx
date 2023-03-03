@@ -10,18 +10,13 @@ import "jalaali-react-date-picker/lib/styles/index.css";
 const EditModal = ({ data, isOpen, handleClose, handleEdit }) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
-  console.log(data);
 
-  const formHandler = (data) => data;
-
-  const editHandler = () => {
-    const dt = handleSubmit(formHandler);
-    console.log('dt', dt);
+  const editHandler = (formData) => {
     setIsLoading(true);
-    console.log(dt);
-    handleEdit({...dt, id:data._id}, setIsLoading);
+    let dt  = {...formData, id: data._id, profile:"image.png", birthDate: formData.birthDate.split('-').join('/')};
+    handleEdit({...dt,}, setIsLoading);
   };
   return (
     <ReactModal
@@ -47,86 +42,87 @@ const EditModal = ({ data, isOpen, handleClose, handleEdit }) => {
               <Avatar src="" alt={data.fullName} sx={{ width: 30, height: 30 }}>
                 {data.fullName[0].toUpperCase()}
               </Avatar>
-              <div className="text-black w-full flex flex-col pt-3 gap-4">
-                <div className="flex justify-between items-center px-3 gap-3">
-                  <label>نام کاربری</label>
-                  <TextField
-                    required
-                    id="outlined-required"
-                    label="Required"
-                    defaultValue={data.fullName}
-                    name="fullName"
-                    color="secondary"
-                    {...register("name", { required: true }) }
-                  />
+              <form onSubmit={handleSubmit(editHandler)}>
+                <div className="text-black w-full flex flex-col pt-3 gap-4">
+                  <div className="flex justify-between items-center px-3 gap-3">
+                    <label>نام کاربری</label>
+                    <TextField
+                      required
+                      id="outlined-required"
+                      label="Required"
+                      defaultValue={data.fullName}
+                      name="fullName"
+                      color="secondary"
+                      {...register("fullName", { required: true })}
+                    />
+                  </div>
+                  <div className="flex justify-between items-center px-3 gap-3">
+                    <label>ایمیل</label>
+                    <TextField
+                      required
+                      id="outlined-required"
+                      label="Required"
+                      defaultValue={data.email}
+                      type={"email"}
+                      name="email"
+                      color="primary"
+                      {...register("email", { required: true })}
+                    />
+                  </div>
+                  <div className="flex justify-between items-center px-3 gap-3">
+                    <label>شماره تلفن</label>
+                    <TextField
+                      required
+                      id="outlined-required"
+                      label="Required"
+                      defaultValue={data.phoneNumber}
+                      type={"text"}
+                      name="phoneNumber"
+                      color="primary"
+                      {...register("phoneNumber", { required: true })}
+                    />
+                  </div>
+                  <div className="flex justify-between items-center px-3 gap-3">
+                    <label>تاریخ تولد</label>
+                    <InputDatePicker
+                      placeholder="تاریخ تولد"
+                      className="outline-none"
+                      id="form-date"
+                      name="birthDate"
+                      // value={new Date(data.birthDate)}
+                      {...register("birthDate", { required: true })}
+                    />
+                  </div>
+                  <div className="flex justify-between items-center px-3 gap-3">
+                    <label>کد ملی</label>
+                    <TextField
+                      required
+                      id="outlined-required"
+                      label="Required"
+                      defaultValue={data.nationalId}
+                      type={"number"}
+                      name="nationalId"
+                      color="primary"
+                      {...register("nationalId", { required: true })}
+                    />
+                  </div>
+                  <div className="w-full flex">
+                    <input
+                      className="text-white bg-[#0d5a5f] hover:bg-[#093d41] flex-grow p-3 hover:font-bold"
+                      type="submit"
+                      value={'ثبت اطلاعات'}
+                      />
+                  </div>
                 </div>
-                <div className="flex justify-between items-center px-3 gap-3">
-                  <label>ایمیل</label>
-                  <TextField
-                    required
-                    id="outlined-required"
-                    label="Required"
-                    defaultValue={data.email}
-                    type={"email"}
-                    name="email"
-                    color="primary"
-                    {...register("email", { required: true }) }
-                  />
-                </div>
-                <div className="flex justify-between items-center px-3 gap-3">
-                  <label>شماره تلفن</label>
-                  <TextField
-                    required
-                    id="outlined-required"
-                    label="Required"
-                    defaultValue={data.phoneNumber}
-                    type={"text"}
-                    name="phoneNumber"
-                    color="primary"
-                    {...register("phoneNumber", { required: true }) }
-                  />
-                </div>
-                <div className="flex justify-between items-center px-3 gap-3">
-                  <label>تاریخ تولد</label>
-                  <InputDatePicker
-                    placeholder="تاریخ تولد"
-                    className="outline-none"
-                    id="form-date"
-                    name="birthDate"
-                    // value={new Date(data.birthDate)}
-                    {...register("birthDate", { required: true }) }
-                  />
-                </div>
-                <div className="flex justify-between items-center px-3 gap-3">
-                  <label>کد ملی</label>
-                  <TextField
-                    required
-                    id="outlined-required"
-                    label="Required"
-                    defaultValue={data.nationalId}
-                    type={"number"}
-                    name="nationalId"
-                    color="primary"
-                    {...register("nationalId", { required: true }) }
-                  />
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         )}
         {isLoading && (
-          <div className="flex justify-center items-center h-full">
+          <div className="flex h-1/2 w-1/2 justify-center items-center ">
             <Loading />
           </div>
         )}
-        <div className="w-full flex">
-          <button
-            className="text-white bg-[#0d5a5f] hover:bg-[#093d41] flex-grow p-3 hover:font-bold"
-            onClick={editHandler}
-          >
-            ثبت اطلاعات
-          </button>
-        </div>
       </div>
     </ReactModal>
   );

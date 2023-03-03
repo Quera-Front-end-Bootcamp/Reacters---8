@@ -5,6 +5,7 @@ import Wall from "../../components/Account/Wall";
 import Registerapi from "../../core/apis/Register.api";
 import { InputDatePicker } from "jalaali-react-date-picker";
 import "jalaali-react-date-picker/lib/styles/index.css";
+import Loading from '../../components/Loading/Loading';
 //#endregion
 
 function LoginPage() {
@@ -20,6 +21,7 @@ function LoginPage() {
   const [nationalId, setNationalId] = useState("");
   const [address, setAddress] = useState("");
   const [role, setRole] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   //#endregion
   //#region registerfunction
   const register = async (isWorker) => {
@@ -35,6 +37,7 @@ function LoginPage() {
       role,
     };
     console.log(user);
+    setIsLoading(true);
     const regresult = await Registerapi(user, isWorker);
     console.log(regresult);
     if (regresult?.success) {
@@ -49,13 +52,16 @@ function LoginPage() {
       setPassword('');
       alert(`${fullName} با موفقیت ثبت نام شدید`);
       nav('/login');
+      setIsLoading(false)
     }
     else if(!regresult?.success)
     {
       alert(regresult?.message?.message);
+      setIsLoading(false)
     }
     else{
       alert('خطایی رخ داده لطفا دوباره تلاش کنید');
+      setIsLoading(false)
     }
 
   };
@@ -74,7 +80,7 @@ function LoginPage() {
               onChange={(e) => setFullName(e.target.value)}
               value={fullName}
               id="form-username"
-              className="flex-1 bg-transparent mx-2 outline-none w-3/5"
+              className="flex-1 bg-transparent mx-2 outline-none w-3/5 border-[#0d5a5f] border-[.2px] rounded-sm"
             />
           </div>
           <div className="flex flex-row-reverse text-input bg-gray-100 p-3 my-4 rounded-md">
@@ -85,7 +91,7 @@ function LoginPage() {
               type="email"
               id="form-email"
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 bg-transparent mx-2 outline-none w-3/5"
+              className="flex-1 bg-transparent mx-2 outline-none w-3/5 border-[#0d5a5f] border-[.2px] rounded-sm"
               value={email}
             />
           </div>
@@ -100,7 +106,7 @@ function LoginPage() {
               maxLength={11}
               pattern="[0-9]*"
               required
-              className="flex-1 bg-transparent mx-2 outline-none w-3/5"
+              className="flex-1 bg-transparent mx-2 outline-none w-3/5 border-[#0d5a5f] border-[.2px] rounded-sm"
               value={phoneNumber}
             />
           </div>
@@ -113,7 +119,7 @@ function LoginPage() {
               id="form-idNum"
               onChange={(e) => setNationalId(e.target.value)}
               value={nationalId}
-              className="flex-1 bg-transparent mx-2 outline-none w-3/5"
+              className="flex-1 bg-transparent mx-2 outline-none w-3/5 border-[#0d5a5f] border-[.2px] rounded-sm"
             />
           </div>
           <div className="flex flex-row-reverse justify-between items-center w-full gap-4 text-input bg-gray-100 p-2 rounded-md">
@@ -141,7 +147,7 @@ function LoginPage() {
               id="form-password"
               onChange={(e) => setPassword(e.target.value)}
               value={password}
-              className="flex-1 bg-transparent mx-2 outline-none w-3/5"
+              className="flex-1 bg-transparent mx-2 outline-none w-3/5 border-[#0d5a5f] border-[.2px] rounded-sm"
             />
           </div>
           <div
@@ -156,7 +162,7 @@ function LoginPage() {
               id="form-address"
               onChange={(e) => setAddress(e.target.value)}
               value={address}
-              className="flex-1 bg-transparent mx-2 outline-none w-3/5"
+              className="flex-1 bg-transparent mx-2 outline-none w-3/5 border-[#0d5a5f] border-[.2px] rounded-sm"
             />
           </div>
           <div
@@ -179,14 +185,19 @@ function LoginPage() {
           <div className="flex flex-row-reverse justify-between mt-8 font-semibold items-center">
             <Link
               to="/login"
-              className="lg:mb-0 py-3 px-4 bg-gray-200 hover:border-[#0d5a5f] text-center rounded-md w-[45%]">
+              className="lg:mb-0 py-3 px-4 bg-gray-200 hover:border-[#0d5a5f] hover:border-[.2px] text-center rounded-md w-[45%]">
               ورود
             </Link>
 
             <button
               onClick={() => register(isWorker)}
               className="border border-gray-200 rounded-md bg-[#0d5a5f] hover:bg-[#093d41] text-white py-3 px-4 w-[45%]">
-              ثبت نام
+             {!isLoading && <p> ثبت نام</p>}
+              {isLoading && 
+              <div className="flex justify-center items-center h-1/2 w-1/2">
+                <Loading />
+              </div>
+              }
             </button>
           </div>
 
@@ -200,6 +211,7 @@ function LoginPage() {
               shadow-md rounded-md text-center font-semibold py-3 px-4 cursor-pointer duration-500`}
               onClick={() => setIsWorker(true)}>
               ثبت نام کارمند
+              
             </p>
           </div>
         </div>

@@ -139,7 +139,7 @@ export const coursesData = [
         description: DESCRIPTION,
         discount: Math.floor(Math.random() * 100),
         benefits: BENEFITS("تایپ اسکریپت"),
-        id: "6e2069c9-06c4-42f7-ab47-3d81fba3df0a",
+        id: "63ee6fd1e7b6661ae032c2ba",
         heroSrc: tsHero,
         modalSrc: tsHero,
     },
