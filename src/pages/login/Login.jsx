@@ -23,7 +23,8 @@ function LoginPage() {
       AXIOS.post(URL, userData)
       .then((response) => {
         alert(response?.data.message[0]?.message);
-        ctx.onLogin(role, role === 'employee' ? response.data.result.employeeModel : response.data.result.studentModel)
+        ctx.onLogin(role, role === 'employee' ? response.data.result.employeeModel : response.data.result.studentModel);
+        localStorage.setItem("token", response.data.result.jwtToken);
       })
       .catch((error) => {
         alert(error.message);
