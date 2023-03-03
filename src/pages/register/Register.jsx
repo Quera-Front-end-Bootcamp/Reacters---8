@@ -35,7 +35,7 @@ function LoginPage() {
       role,
     };
     const regresult = await Registerapi(user, isWorker);
-    if (regresult.success) {
+    if (regresult?.success) {
       setFullName('');
       setEmail('');
       setRole('');
@@ -47,6 +47,10 @@ function LoginPage() {
       setPassword('');
       alert(`${fullName} با موفقیت ثبت نام شدید`);
       nav('/register');
+    }
+    else
+    {
+      alert("مشکلی رخ داده است")
     }
   };
   //#endregion

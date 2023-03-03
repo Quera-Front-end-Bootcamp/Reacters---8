@@ -462,7 +462,7 @@ export const coursesData = [
         description: DESCRIPTION,
         discount: Math.floor(Math.random() * 100),
         benefits: BENEFITS("جاوا اسکریپت"),
-        id: "70ce3ded-c3fd-46e9-9f6b-89ff5ca1c894",
+        id: "63f09b87a3a55d2200e1f893",
         heroSrc: jsHero,
         modalSrc: jsModal,
     },
