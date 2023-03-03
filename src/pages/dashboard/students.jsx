@@ -154,13 +154,15 @@ export default function StudentPage() {
 
   const updateStudent = (data, setEditingState) => {
     console.log('update is running');
-    data = {...data, profile:""}
-        AXIOS.put(`/api/student/${data.id}`, data, config).then(() => {
+    let id = data.id;
+    delete data.id;
+    console.log('data', data);
+        AXIOS.put(`/api/student/${id}`, data, config).then(() => {
           console.log('doneeE');
           fetchStudents();
           setEditingState(false);
           setEditModalIsOpen(false);
-        }).catch(err => {console.log('err: ', err.config);})
+        }).catch(err => {console.log('err: ', err);})
   }
 
   

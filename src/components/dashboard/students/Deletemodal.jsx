@@ -50,7 +50,7 @@ const DeleteModal = ({ data, isOpen, handleClose, handleDelete }) => {
             </div>
           )}
           {isLoading && (
-            <div className="flex justify-center items-center">
+            <div className="flex h-1/2 w-1/2 justify-center items-center">
               <Loading />
             </div>
           )}
