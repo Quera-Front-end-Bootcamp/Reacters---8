@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import {AXIOS} from '../../config/axios.config';
+import Context from "../../context/context";
 import Wall from "../../components/Account/Wall";
 import "./style/login.css"
 
@@ -8,6 +9,8 @@ function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("student");
+
+  const ctx = useContext(Context);
 
   const loginHandler = (e) => {
     e.preventDefault();
@@ -19,9 +22,8 @@ function LoginPage() {
       const URL = role === 'student' ? "/api/auth/login" : '/api/auth/employee/login';
       AXIOS.post(URL, userData)
       .then((response) => {
-        console.log(response);
-        console.log('res',response?.data.result);
         alert(response?.data.message[0]?.message);
+        ctx.onLogin(role, role === 'employee' ? response.data.result.employeeModel : response.data.result.studentModel)
       })
       .catch((error) => {
         alert(error.message);

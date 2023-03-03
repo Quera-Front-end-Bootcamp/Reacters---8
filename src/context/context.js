@@ -6,7 +6,7 @@ const Context = React.createContext({
     user: {},
     news: [],
     lessons: [],
-    onLogin: () => {},
+    onLogin: (role, user) => {},
     setNews: () => {},
     setLessons: () => {},
 });
