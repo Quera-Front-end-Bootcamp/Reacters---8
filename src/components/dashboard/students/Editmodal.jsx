@@ -14,11 +14,8 @@ const EditModal = ({ data, isOpen, handleClose, handleEdit }) => {
 
 
   const editHandler = (formData) => {
-    // const dt = handleSubmit(formHandler);
-    
     setIsLoading(true);
     let dt  = {...formData, id: data._id, profile:"image.png", birthDate: formData.birthDate.split('-').join('/')};
-    console.log('dt', dt);
     handleEdit({...dt,}, setIsLoading);
   };
   return (
