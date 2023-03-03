@@ -1,18 +1,42 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Context = React.createContext({
-    userType: "",
-    userInfo: {},
+    isLoggedIn: "",
+    role: "",
+    user: {},
     news: [],
     lessons: [],
-    setNews: () => null,
-    setLessons: () => null,
+    onLogin: () => {},
+    setNews: () => {},
+    setLessons: () => {},
 });
 
 export const ContextProvider = (props) => {
+    const [isLoggedIn, setIsloggedIn] = useState(false);
+    const [role, setRole] = useState("");
+    const [user, setUser] = useState({});
+    const [lessons, setLessons] = useState([]);
+    const [news, setNews] = useState([]);
+
+    const loginHandler = (role, user) => {
+        setRole(role);
+        setUser(user);
+        setIsloggedIn(true);
+    }
+
+
     return (
         <Context.Provider 
-        // value={}
+        value={{
+            isLoggedIn,
+            role,
+            user,
+            news,
+            lessons,
+            onLogin: loginHandler,
+            setNews,
+            setLessons
+        }}
         >
         {props.children}
         </Context.Provider>

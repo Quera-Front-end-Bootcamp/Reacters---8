@@ -7,7 +7,7 @@ import "./style/login.css"
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRoll] = useState("student");
+  const [role, setRole] = useState("student");
 
   const loginHandler = (e) => {
     e.preventDefault();
@@ -68,11 +68,11 @@ function LoginPage() {
             <fieldset className="flex flex-col">
               <div clasName="flex">
               <label>ورود به عنوان دانش آموز</label>
-              <input type="radio" checked className="" name="role" value="student" onClick={(e) => setRoll(e.target.value)} />
+              <input type="radio" checked className="" name="role" value="student" onClick={(e) => setRole(e.target.value)} />
               </div>
               <div clasName="flex">
               <label>ورود به عنوان معلم/ادمین</label>
-              <input type="radio" className="" name="role" value="employee" onClick={(e) => setRoll(e.target.value)}/>
+              <input type="radio" className="" name="role" value="employee" onClick={(e) => setRole(e.target.value)}/>
               </div>
             </fieldset>
           </div>
