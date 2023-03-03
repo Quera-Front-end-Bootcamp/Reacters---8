@@ -4,8 +4,6 @@ import { useLocation } from 'react-router-dom';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
 import { Box, Link, Button, Drawer, Typography, Avatar, Stack } from '@mui/material';
-// mock
-import account from '../../../../_mock/account';
 // hooks
 import useResponsive from '../../../../hooks/useResponsive';
 // components
@@ -18,7 +16,7 @@ import navConfig from './config';
 
 
 // ----------------------------------------------------------------------
-const pfpURL = 'https://darbonnewoods.com/wp-content/uploads/2022/04/Blank-Profile.png';
+
 
 const NAV_WIDTH = 280;
 
@@ -64,7 +62,7 @@ export default function Nav({ openNav, onCloseNav }) {
       <Box sx={{ mb: 5, mx: 2.5 }}>
         <Link underline="none">
           <StyledAccount>
-            <Avatar src={pfpURL} alt="photoURL" />
+            <Avatar src={ctx.pfpURL} alt="photoURL" />
 
             <Box sx={{ ml: 2 }}>
               <Typography variant="subtitle2" sx={{ color: 'text.primary' }}>

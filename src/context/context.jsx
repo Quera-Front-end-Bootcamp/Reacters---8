@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from "react";
 
+const pfpURL = 'https://darbonnewoods.com/wp-content/uploads/2022/04/Blank-Profile.png';
+
 const Context = React.createContext({
     isLoggedIn: "",
     role: "",
     user: {},
+    pfpURL, 
     news: [],
     lessons: [],
     onLogin: (role, user) => {},
@@ -48,6 +51,7 @@ export const ContextProvider = (props) => {
             isLoggedIn,
             role,
             user,
+            pfpURL,
             news,
             lessons,
             onLogin: loginHandler,
