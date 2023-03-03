@@ -23,7 +23,8 @@ function LoginPage() {
       AXIOS.post(URL, userData)
       .then((response) => {
         alert(response?.data.message[0]?.message);
-        ctx.onLogin(role, role === 'employee' ? response.data.result.employeeModel : response.data.result.studentModel)
+        ctx.onLogin(role, role === 'employee' ? response.data.result.employeeModel : response.data.result.studentModel);
+        localStorage.setItem("token", response.data.result.jwtToken);
       })
       .catch((error) => {
         alert(error.message);
@@ -70,11 +71,11 @@ function LoginPage() {
             <fieldset className="flex flex-col">
               <div clasName="flex">
               <label>ورود به عنوان دانش آموز</label>
-              <input type="radio" checked className="" name="role" value="student" onClick={(e) => setRole(e.target.value)} />
+              <input type="radio"  className="" name="role" value="student" onClick={(e) => setRole(e.target.value)} />
               </div>
               <div clasName="flex">
               <label>ورود به عنوان معلم/ادمین</label>
-              <input type="radio" className="" name="role" value="employee" onClick={(e) => setRole(e.target.value)}/>
+              <input type="radio" checked className="" name="role" value="employee" onClick={(e) => setRole(e.target.value)}/>
               </div>
             </fieldset>
           </div>

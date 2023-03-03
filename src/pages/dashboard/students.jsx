@@ -311,7 +311,7 @@ export default function StudentPage() {
         </Container>
       )}
       {loading && (
-        <div className="flex justify-center items-center">
+        <div className="flex h-[500px] w-[500px] justify-center items-center">
           <Loading />
         </div>
       )}
