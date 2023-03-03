@@ -1,5 +1,4 @@
 import { filter } from "lodash";
-import { sentenceCase } from "change-case";
 import { useEffect, useState } from "react";
 // @mui
 import {
@@ -34,7 +33,6 @@ import {
 } from "../../components/dashboard/students";
 
 import { AXIOS } from "../../config/axios.config";
-import { Axios } from "axios";
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
@@ -211,8 +209,8 @@ export default function StudentPage() {
           ></Stack>
 
           <Card>
-            <Typography variant="h4" gutterBottom>
-              User
+            <Typography variant="h4" dir="rtl" gutterBottom >
+              دانش آموزان
             </Typography>
             <UserListToolbar
               numSelected={selected.length}
